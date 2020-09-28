@@ -3,6 +3,6 @@ FactoryBot.define do
     association :eventable, factory: :proposal
     association :creator, factory: :user
     data { {} }
-    type ""
+    type {""}
   end
 end

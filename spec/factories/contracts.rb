@@ -3,7 +3,7 @@ FactoryBot.define do
     proposal
     user
     user_signed_at { DateTime.current }
-    deadline 60
+    deadline {60}
 
     trait :full_signed_at do
       supplier_signed_at { DateTime.current }

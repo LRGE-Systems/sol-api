@@ -4,9 +4,9 @@ FactoryBot.define do
     bidding
     lot
     file { Rack::Test::UploadedFile.new(Rails.root.join("spec/fixtures/myfiles/proposal_upload_1_1.xls")) }
-    file_type :xls
-    error_message nil
-    error_backtrace nil
-    status :waiting
+    file_type {:xls}
+    error_message {nil}
+    error_backtrace {nil}
+    status {:waiting}
   end
 end

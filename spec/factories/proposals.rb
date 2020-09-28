@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :proposal do
     bidding
     provider
-    status 0
+    status {0}
     price_total { rand(5000..25000) }
 
     transient do

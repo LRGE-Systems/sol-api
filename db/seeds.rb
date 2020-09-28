@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Doorkeeper::Application.create! uid:'idhash', secret: 'secrethash', name: 'Test', redirect_uri: 'http://localhost:8080/'
+
+Admin.create! email:"arueira95@gmail.com", password:"12345678", name:"Galba"
+
+Doorkeeper::Application.find_or_create_by!(name: 'sdc-admin-frontend.vue') do |app|
+   app.attributes = {  
+     confidential: false, # it's a webapp! Also, confidential apps must authenticate when revoking tokens!    
+     uid: "idhash",    
+     secret: "secrethash",    
+     redirect_uri: 'urn:ietf:wg:oauth:2.0:oob',    
+     scopes: 'admin' # read write ...    
+   }    
+end

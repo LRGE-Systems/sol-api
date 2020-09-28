@@ -6,7 +6,7 @@ FactoryBot.define do
 
     resource_owner_id { resource_owner.id }
     association :application, factory: :oauth_application
-    expires_in 2.hours
+    expires_in {2.hours}
 
     factory :clientless_access_token do
       application nil

@@ -37,6 +37,7 @@ gem 'wkhtmltopdf-binary'
 gem 'combine_pdf'
 gem 'cancancan'
 gem 'newrelic_rpm'
+gem 'rake', '12.3.1'
 gem 'tty-spinner'
 gem 'extensobr', git: 'https://github.com/dpedoneze/extensobr.git'
 

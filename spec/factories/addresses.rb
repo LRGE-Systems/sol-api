@@ -4,12 +4,12 @@ FactoryBot.define do
     association :addressable, factory: :cooperative
     latitude { Geo::Latitude.rand }
     longitude { Geo::Longitude.rand }
-    address "Rua Carlos Gomes"
-    number "123A"
-    neighborhood "Centro"
+    address { "Rua Carlos Gomes" }
+    number { "123A"} 
+    neighborhood { "Centro" }
     cep { ZipCode.generate }
-    complement "AP 34"
-    reference_point "Próximo ao Swiss Park"
+    complement { "AP 34" }
+    reference_point { "Próximo ao Swiss Park" }
     city
 
     trait :provider_address do

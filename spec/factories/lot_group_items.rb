@@ -7,7 +7,7 @@ FactoryBot.define do
     trait :invalid do
       lot nil
       group_item nil
-      quantity 0
+      quantity {0}
     end
   end
 end

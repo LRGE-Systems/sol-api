@@ -1,6 +1,6 @@
 # config
 PaperTrail.config.version_limit = 10
-PaperTrail.config.track_associations = false
+# PaperTrail.config.track_associations = false
 
 # We're using a custom Version model (app/models/audit.rb), in a custom table
 # (audits). Therefore, we must let ActiveRecord know that PaperTrail::Version

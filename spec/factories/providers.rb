@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :provider do
     sequence(:document) { |n| "12.345.#{n}-00" }
     sequence(:name) { |n| "Carls Max #{n}" }
-    type "Individual" # STI type
+    type {"Individual"} # STI type
 
     transient do
       skip_classification { false }

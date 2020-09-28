@@ -4,7 +4,7 @@ FactoryBot.define do
     proposal
     supplier
     price_total { rand(3500..4500) }
-    delivery_price 0
+    delivery_price {0}
 
     transient do
       build_lot_group_item_lot_proposal { true }

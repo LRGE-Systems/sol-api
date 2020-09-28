@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :legal_representative do
     association :representable, factory: :cooperative
-    name "John Doe"
-    nationality "Brasileiro"
-    civil_state 1
-    rg "12.345.678-90"
+    name {"John Doe"}
+    nationality {"Brasileiro"}
+    civil_state {1}
+    rg {"12.345.678-90"}
     cpf { CPF.generate }
     valid_until { Date.tomorrow }
 

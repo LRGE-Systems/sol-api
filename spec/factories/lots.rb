@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :lot do
     bidding
     sequence(:name) { |n| "Lote #{n}" }
-    address 'address'
+    address {'address'}
 
     transient do
       build_lot_group_item { true }
