@@ -35,12 +35,12 @@ Thumbs.db
 !/tmp/.keep
 
 # config files
-config/cable.yml
-config/database.yml
-config/secrets.yml
-config/sidekiq.yml
-config/storage.yml
-config/webpacker.yml
+# config/cable.yml
+# config/database.yml
+# config/secrets.yml
+# config/sidekiq.yml
+# config/storage.yml
+# config/webpacker.yml
 
 app/frontend/core/config/secrets.yml
 
@@ -90,7 +90,7 @@ yarn-error.log*
 
 # dev tasks
 /lib/tasks/boot/*
-lib/tasks/setup/AR_BR_MUN_2018.csv
+# lib/tasks/setup/AR_BR_MUN_2018.csv # Dont waste my time
 
 # generated pdf documents
 /spec/fixtures/myfiles/*_contract_*.html

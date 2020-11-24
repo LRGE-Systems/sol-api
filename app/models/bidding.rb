@@ -21,6 +21,12 @@ class Bidding < ApplicationRecord
                  failure: 9, reopened: 10, desert: 11 }
   enum modality: { unrestricted: 0, open_invite: 1, closed_invite: 2 }
 
+  before_validation do 
+    if self.waiting? or self.approved?
+      self.status = :ongoing
+    end
+  end
+
   belongs_to :covenant
 
   belongs_to :reopen_reason_contract, class_name: 'Contract',
