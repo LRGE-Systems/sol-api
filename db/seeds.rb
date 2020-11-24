@@ -8,9 +8,9 @@
 
 # Doorkeeper::Application.create! uid:'idhash', secret: 'secrethash', name: 'Test', redirect_uri: 'http://localhost:8080/'
 
-Admin.create! email:"arueira95@gmail.com", password:"12345678", name:"Galba"
+Admin.create email:"arueira95@gmail.com", password:"12345678", name:"Galba"
 
-Doorkeeper::Application.find_or_create_by!(name: 'sdc-admin-frontend.vue') do |app|
+Doorkeeper::Application.find_or_create_by(name: 'sdc-admin-frontend.vue') do |app|
    app.attributes = {  
      confidential: false, # it's a webapp! Also, confidential apps must authenticate when revoking tokens!    
      uid: "idhash",    
@@ -20,7 +20,7 @@ Doorkeeper::Application.find_or_create_by!(name: 'sdc-admin-frontend.vue') do |a
    }    
 end
 
-Doorkeeper::Application.find_or_create_by!(name: 'sdc-cooperative-frontend.vue') do |app|
+Doorkeeper::Application.find_or_create_by(name: 'sdc-cooperative-frontend.vue') do |app|
   app.attributes = {  
     confidential: false, # it's a webapp! Also, confidential apps must authenticate when revoking tokens!    
     uid: "sdc-cooperative-frontend.vue",    
@@ -31,7 +31,7 @@ Doorkeeper::Application.find_or_create_by!(name: 'sdc-cooperative-frontend.vue')
 end
 
 
-Doorkeeper::Application.find_or_create_by!(name: 'sdc-supplier-frontend.vue') do |app|
+Doorkeeper::Application.find_or_create_by(name: 'sdc-supplier-frontend.vue') do |app|
   app.attributes = {  
     confidential: false, # it's a webapp! Also, confidential apps must authenticate when revoking tokens!    
     uid: "sdc-supplier-frontend.vue",    
