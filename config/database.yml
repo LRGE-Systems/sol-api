@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   username: lrge
   password: edjfdhasm234
-  host: db
+  host: localhost
 
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -28,6 +28,7 @@ default: &default
 development:
   <<: *default
   database: sdc_api_development
+  host: db
   
 
   # The specified database role being used to connect to postgres.
@@ -86,5 +87,3 @@ test:
 production:
   <<: *default
   database: sdc_api_production
-  # username: sdc_api
-  password: <%= ENV['API_RB_DATABASE_PASSWORD'] %>
