@@ -24,7 +24,7 @@ Doorkeeper::Application.find_or_create_by(name: 'sdc-cooperative-frontend.vue') 
   app.attributes = {  
     confidential: false, # it's a webapp! Also, confidential apps must authenticate when revoking tokens!    
     uid: "sdc-cooperative-frontend.vue",    
-    secret: "c6063855c25f8eb61b45248bd10562baf2663e663842e0ef955a8800a1b722efea25fbb0ede6fce58698bab121055aa090db7b288c112569325c676a00610bcf",    
+    secret: "secretId",    
     redirect_uri: 'urn:ietf:wg:oauth:2.0:oob',    
     scopes: 'user' # read write ...    
   }    
@@ -35,7 +35,7 @@ Doorkeeper::Application.find_or_create_by(name: 'sdc-supplier-frontend.vue') do 
   app.attributes = {  
     confidential: false, # it's a webapp! Also, confidential apps must authenticate when revoking tokens!    
     uid: "sdc-supplier-frontend.vue",    
-    secret: "c7063855c25f8eb61b45248bd10562baf2663e663842e0ef955a8800a1b722efea25fbb0ede6fce58698bab121055aa090db7b288c112569325c676a00610bcf",    
+    secret: "secretId",    
     redirect_uri: 'urn:ietf:wg:oauth:2.0:oob',    
     scopes: 'supplier' # read write ...    
   }    

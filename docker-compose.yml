@@ -10,8 +10,12 @@ services:
             - 3000:3000
         depends_on: 
             - db
+        # environment: 
+        #     NODE_ENV: production
     db:
         image: postgres
+        volumes:
+            - ./tmp/db/:/var/lib/postgresql/data
         # restart: always
         environment:
             POSTGRES_PASSWORD: edjfdhasm234
