@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_08_184243) do
+ActiveRecord::Schema.define(version: 2020_12_14_185654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -145,8 +145,12 @@ ActiveRecord::Schema.define(version: 2020_06_08_184243) do
     t.bigint "document_id"
     t.integer "deadline"
     t.string "title"
+    t.bigint "service_order_document_id"
+    t.bigint "buy_approval_document_id"
+    t.index ["buy_approval_document_id"], name: "index_contracts_on_buy_approval_document_id"
     t.index ["document_id"], name: "index_contracts_on_document_id"
     t.index ["proposal_id"], name: "index_contracts_on_proposal_id"
+    t.index ["service_order_document_id"], name: "index_contracts_on_service_order_document_id"
     t.index ["supplier_id"], name: "index_contracts_on_supplier_id"
     t.index ["user_id"], name: "index_contracts_on_user_id"
   end
@@ -568,6 +572,8 @@ ActiveRecord::Schema.define(version: 2020_06_08_184243) do
   add_foreign_key "cities", "states"
   add_foreign_key "classifications", "classifications"
   add_foreign_key "contracts", "documents"
+  add_foreign_key "contracts", "documents", column: "buy_approval_document_id"
+  add_foreign_key "contracts", "documents", column: "service_order_document_id"
   add_foreign_key "contracts", "proposals"
   add_foreign_key "contracts", "suppliers"
   add_foreign_key "contracts", "users"

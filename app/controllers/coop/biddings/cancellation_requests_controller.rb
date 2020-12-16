@@ -20,6 +20,8 @@ module Coop
 
     def cancellation_request?
       cancellation_request_service.call
+      # BiddingsService::CancellationRequests::Approve.new(service_params).call
+      BiddingsService::Cancel.new(service_params).call
     end
 
     def cancellation_request_service

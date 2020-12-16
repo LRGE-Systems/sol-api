@@ -12,9 +12,27 @@ module Pdf
   module Contract
     module Classification; end
   end
+  module OrderService
+    module Classification; end
+  end
+  module BuyApproval
+    module Classification; end
+  end
 end
 
 Dir[File.join(File.expand_path(File.dirname(__FILE__)), 'pdf', '*.rb')]
+  .sort.each { |f| require_dependency f }
+
+Dir[File.join(File.expand_path(File.dirname(__FILE__)), 'pdf', 'order_service', '*.rb')]
+  .sort.each { |f| require_dependency f }
+
+Dir[File.join(File.expand_path(File.dirname(__FILE__)), 'pdf', 'order_service', '**', '*.rb')]
+  .sort.each { |f| require_dependency f }
+
+Dir[File.join(File.expand_path(File.dirname(__FILE__)), 'pdf', 'buy_approval', '*.rb')]
+  .sort.each { |f| require_dependency f }
+
+Dir[File.join(File.expand_path(File.dirname(__FILE__)), 'pdf', 'buy_approval', '**', '*.rb')]
   .sort.each { |f| require_dependency f }
 
 Dir[File.join(File.expand_path(File.dirname(__FILE__)), 'pdf', 'contract', '*.rb')]

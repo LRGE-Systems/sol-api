@@ -20,6 +20,8 @@ module Supp
         type: 'supplier',
         user: current_user
       )
+
+      ContractsService::PdfGenerate.call!(contract: contract)
     end
   end
 end

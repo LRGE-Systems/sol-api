@@ -96,6 +96,7 @@ Rails.application.routes.draw do
       resource :failure, module: 'biddings', only: [:update]
       resource :finish, module: 'biddings', only: [:update]
       resource :refinish, module: 'biddings', only: [:update]
+      resource :review, module: 'biddings', only: [:update]
       resources :lots, module: 'biddings' do
         resources :lot_proposals, module: 'lots', only: [:index, :show]
       end

@@ -14,6 +14,9 @@ class Contract < ApplicationRecord
   belongs_to :refused_by, polymorphic: true, optional: true
   belongs_to :document, optional: true
 
+  belongs_to :service_order_document, class_name: 'Document', foreign_key: :service_order_document_id, optional: true
+  belongs_to :buy_approval_document, class_name: 'Document', foreign_key: :buy_approval_document_id, optional: true
+
   has_one :bidding, through: :proposal
   has_one :classification, through: :bidding, source: :classification
 

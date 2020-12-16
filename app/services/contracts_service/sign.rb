@@ -48,7 +48,11 @@ module ContractsService
     end
 
     def generate_pdf
-      Contract::PdfGenerateWorker.perform_async(contract.id) if contract.all_signed?
+      if contract.all_signed?
+        Contract::PdfGenerateWorker.perform_async(contract.id)
+        BuyApproval::PdfGenerateWorker.perform_async(contract.id)
+        OrderService::PdfGenerateWorker.perform_async(contract.id)
+      end
     end
   end
 end

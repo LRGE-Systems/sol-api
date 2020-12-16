@@ -18,6 +18,7 @@ module Coop
 
     def coop_accepted?
       ProposalService::Coop::LotProposal::Accept.call(lot_proposal: lot_proposal)
+      ProposalService::Admin::Accept.call(proposal: lot_proposal.proposal)
     end
   end
 end

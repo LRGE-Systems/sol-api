@@ -29,7 +29,9 @@ module Administrator
     end
 
     def covenant_params
-      params.require(:covenant).permit(*PERMITTED_PARAMS)
+      r = params.require(:covenant).permit(*PERMITTED_PARAMS)
+      r['admin_id'] = doorkeeper_token.resource_owner_id
+      r
     end
   end
 end

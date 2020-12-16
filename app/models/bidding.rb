@@ -21,9 +21,10 @@ class Bidding < ApplicationRecord
                  failure: 9, reopened: 10, desert: 11 }
   enum modality: { unrestricted: 0, open_invite: 1, closed_invite: 2 }
 
-  before_validation do 
-    if self.waiting? or self.approved?
-      self.status = :ongoing
+  after_save do 
+    if self.waiting?
+      BiddingsService::Approve.call(bidding: self)
+      BiddingsService::Ongoing.call(bidding: self) #Hmmm
     end
   end
 

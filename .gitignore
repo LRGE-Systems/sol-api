@@ -6,6 +6,7 @@
 # ===============
 # Temporary Files #
 ###################
+postgres-data/
 *~
 *.swp
 *.orig

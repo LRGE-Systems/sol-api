@@ -5,7 +5,9 @@ module BaseContractSerializer
     attributes :id, :title, :status, :price_total, :bidding_title, :provider_title,
                :supplier_signed_at, :user_signed_at, :proposal_id,
                :bidding_kind, :bidding_id, :lot_proposal_ids, :lot_ids, :refused_by_at,
-               :refused_by_class, :refused_by_name, :contract_pdf, :deadline, :covenant_name,
+               :refused_by_class, :refused_by_name, :contract_pdf,:service_order_pdf,
+               :buy_approval_pdf,
+               :deadline, :covenant_name,
                :refused_comment
   end
 
@@ -64,6 +66,14 @@ module BaseContractSerializer
 
   def contract_pdf
     object.document.try(:file).try(:url)
+  end
+
+  def service_order_pdf
+    object.service_order_document.try(:file).try(:url)
+  end
+
+  def buy_approval_pdf
+    object.buy_approval_document.try(:file).try(:url)
   end
 
   def covenant_name

@@ -7,17 +7,17 @@ module Abilities::Admin
     ].freeze
 
     NOT_INTEGRATION_MODELS = [
-      Contract, Bidding, Proposal,Cooperative, Lot, LotProposal, Admin, Provider, Supplier,
+      Covenant,Contract, Bidding, Proposal,Cooperative, Lot, LotProposal, Admin, Provider, Supplier,
       Unit, User, Notification, Report
     ].freeze
 
     def initialize(user)
-      if exist_integration?
-        can :read, INTEGRATION_MODELS
-        can :manage, NOT_INTEGRATION_MODELS
-      else
+      # if exist_integration?
+      #   can :read, INTEGRATION_MODELS
+      #   can :manage, NOT_INTEGRATION_MODELS
+      # else
         can :manage, INTEGRATION_MODELS + NOT_INTEGRATION_MODELS
-      end
+      # end
     end
   end
 end
