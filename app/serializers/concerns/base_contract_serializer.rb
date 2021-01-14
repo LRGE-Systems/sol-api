@@ -69,11 +69,11 @@ module BaseContractSerializer
   end
 
   def service_order_pdf
-    object.service_order_document.try(:file).try(:url)
+    # object.service_order_document.try(:file).try(:url)
   end
 
   def buy_approval_pdf
-    object.buy_approval_document.try(:file).try(:url)
+    # object.buy_approval_document.try(:file).try(:url)
   end
 
   def covenant_name
