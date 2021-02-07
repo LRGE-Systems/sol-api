@@ -32,12 +32,13 @@ module Blockchain
 
       def request
         @request ||= begin
-          if Rails.env.production?
-            client.request(verb: verb, endpoint: endpoint, params: params)
-          else
+          # Temporary disable due to blockchain construction
+          # if Rails.env.production?
+          #   client.request(verb: verb, endpoint: endpoint, params: params)
+          # else
             bc = Struct.new(:success?)
             bc.new(true)
-          end
+          # end
         end
       end
 

@@ -10,7 +10,7 @@ class Covenant < ApplicationRecord
 
   belongs_to :admin
   belongs_to :cooperative
-  belongs_to :city
+  belongs_to :city, optional: true
 
   has_many :groups, -> { order('groups.name') }, dependent: :destroy
   has_many :group_items, through: :groups
@@ -24,7 +24,7 @@ class Covenant < ApplicationRecord
             :status,
             :signature_date,
             :validity_date,
-            :city,
+            # :city,
             presence: true
 
   validates_uniqueness_of :number, scope: :cooperative_id
