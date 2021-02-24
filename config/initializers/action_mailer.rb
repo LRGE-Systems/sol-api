@@ -20,7 +20,7 @@ Rails.application.config.before_initialize do
   # these are set in `initializers/routes.rb`, using Rails.application.routes.default_url_options
 
   # delivery_method and settings (e.g. :smtp and .smtp_settings)
-  if Rails.env.production?
+  # if Rails.env.production?
     delivery_method = options.fetch(:delivery_method, :smtp).to_sym # XXX precisa ser Symbol!
     action_mailer_config.delivery_method = delivery_method
     ActionMailer::Base.delivery_method = delivery_method
@@ -35,5 +35,5 @@ Rails.application.config.before_initialize do
       action_mailer_config.smtp_settings.merge! options[:smtp_settings]
       ActionMailer::Base.smtp_settings = action_mailer_config.smtp_settings
     end
-  end
+  # end
 end

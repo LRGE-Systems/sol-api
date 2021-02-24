@@ -15,13 +15,13 @@ module Supp
     end
 
     def updated?
-      ContractsService::Sign.call(
-        contract: contract,
-        type: 'supplier',
-        user: current_user
-      )
+      # ContractsService::Sign.call(
+      #   contract: contract,
+      #   type: 'supplier',
+      #   user: current_user
+      # )
 
-      ContractsService::PdfGenerate.call!(contract: contract)
+      # ContractsService::PdfGenerate.call!(contract: contract)
     end
   end
 end

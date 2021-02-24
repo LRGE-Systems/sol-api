@@ -42,7 +42,8 @@ module ContractsService
         proposal: proposal,
         user: user,
         user_signed_at: DateTime.current,
-        deadline: deadline
+        deadline: deadline,
+        # status: :signed
       }
     end
 

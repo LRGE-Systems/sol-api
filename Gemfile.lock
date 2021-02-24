@@ -3,6 +3,8 @@ GIT
   revision: 7afc616fb51c62b6774f8062786429ab74f5bcf8
   specs:
     extensobr (0.1.0)
+      bundler (~> 1.13)
+      rake (~> 10.0)
 
 GIT
   remote: https://github.com/ppdeassis/foreman.git
@@ -14,10 +16,10 @@ GIT
 
 GIT
   remote: https://github.com/thoughtbot/shoulda-matchers.git
-  revision: e19ebf291d6f9bb5b8187e988da6b96fb1f5e423
+  revision: cd71a958a75562fddfacd7e94e1fc65009ddce79
   branch: master
   specs:
-    shoulda-matchers (4.4.1)
+    shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
 
 GEM

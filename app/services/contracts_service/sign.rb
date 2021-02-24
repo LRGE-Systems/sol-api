@@ -49,7 +49,7 @@ module ContractsService
 
     def generate_pdf
       if contract.all_signed?
-        Contract::PdfGenerateWorker.perform_async(contract.id)
+        # Contract::PdfGenerateWorker.perform_async(contract.id)
         # BuyApproval::PdfGenerateWorker.perform_async(contract.id)
         # OrderService::PdfGenerateWorker.perform_async(contract.id)
       end

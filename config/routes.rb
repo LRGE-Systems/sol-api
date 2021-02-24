@@ -69,8 +69,9 @@ Rails.application.routes.draw do
     resource :device_tokens, only: :create
     resource :dashboard, only: :show
     resource :map, only: :show
-
+    post 'contracts/:id/updateDoc', to:'contracts#updateDoc'
     resources :contracts, only: [:index, :show] do
+      
       resources :items, module: 'contract', only: [:index]
       resource :completed, module: 'contract', only: [:update]
       resource :partial_execution, module: 'contract', only: [:update]
@@ -136,6 +137,7 @@ Rails.application.routes.draw do
     namespace :reports do
       resources :biddings, only: :index
       resources :contracts, only: :index
+      resources :documents, only: :index
     end
 
     resources :reports, only: [:create, :index, :show] do

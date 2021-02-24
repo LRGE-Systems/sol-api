@@ -69,6 +69,13 @@ class Contract < ApplicationRecord
     )
   end
 
+  def self.by_document_type(type)
+    joins(:document, :proposal).where(
+      documents: {document_type: type},
+      proposals: { status: :accepted }
+    )
+  end
+
   def price_by_proposal_accepted
     self.class.joins(:proposal).where(proposals: { status: :accepted }).where(id: self.id).sum('proposals.price_total')
   end

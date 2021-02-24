@@ -5,5 +5,7 @@ class Document < ApplicationRecord
 
   validates_presence_of :file
 
+  enum document_type: [:'Autorização de Fornecimento', :'Ordem de Serviço', :'Contrato']
+
   mount_uploader :file, DocumentUploader::Pdf
 end
