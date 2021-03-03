@@ -1,6 +1,9 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+
+  get '/cpf_cnpj/:cpf_cnpj', to:'general#search_info'
+
   concern :notifiable do
     resources :notifications, only: [:index, :show] do
       patch :mark_as_read, on: :member
