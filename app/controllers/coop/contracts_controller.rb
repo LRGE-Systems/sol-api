@@ -11,6 +11,7 @@ module Coop
         document_number: params[:documentNumber] ,
         document_type: params[:documentType] ,
       )
+      contract.status = :signed
       contract.save!
       render json: contract.document.try(:file).try(:url)
     end
