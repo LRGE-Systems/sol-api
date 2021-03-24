@@ -16,7 +16,7 @@ gem 'api-pagination'
 gem 'http_accept_language'
 gem 'sidekiq'
 gem 'redis-namespace'
-gem 'whenever', require: false
+gem 'whenever'
 gem 'decent_exposure'
 gem 'paper_trail'
 gem 'geocoder'

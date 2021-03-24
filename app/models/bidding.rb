@@ -24,7 +24,8 @@ class Bidding < ApplicationRecord
   after_save do 
     if self.waiting?
       BiddingsService::Approve.call(bidding: self)
-      BiddingsService::Ongoing.call(bidding: self) #Hmmm
+      # Bidding::ApprovedToOngoingWorker.perform_async
+      # BiddingsService::Ongoing.call(bidding: self) #Hmmm
     end
   end
 
