@@ -44,7 +44,8 @@ module ReportsService::Contracts
         I18n.t('services.download.contracts.kind.column_8'),
         I18n.t('services.download.contracts.kind.column_9'),
         I18n.t('services.download.contracts.kind.column_10'),
-        I18n.t('services.download.contracts.kind.column_11')
+        I18n.t('services.download.contracts.kind.column_11'),
+        'Documento Anexado',
       ]
     end
 
@@ -81,7 +82,8 @@ module ReportsService::Contracts
         contract.proposal.bidding.title,
         contract.proposal.provider.name,
         contract.proposal.provider.document,
-        format_money(contract.price_by_proposal_accepted)
+        format_money(contract.price_by_proposal_accepted),
+        contract.document.document_type
       ]
     end
 
