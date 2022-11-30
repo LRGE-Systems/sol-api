@@ -5,6 +5,10 @@ class User < ApplicationRecord
   include ::PasswordSkippable
   include ::I18nable
 
+  belongs_to :organization
+
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+
   mount_uploader :avatar, AvatarUploader
 
   versionable ignore: %i[

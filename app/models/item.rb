@@ -2,6 +2,9 @@ class Item < ApplicationRecord
   include Item::Search
   include ::Sortable
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+  
   versionable
 
   attr_accessor :children_classification_id

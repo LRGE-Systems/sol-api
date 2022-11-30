@@ -61,23 +61,29 @@ module Administrator
     end
 
     def resources
-      providers
+      providers.for_user(current_user)
     end
 
     def find_providers
-      Provider.accessible_by(current_ability).includes(:address)
+      Provider.for_user(current_user).accessible_by(current_ability).includes(:address)
     end
 
     def individual_params
-      provider_params
+      pr = provider_params
+      pr[:organization] = current_user.organization
+      pr
     end
 
     def company_params
-      provider_params
+      pr = provider_params
+      pr[:organization] = current_user.organization
+      pr
     end
 
     def provider_params
-      params.require(:provider).permit(*PERMITTED_PARAMS)
+      pr = params.require(:provider).permit(*PERMITTED_PARAMS)
+      pr[:organization] = current_user.organization
+      pr
     end
 
     def blocked?

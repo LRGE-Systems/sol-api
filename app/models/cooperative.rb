@@ -3,6 +3,9 @@ class Cooperative < ApplicationRecord
   include ::Sortable
   include ::AddressableConcern
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+
   versionable
 
   has_one :legal_representative, as: :representable, dependent: :destroy

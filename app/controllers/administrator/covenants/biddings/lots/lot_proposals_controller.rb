@@ -19,11 +19,11 @@ module Administrator
     end
 
     def resources
-      lot_proposals
+      lot_proposals.for_user(current_user)
     end
 
     def find_lot_proposals
-      LotProposal.accessible_by(current_ability).active_and_orderly_with(lot, [:draft, :abandoned])
+      LotProposal.for_user(current_user).accessible_by(current_ability).active_and_orderly_with(lot, [:draft, :abandoned])
     end
   end
 end

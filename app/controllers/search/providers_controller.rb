@@ -4,7 +4,7 @@ module Search
     private
 
     def base_resources
-      Provider
+      Provider.for_user(current_user)
     end
   end
 end

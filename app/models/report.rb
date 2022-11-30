@@ -1,6 +1,9 @@
 class Report < ApplicationRecord
   include ::Sortable
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+
   belongs_to :admin
 
   enum report_type: {

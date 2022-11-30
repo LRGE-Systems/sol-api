@@ -4,6 +4,9 @@ class Proposal < ApplicationRecord
 
   versionable
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+  
   attr_accessor :import_creating
 
   before_destroy do

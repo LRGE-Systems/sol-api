@@ -29,11 +29,11 @@ module Administrator
     end
 
     def resources
-      biddings
+      biddings.for_user(current_user)
     end
 
     def find_biddings
-      covenant.biddings.accessible_by(current_ability).not_draft
+      covenant.biddings.for_user(current_user).accessible_by(current_ability).not_draft
     end
 
     def bidding_params

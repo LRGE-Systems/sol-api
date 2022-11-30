@@ -19,11 +19,11 @@ module Administrator
     end
 
     def resources
-      lots
+      lots.for_user(current_user)
     end
 
     def find_lots
-      bidding.lots.accessible_by(current_ability)
+      bidding.for_user(current_user).lots.for_user(current_user).accessible_by(current_ability)
     end
   end
 end

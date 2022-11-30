@@ -25,15 +25,17 @@ module Administrator
     end
 
     def resources
-      suppliers
+      suppliers.for_user(current_user)
     end
 
     def find_suppliers
-      Supplier.accessible_by(current_ability)
+      Supplier.for_user(current_user).accessible_by(current_ability)
     end
 
     def supplier_params
-      params.require(:supplier).permit(*PERMITTED_PARAMS)
+      pr = params.require(:supplier).permit(*PERMITTED_PARAMS)
+      pr[:organization] = current_user.organization
+      pr
     end
   end
 end

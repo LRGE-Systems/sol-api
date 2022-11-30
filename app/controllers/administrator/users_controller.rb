@@ -25,15 +25,17 @@ module Administrator
     end
 
     def resources
-      users
+      users.for_user(current_user)
     end
 
     def find_users
-      User.accessible_by(current_ability)
+      User.for_user(current_user).accessible_by(current_ability)
     end
 
     def user_params
-      params.require(:user).permit(*PERMITTED_PARAMS)
+       pr = params.require(:user).permit(*PERMITTED_PARAMS)
+       pr[:organization] = current_user.organization
+       pr
     end
   end
 end

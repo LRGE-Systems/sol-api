@@ -4,6 +4,9 @@ class Lot < ApplicationRecord
 
   versionable
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+
   mount_uploader :lot_proposal_import_file, FileUploader
 
   enum status: { draft: 0, waiting: 1, triage: 2, accepted: 3, failure: 4, desert: 5, canceled: 6 }

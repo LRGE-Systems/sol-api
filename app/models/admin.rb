@@ -5,6 +5,9 @@ class Admin < ApplicationRecord
   include ::PasswordSkippable
   include ::I18nable
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+
   versionable ignore: %i[
     confirmation_token confirmation_sent_at confirmed_at current_sign_in_at
     current_sign_in_ip last_sign_in_at last_sign_in_ip name phone

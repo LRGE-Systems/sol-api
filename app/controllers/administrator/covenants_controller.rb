@@ -21,15 +21,17 @@ module Administrator
     end
 
     def resources
-      covenants
+      covenants.for_user(current_user)
     end
 
     def find_covenants
-      Covenant.accessible_by(current_ability)
+      Covenant.for_user(current_user).accessible_by(current_ability)
     end
 
     def covenant_params
-      params.require(:covenant).permit(*PERMITTED_PARAMS)
+      pr = params.require(:covenant).permit(*PERMITTED_PARAMS)
+      pr[:organization] = current_user.organization
+      pr
     end
   end
 end

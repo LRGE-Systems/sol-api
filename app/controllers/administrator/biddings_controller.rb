@@ -14,11 +14,11 @@ module Administrator
     end
 
     def resources
-      biddings
+      biddings.for_user(current_user)
     end
 
     def find_biddings
-      Bidding.accessible_by(current_ability)
+      Bidding.for_user(current_user).accessible_by(current_ability)
     end
   end
 end

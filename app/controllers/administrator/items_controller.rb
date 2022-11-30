@@ -30,6 +30,7 @@ module Administrator
 
     def assign_owner
       item.owner = current_user
+      item.organization = current_user.organization
     end
 
     def resource
@@ -37,15 +38,17 @@ module Administrator
     end
 
     def resources
-      items
+      items.for_user(current_user)
     end
 
     def find_items
-      Item.accessible_by(current_ability).includes(:owner, :classification)
+      Item.for_user(current_user).accessible_by(current_ability).includes(:owner, :classification)
     end
 
     def item_params
-      params.require(:item).permit(*PERMITTED_PARAMS)
+      pr = params.require(:item).permit(*PERMITTED_PARAMS)
+      pr[:organization] = current_user.organization
+      pr
     end
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_23_212351) do
+ActiveRecord::Schema.define(version: 2022_11_29_212322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,9 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.string "name", null: false
     t.integer "role", default: 2
     t.integer "locale", default: 0, null: false
+    t.bigint "organization_id"
     t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["organization_id"], name: "index_admins_on_organization_id"
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
@@ -100,10 +102,12 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.string "proposal_import_file"
     t.bigint "reopen_reason_contract_id"
     t.bigint "spreadsheet_report_id"
+    t.bigint "organization_id"
     t.index ["classification_id"], name: "index_biddings_on_classification_id"
     t.index ["covenant_id"], name: "index_biddings_on_covenant_id"
     t.index ["edict_document_id"], name: "index_biddings_on_edict_document_id"
     t.index ["merged_minute_document_id"], name: "index_biddings_on_merged_minute_document_id"
+    t.index ["organization_id"], name: "index_biddings_on_organization_id"
     t.index ["reopen_reason_contract_id"], name: "index_biddings_on_reopen_reason_contract_id"
     t.index ["spreadsheet_report_id"], name: "index_biddings_on_spreadsheet_report_id"
   end
@@ -160,6 +164,8 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.string "cnpj"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "organization_id"
+    t.index ["organization_id"], name: "index_cooperatives_on_organization_id"
   end
 
   create_table "covenants", force: :cascade do |t|
@@ -174,9 +180,11 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.bigint "admin_id"
     t.float "estimated_cost"
     t.bigint "city_id"
+    t.bigint "organization_id"
     t.index ["admin_id"], name: "index_covenants_on_admin_id"
     t.index ["city_id"], name: "index_covenants_on_city_id"
     t.index ["cooperative_id"], name: "index_covenants_on_cooperative_id"
+    t.index ["organization_id"], name: "index_covenants_on_organization_id"
   end
 
   create_table "device_tokens", force: :cascade do |t|
@@ -261,7 +269,9 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.bigint "classification_id"
     t.bigint "code"
     t.integer "unit_id"
+    t.bigint "organization_id"
     t.index ["classification_id"], name: "index_items_on_classification_id"
+    t.index ["organization_id"], name: "index_items_on_organization_id"
     t.index ["owner_type", "owner_id"], name: "index_items_on_owner_type_and_owner_id"
   end
 
@@ -324,8 +334,10 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.bigint "supplier_id"
     t.decimal "delivery_price"
     t.bigint "parent_id"
+    t.bigint "organization_id"
     t.index ["lot_id", "supplier_id"], name: "index_lot_proposals_on_lot_id_and_supplier_id", unique: true
     t.index ["lot_id"], name: "index_lot_proposals_on_lot_id"
+    t.index ["organization_id"], name: "index_lot_proposals_on_organization_id"
     t.index ["proposal_id"], name: "index_lot_proposals_on_proposal_id"
     t.index ["supplier_id"], name: "index_lot_proposals_on_supplier_id"
   end
@@ -343,7 +355,9 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.float "estimated_cost_total"
     t.string "lot_proposal_import_file"
     t.integer "lot_proposals_count"
+    t.bigint "organization_id"
     t.index ["bidding_id"], name: "index_lots_on_bidding_id"
+    t.index ["organization_id"], name: "index_lots_on_organization_id"
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -404,6 +418,12 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
+  create_table "organizations", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "proposal_imports", force: :cascade do |t|
     t.bigint "provider_id"
     t.bigint "bidding_id"
@@ -426,7 +446,9 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "sent_updated_at"
+    t.bigint "organization_id"
     t.index ["bidding_id"], name: "index_proposals_on_bidding_id"
+    t.index ["organization_id"], name: "index_proposals_on_organization_id"
     t.index ["provider_id"], name: "index_proposals_on_provider_id"
   end
 
@@ -444,6 +466,8 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "blocked", default: false, null: false
+    t.bigint "organization_id"
+    t.index ["organization_id"], name: "index_providers_on_organization_id"
   end
 
   create_table "reports", force: :cascade do |t|
@@ -455,7 +479,9 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.text "error_backtrace"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "organization_id"
     t.index ["admin_id"], name: "index_reports_on_admin_id"
+    t.index ["organization_id"], name: "index_reports_on_organization_id"
   end
 
   create_table "returned_lot_group_items", force: :cascade do |t|
@@ -499,7 +525,9 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.bigint "provider_id"
     t.string "avatar"
     t.integer "locale", default: 0, null: false
+    t.bigint "organization_id"
     t.index ["email"], name: "index_suppliers_on_email", unique: true
+    t.index ["organization_id"], name: "index_suppliers_on_organization_id"
     t.index ["provider_id"], name: "index_suppliers_on_provider_id"
     t.index ["reset_password_token"], name: "index_suppliers_on_reset_password_token", unique: true
   end
@@ -536,8 +564,10 @@ ActiveRecord::Schema.define(version: 2021_03_23_212351) do
     t.bigint "role_id"
     t.string "avatar"
     t.integer "locale", default: 0, null: false
+    t.bigint "organization_id"
     t.index ["cooperative_id"], name: "index_users_on_cooperative_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["organization_id"], name: "index_users_on_organization_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
   end

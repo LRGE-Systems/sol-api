@@ -35,15 +35,17 @@ module Administrator
     end
 
     def resources
-      cooperatives
+      cooperatives.for_user(current_user)
     end
 
     def find_cooperatives
-      Cooperative.accessible_by(current_ability).includes(:address)
+      Cooperative.for_user(current_user).accessible_by(current_ability).includes(:address)
     end
 
     def cooperative_params
-      params.require(:cooperative).permit(*PERMITTED_PARAMS)
+      pr = params.require(:cooperative).permit(*PERMITTED_PARAMS)
+      pr[:organization] = current_user.organization
+      pr
     end
   end
 end

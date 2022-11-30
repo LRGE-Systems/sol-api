@@ -22,19 +22,21 @@ module Administrator
     end
 
     def resources
-      reports
+      reports.for_user(current_user)
     end
 
     def default_sort_scope
-      resources
+      resources.for_user(current_user)
     end
 
     def find_reports
-      Report.where(filter_params).accessible_by(current_ability)
+      Report.for_user(current_user).where(filter_params).accessible_by(current_ability)
     end
 
     def report_params
-      params.require(:report).permit(*PERMITTED_PARAMS)
+      pr = params.require(:report).permit(*PERMITTED_PARAMS)
+      pr[:organization] = current_user.organization
+      pr
     end
 
     def report_service

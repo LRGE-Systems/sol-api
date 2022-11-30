@@ -4,6 +4,9 @@ class Bidding < ApplicationRecord
 
   versionable
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+
   mount_uploader :proposal_import_file, FileUploader
 
   attr_accessor :skip_cloning_validations, :force_failure

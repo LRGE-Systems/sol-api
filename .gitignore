@@ -71,7 +71,7 @@ yarn-error.log*
 /db/*.sqlite3
 /db/*.sqlite3-journal
 *.rdb
-
+/postgres-data/
 
 # dotfiles
 .env
@@ -90,7 +90,7 @@ yarn-error.log*
 
 # dev tasks
 /lib/tasks/boot/*
-lib/tasks/setup/AR_BR_MUN_2018.csv
+# lib/tasks/setup/AR_BR_MUN_2018.csv
 
 # generated pdf documents
 /spec/fixtures/myfiles/*_contract_*.html

@@ -1,6 +1,9 @@
 class Covenant < ApplicationRecord
   versionable
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+
   before_validation :ensure_estimated_cost
 
   attribute :estimated_cost, :money

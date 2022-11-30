@@ -4,7 +4,7 @@ module Search
     private
 
     def base_resources
-      Item
+      Item.for_user(current_user)
     end
   end
 end

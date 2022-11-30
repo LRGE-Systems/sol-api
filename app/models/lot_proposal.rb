@@ -4,6 +4,9 @@ class LotProposal < ApplicationRecord
 
   versionable
 
+  belongs_to :organization
+  scope :for_user, lambda{ |user| where(:organization => user.organization) }
+  
   before_save :update_price_total
 
   belongs_to :lot, counter_cache: true
