@@ -8,8 +8,8 @@ class CreateVersions < ActiveRecord::Migration[5.2]
       t.integer  :item_id,   null: false
       t.string   :event,     null: false
       t.string   :whodunnit
-      t.jsonb    :object
-      t.jsonb    :object_changes
+      t.json    :object
+      t.json    :object_changes
 
       # Known issue in MySQL: fractional second precision
       # -------------------------------------------------
