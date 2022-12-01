@@ -3,10 +3,11 @@ module Abilities::Admin
     include CanCan::Ability
 
     INTEGRATION_MODELS = [
-      Covenant, Group, Cooperative, Item, GroupItem
+      # Covenant, Group, Cooperative, Item, GroupItem
     ].freeze
 
     NOT_INTEGRATION_MODELS = [
+      Covenant, Group, Cooperative, Item, GroupItem,
       Contract, Bidding, Proposal, Lot, LotProposal, Admin, Provider, Supplier,
       Unit, User, Notification, Report
     ].freeze

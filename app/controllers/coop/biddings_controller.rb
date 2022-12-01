@@ -28,11 +28,13 @@ module Coop
     end
 
     def resources
-      biddings
+      biddings.for_user(current_cooperative)
     end
 
     def bidding_params
-      params.require(:bidding).permit(*PERMITTED_PARAMS)
+      pr = params.require(:bidding).permit(*PERMITTED_PARAMS)
+      pr[:organization_id] = current_cooperative.organization_id
+      pr
     end
   end
 end

@@ -78,7 +78,9 @@ module Coop
     end
 
     def lot_params
-      params.require(:lot).permit(*PERMITTED_PARAMS)
+      pr = params.require(:lot).permit(*PERMITTED_PARAMS)
+      pr[:organization_id] = current_cooperative.organization_id
+      pr
     end
   end
 end

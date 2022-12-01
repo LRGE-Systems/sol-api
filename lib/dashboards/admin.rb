@@ -14,9 +14,9 @@ module Dashboards
       return if bounds.invalid?
 
       {
-        cooperatives_total: ::Cooperative.count,
-        providers_total: ::Provider.count,
-        ongoing_licitations_total: ::Bidding.in_progress_count,
+        cooperatives_total: ::Cooperative.for_user(@admin).count,
+        providers_total: ::Provider.for_user(@admin).count,
+        ongoing_licitations_total: ::Bidding.for_user(@admin).in_progress_count,
         markers: markers,
         notifications: serialized_notifications
       }
@@ -70,11 +70,11 @@ module Dashboards
     end
 
     def cooperatives
-      ::Cooperative.by_viewport(bounds).includes(:address)
+      ::Cooperative.for_user(@admin).by_viewport(bounds).includes(:address)
     end
 
     def providers
-      ::Provider.by_viewport(bounds).includes(:address)
+      ::Provider.for_user(@admin).by_viewport(bounds).includes(:address)
     end
   end
 end

@@ -2,7 +2,7 @@ class ProvidersController < ApplicationController
   include CrudController
 
   PERMITTED_PARAMS = [
-    :name, :document, :type,
+    :name, :document, :type, :organization_id,
 
     address_attributes: [
       :id, :address, :number, :neighborhood, :city_id, :cep, :complement,
@@ -23,7 +23,7 @@ class ProvidersController < ApplicationController
     ],
 
     suppliers_attributes: [
-      :name, :email, :phone, :cpf, :password, :password_confirmation
+      :name, :email, :phone, :cpf, :password, :password_confirmation, :organization_id
     ],
 
     attachments_attributes: [
@@ -44,6 +44,10 @@ class ProvidersController < ApplicationController
   end
 
   def provider_params
-    params.require(:provider).permit(*PERMITTED_PARAMS)
+    pr = params.require(:provider).permit(*PERMITTED_PARAMS)
+    org = Organization.find(params[:organization_id])
+    pr[:organization_id] = org.id
+    pr[:suppliers_attributes][0][:organization_id] = org.id
+    pr
   end
 end

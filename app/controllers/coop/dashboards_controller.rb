@@ -15,7 +15,7 @@ module Coop
     end
 
     def find_biddings
-      current_cooperative.biddings.active.sorted
+      current_cooperative.biddings.for_user(current_cooperative).active.sorted
     end
   end
 end

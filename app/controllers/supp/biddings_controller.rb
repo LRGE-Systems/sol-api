@@ -14,11 +14,11 @@ module Supp
     end
 
     def resources
-      biddings
+      biddings.for_user(current_provider)
     end
 
     def find_biddings
-      Bidding.by_provider(current_provider).accessible_by(current_ability).distinct('biddings.id')
+      Bidding.for_user(current_provider).by_provider(current_provider).accessible_by(current_ability).distinct('biddings.id')
     end
   end
 end

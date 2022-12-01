@@ -59,3 +59,10 @@ O projeto conta com a gem Guard que permite rodar os testes automaticamente ao e
 ```bash
  guard
 ```
+
+## Pre polulate
+
+Need database to be prepopulated with the follwed data:
+
+- City and states (automatic, rails task)
+- Roles

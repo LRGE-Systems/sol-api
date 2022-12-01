@@ -14,11 +14,11 @@ module Coop
     end
 
     def resources
-      covenants
+      covenants.for_user(current_cooperative)
     end
 
     def find_covenants
-      current_cooperative.covenants.accessible_by(current_ability)
+      current_cooperative.covenants.for_user(current_cooperative).accessible_by(current_ability)
     end
   end
 end

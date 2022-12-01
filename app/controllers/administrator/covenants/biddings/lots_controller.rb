@@ -23,7 +23,7 @@ module Administrator
     end
 
     def find_lots
-      bidding.for_user(current_user).lots.for_user(current_user).accessible_by(current_ability)
+      bidding.lots.for_user(current_user).accessible_by(current_ability)
     end
   end
 end

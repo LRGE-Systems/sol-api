@@ -83,16 +83,21 @@ module Supp
     end
 
     def resources
-      proposals
+      proposals.for_user(current_provider)
     end
 
     def proposal_params
-      params.require(:proposal).permit(*PERMITTED_PARAMS)
+      pr = params.require(:proposal).permit(*PERMITTED_PARAMS)
+      pr[:organization_id] = current_provider.organization_id
+      pr[:lot_proposals_attributes][0][:organization_id] = current_provider.organization_id
+      puts "puta que pariuy!!!!!!!!!!!"
+      puts pr
+      pr
     end
 
     # we wont list draft proposals
     def find_proposals
-      bidding.proposals.accessible_by(current_ability).where.not(status: :draft)
+      bidding.proposals.for_user(current_provider).accessible_by(current_ability).where.not(status: :draft)
     end
   end
 end

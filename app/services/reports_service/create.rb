@@ -26,7 +26,7 @@ module ReportsService
 
     def create_report
       execute_or_rollback do
-        @report = Report.create!(admin: admin, report_type: report_type.try(:to_sym))
+        @report = Report.create!(organization_id: admin.organization_id ,admin: admin, report_type: report_type.try(:to_sym))
       end
     end
 

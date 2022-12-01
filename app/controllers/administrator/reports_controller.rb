@@ -35,7 +35,7 @@ module Administrator
 
     def report_params
       pr = params.require(:report).permit(*PERMITTED_PARAMS)
-      pr[:organization] = current_user.organization
+      pr[:organization_id] = current_user.organization_id
       pr
     end
 

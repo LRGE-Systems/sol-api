@@ -18,7 +18,7 @@ module Coop
     private
 
     def resources
-      providers
+      providers.for_user(current_cooperative)
     end
 
     def resource
@@ -34,7 +34,7 @@ module Coop
     end
 
     def base_providers
-      Provider.with_access.joins(:suppliers).accessible_by(current_ability).distinct(:id).sorted
+      Provider.for_user(current_cooperative).with_access.joins(:suppliers).accessible_by(current_ability).distinct(:id).sorted
     end
 
     def classification_ids

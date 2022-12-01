@@ -20,7 +20,7 @@ module Administrator
     end
 
     def find_proposals
-      bidding.for_user(current_user).proposals.for_user(current_user).accessible_by(current_ability).active_and_orderly
+      bidding.proposals.for_user(current_user).accessible_by(current_ability).active_and_orderly
     end
   end
 end
