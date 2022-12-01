@@ -16,7 +16,7 @@ class Bidding < ApplicationRecord
   after_create :update_title, :update_code
   after_save :update_estimated_cost_total
 
-  attribute :value, :money
+  # attribute :value, :money
 
   enum kind: { unitary: 1, lot: 2, global: 3 }
   enum status: { draft: 0, waiting: 1, approved: 2, ongoing: 3, draw: 4,

@@ -6,7 +6,7 @@ class LotGroupItemLotProposal < ApplicationRecord
   before_validation :ensure_price
   after_save :ensure_group_itens_prices
 
-  attribute :price, :money
+  # attribute :price, :money
 
   belongs_to :lot_group_item
   belongs_to :lot_proposal, touch: true

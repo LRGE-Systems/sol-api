@@ -6,7 +6,7 @@ class Covenant < ApplicationRecord
 
   before_validation :ensure_estimated_cost
 
-  attribute :estimated_cost, :money
+  # attribute :estimated_cost, :money
 
   include Covenant::Search
   include ::Sortable
