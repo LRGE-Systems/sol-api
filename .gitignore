@@ -35,14 +35,14 @@ Thumbs.db
 !/tmp/.keep
 
 # config files
-config/cable.yml
-config/database.yml
-config/secrets.yml
-config/sidekiq.yml
-config/storage.yml
-config/webpacker.yml
+#config/cable.yml
+#config/database.yml
+#config/secrets.yml
+#config/sidekiq.yml
+#config/storage.yml
+#config/webpacker.yml
 
-app/frontend/core/config/secrets.yml
+#app/frontend/core/config/secrets.yml
 
 # Ignore uploaded files in development
 /storage/*
