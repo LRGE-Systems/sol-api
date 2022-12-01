@@ -15,7 +15,7 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
+  adapter: mysql2
   encoding: unicode
   username: lrge
   password: edjfdhasm234
@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: sdc_api_production
-  username: solCaribe
+  username: solcaribe
   password: <%= ENV['API_RB_DATABASE_PASSWORD'] %>
