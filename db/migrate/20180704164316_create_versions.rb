@@ -36,6 +36,6 @@ class CreateVersions < ActiveRecord::Migration[5.2]
     add_index :versions, %i[item_type item_id]
 
     # extensions
-    add_index :versions, :class_name
+    # add_index :versions, :class_name
   end
 end
