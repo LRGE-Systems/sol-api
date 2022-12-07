@@ -7,6 +7,6 @@ module Classification::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(classifications.name)) LIKE unaccent(LOWER(:search))
+    (LOWER(classifications.name)) LIKE (LOWER(:search))
   }
 end

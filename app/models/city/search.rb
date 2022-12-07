@@ -7,6 +7,6 @@ module City::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(cities.name)) LIKE unaccent(LOWER(:search))
+    (LOWER(cities.name)) LIKE (LOWER(:search))
   }
 end

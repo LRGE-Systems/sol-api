@@ -7,7 +7,7 @@ module Provider::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(providers.name)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(providers.document)) LIKE unaccent(LOWER(:search))
+    (LOWER(providers.name)) LIKE (LOWER(:search)) OR
+    (LOWER(providers.document)) LIKE (LOWER(:search))
   }
 end

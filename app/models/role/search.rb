@@ -7,6 +7,6 @@ module Role::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(roles.title)) LIKE unaccent(LOWER(:search))
+    (LOWER(roles.title)) LIKE (LOWER(:search))
   }
 end

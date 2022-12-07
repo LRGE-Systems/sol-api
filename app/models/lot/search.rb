@@ -7,6 +7,6 @@ module Lot::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(lot.name)) LIKE unaccent(LOWER(:search))
+    (LOWER(lot.name)) LIKE (LOWER(:search))
   }
 end

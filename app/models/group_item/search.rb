@@ -7,8 +7,8 @@ module GroupItem::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(items.title)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(items.description)) LIKE unaccent(LOWER(:search))
+    (LOWER(items.title)) LIKE (LOWER(:search)) OR
+    (LOWER(items.description)) LIKE (LOWER(:search))
   }
 
   SEARCH_INCLUDES = :item

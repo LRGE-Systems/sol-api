@@ -7,9 +7,9 @@ module Supplier::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(suppliers.name)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(suppliers.cpf)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(suppliers.phone)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(suppliers.email)) LIKE unaccent(LOWER(:search))
+    (LOWER(suppliers.name)) LIKE (LOWER(:search)) OR
+    (LOWER(suppliers.cpf)) LIKE (LOWER(:search)) OR
+    (LOWER(suppliers.phone)) LIKE (LOWER(:search)) OR
+    (LOWER(suppliers.email)) LIKE (LOWER(:search))
   }
 end

@@ -7,6 +7,6 @@ module Contract::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(contracts.title)) LIKE unaccent(LOWER(:search))
+    (LOWER(contracts.title)) LIKE (LOWER(:search))
   }
 end

@@ -7,8 +7,8 @@ module Bidding::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(biddings.title)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(biddings.description)) LIKE unaccent(LOWER(:search)) OR
-    biddings.covenant_id IN (SELECT c.id FROM covenants c WHERE unaccent(LOWER(c.number)) LIKE unaccent(LOWER(:search)))
+    (LOWER(biddings.title)) LIKE (LOWER(:search)) OR
+    (LOWER(biddings.description)) LIKE (LOWER(:search)) OR
+    biddings.covenant_id IN (SELECT c.id FROM covenants c WHERE (LOWER(c.number)) LIKE (LOWER(:search)))
   }
 end

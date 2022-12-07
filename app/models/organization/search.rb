@@ -7,6 +7,6 @@ module Organization::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(organizations.name)) LIKE unaccent(LOWER(:search))
+    (LOWER(organizations.name)) LIKE (LOWER(:search))
   }
 end

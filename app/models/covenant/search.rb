@@ -7,7 +7,7 @@ module Covenant::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(covenants.number)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(covenants.name)) LIKE unaccent(LOWER(:search))
+    (LOWER(covenants.number)) LIKE (LOWER(:search)) OR
+    (LOWER(covenants.name)) LIKE (LOWER(:search))
   }
 end

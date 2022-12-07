@@ -7,7 +7,7 @@ module Cooperative::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(cooperatives.name)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(cooperatives.cnpj)) LIKE unaccent(LOWER(:search))
+    (LOWER(cooperatives.name)) LIKE (LOWER(:search)) OR
+    (LOWER(cooperatives.cnpj)) LIKE (LOWER(:search))
   }
 end

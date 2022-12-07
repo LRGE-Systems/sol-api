@@ -7,6 +7,6 @@ module Group::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(groups.name)) LIKE unaccent(LOWER(:search))
+    (LOWER(groups.name)) LIKE (LOWER(:search))
   }
 end

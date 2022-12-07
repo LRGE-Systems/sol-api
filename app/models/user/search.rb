@@ -7,9 +7,9 @@ module User::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(users.name)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(users.cpf)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(users.phone)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(users.email)) LIKE unaccent(LOWER(:search))
+    (LOWER(users.name)) LIKE (LOWER(:search)) OR
+    (LOWER(users.cpf)) LIKE (LOWER(:search)) OR
+    (LOWER(users.phone)) LIKE (LOWER(:search)) OR
+    (LOWER(users.email)) LIKE (LOWER(:search))
   }
 end
