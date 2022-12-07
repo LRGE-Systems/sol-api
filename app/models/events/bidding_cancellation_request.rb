@@ -14,8 +14,7 @@ class Events::BiddingCancellationRequest < Event
     # @see https://github.com/rails/arel/issues/288#issuecomment-64015191
     #
     # where("data->>'to' = :status", status: status)
-    arel_data_to = Arel::Nodes::InfixOperation.new('->', arel_table[:data], Arel::Nodes.build_quoted('$.to'))
-    where arel_data_to.eq(status)
+    whereArel.sql("JSON_EXTRACT("+arel_table[:data]+", '$.to', "+status+")")
   end
 
 end
