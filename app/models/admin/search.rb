@@ -7,7 +7,7 @@ module Admin::Search
   include Searchable
 
   SEARCH_EXPRESSION = %q{
-    unaccent(LOWER(admins.name)) LIKE unaccent(LOWER(:search)) OR
-    unaccent(LOWER(admins.email)) LIKE unaccent(LOWER(:search))
+    (LOWER(admins.name)) LIKE (LOWER(:search)) OR
+    (LOWER(admins.email)) LIKE (LOWER(:search))
   }
 end
