@@ -24,13 +24,13 @@ class Supplier < ApplicationRecord
   has_one :contract, as: :refused_by
 
   has_many :access_grants,
-    -> { where 'scopes ~ :scope', scope: :supplier },
+    -> { where 'scopes LIKE :scope', scope: :supplier },
     class_name: 'Doorkeeper::AccessGrant',
     foreign_key: :resource_owner_id,
     dependent: :destroy
 
   has_many :access_tokens,
-    -> { where 'scopes ~ :scope', scope: :supplier },
+    -> { where 'scopes LIKE :scope', scope: :supplier },
     class_name: 'Doorkeeper::AccessToken',
     foreign_key: :resource_owner_id,
     dependent: :destroy

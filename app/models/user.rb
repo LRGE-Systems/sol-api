@@ -27,13 +27,13 @@ class User < ApplicationRecord
   belongs_to :role, optional: true
 
   has_many :access_grants,
-    -> { where 'scopes ~ :scope', scope: :user },
+    -> { where 'scopes LIKE :scope', scope: :user },
     class_name: 'Doorkeeper::AccessGrant',
     foreign_key: :resource_owner_id,
     dependent: :destroy
 
   has_many :access_tokens,
-    -> { where 'scopes ~ :scope', scope: :user },
+    -> { where 'scopes LIKE :scope', scope: :user },
     class_name: 'Doorkeeper::AccessToken',
     foreign_key: :resource_owner_id,
     dependent: :destroy

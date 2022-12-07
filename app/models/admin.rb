@@ -21,13 +21,13 @@ class Admin < ApplicationRecord
   enum role: { viewer: 0, reviewer: 1, general: 2 }
 
   has_many :access_grants,
-    -> { where 'scopes ~ :scope', scope: :admin },
+    -> { where 'scopes LIKE :scope', scope: :admin },
     class_name: 'Doorkeeper::AccessGrant',
     foreign_key: :resource_owner_id,
     dependent: :destroy
 
   has_many :access_tokens,
-    -> { where 'scopes ~ :scope', scope: :admin },
+    -> { where 'scopes LIKE :scope', scope: :admin },
     class_name: 'Doorkeeper::AccessToken',
     foreign_key: :resource_owner_id,
     dependent: :destroy
