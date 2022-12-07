@@ -43,9 +43,9 @@ module Notifications
       return unless receivables.present?
 
       receivable_list.each do |receiver|
-        notification = Notification.create(notification_attributes(receiver))
+        # notification = Notification.create(notification_attributes(receiver))
 
-        ::Notifications::Fcm.delay.call(notification.id) if notification
+        # ::Notifications::Fcm.delay.call(notification.id) if notification
       end
     end
 
