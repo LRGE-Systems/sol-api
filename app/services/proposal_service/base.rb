@@ -4,7 +4,7 @@ module ProposalService
 
     def abandoned_and_update_blockchain!
       proposal.abandoned!
-      raise BlockchainError unless blockchain_update.success?
+      # raise BlockchainError unless blockchain_update.success?
       true
     end
 
@@ -13,16 +13,16 @@ module ProposalService
       return true if proposal.draft?
 
       proposal.draft!
-      raise BlockchainError unless blockchain_update.success?
+      # raise BlockchainError unless blockchain_update.success?
       true
     end
 
     def blockchain_delete
-      Blockchain::Proposal::Delete.call(proposal)
+      # Blockchain::Proposal::Delete.call(proposal)
     end
 
     def blockchain_update
-      Blockchain::Proposal::Update.call(proposal)
+      # Blockchain::Proposal::Update.call(proposal)
     end
   end
 end

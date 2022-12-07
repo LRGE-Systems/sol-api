@@ -39,8 +39,8 @@ module BiddingsService::CancellationRequests
     end
 
     def update_bidding_at_blockchain!
-      response = Blockchain::Bidding::Update.call(bidding)
-      raise BlockchainError unless response.success?
+      # response = Blockchain::Bidding::Update.call(bidding)
+      # raise BlockchainError unless response.success?
     end
 
     def notify

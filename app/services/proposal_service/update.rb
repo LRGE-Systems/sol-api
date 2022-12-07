@@ -20,7 +20,7 @@ module ProposalService
         return proposal_error unless bidding_or_proposal_available?
 
         proposal.update!(params)
-        raise BlockchainError unless blockchain_create_or_update.success?
+        # raise BlockchainError unless blockchain_create_or_update.success?
       end
     end
 
@@ -31,9 +31,9 @@ module ProposalService
     end
 
     def blockchain_create_or_update
-      return Blockchain::Proposal::Create.call(proposal) if proposal.was_draft?
+      # return Blockchain::Proposal::Create.call(proposal) if proposal.was_draft?
 
-      Blockchain::Proposal::Update.call(proposal)
+      # Blockchain::Proposal::Update.call(proposal)
     end
   end
 end

@@ -50,7 +50,7 @@ module ContractsService
     end
 
     def update_contract_blockchain!
-      Blockchain::Contract::Update.call!(contract: contract)
+      # Blockchain::Contract::Update.call!(contract: contract)
     end
 
     def generate_spreadsheet_report

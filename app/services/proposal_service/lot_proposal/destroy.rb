@@ -22,7 +22,7 @@ module ProposalService::LotProposal
         # não criamos/atualizamos/deletamos propostas em rascunho
         return true if proposal.draft?
 
-        raise BlockchainError unless blockchain_delete.success?
+        # raise BlockchainError unless blockchain_delete.success?
       end
     end
 

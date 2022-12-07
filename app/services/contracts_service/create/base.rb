@@ -23,7 +23,7 @@ module ContractsService
     end
 
     def create_contract_at_blockchain!
-      Blockchain::Contract::Create.call!(contract: contract)
+      # Blockchain::Contract::Create.call!(contract: contract)
     end
 
     def contract

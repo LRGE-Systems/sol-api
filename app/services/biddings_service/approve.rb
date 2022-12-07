@@ -30,8 +30,8 @@ module BiddingsService
     end
 
     def create_bidding_at_blockchain!
-      response = Blockchain::Bidding::Create.call(bidding)
-      raise BlockchainError unless response.success?
+      # response = Blockchain::Bidding::Create.call(bidding)
+      # raise BlockchainError unless response.success?
     end
 
     def notify

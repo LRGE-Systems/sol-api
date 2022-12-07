@@ -18,14 +18,14 @@ module BiddingsService
         bidding.ongoing!
         bidding.reload
 
-        raise BlockchainError unless blockchain_bidding_update.success?
+        # raise BlockchainError unless blockchain_bidding_update.success?
 
-        Notifications::Biddings::Ongoing.call(bidding)
+        # Notifications::Biddings::Ongoing.call(bidding)
       end
     end
 
     def blockchain_bidding_update
-      Blockchain::Bidding::Update.call(bidding)
+      # Blockchain::Bidding::Update.call(bidding)
     end
   end
 end

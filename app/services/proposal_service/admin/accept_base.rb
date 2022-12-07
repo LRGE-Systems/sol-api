@@ -19,8 +19,8 @@ module ProposalService::Admin
     end
 
     def update_proposal_at_blockchain!
-      response = Blockchain::Proposal::Update.call(proposal)
-      raise BlockchainError unless response.success?
+      # response = Blockchain::Proposal::Update.call(proposal)
+      # raise BlockchainError unless response.success?
     end
 
     # override

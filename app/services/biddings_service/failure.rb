@@ -45,8 +45,8 @@ module BiddingsService
     end
 
     def update_bidding_blockchain!
-      response = Blockchain::Bidding::Update.call(bidding)
-      raise BlockchainError unless response.success?
+      # response = Blockchain::Bidding::Update.call(bidding)
+      # raise BlockchainError unless response.success?
     end
 
     def save_event!

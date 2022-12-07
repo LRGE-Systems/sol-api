@@ -33,11 +33,11 @@ module ProposalService
     end
 
     def blockchain_proposal_create
-      raise BlockchainError unless blockchain_create.success?
+      # raise BlockchainError unless blockchain_create.success?
     end
 
     def blockchain_create
-      Blockchain::Proposal::Create.call(proposal)
+      # Blockchain::Proposal::Create.call(proposal)
     end
   end
 end

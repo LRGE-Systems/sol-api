@@ -23,7 +23,7 @@ module ProposalService
         update_sent_updated_at
         # order matters here
         proposal.sent!
-        raise BlockchainError unless create_or_update_blockchain?
+        # raise BlockchainError unless create_or_update_blockchain?
       end
     end
 
@@ -32,21 +32,21 @@ module ProposalService
     end
 
     def create_or_update_blockchain?
-      return blockchain_update if blockchain_get.success?
+      # return blockchain_update if blockchain_get.success?
 
       blockchain_create
     end
 
     def blockchain_get
-      Blockchain::Proposal::Get.call(proposal)
+      # Blockchain::Proposal::Get.call(proposal)
     end
 
     def blockchain_update
-      Blockchain::Proposal::Update.call(proposal).success?
+      # Blockchain::Proposal::Update.call(proposal).success?
     end
 
     def blockchain_create
-      Blockchain::Proposal::Create.call(proposal).success?
+      # Blockchain::Proposal::Create.call(proposal).success?
     end
   end
 end

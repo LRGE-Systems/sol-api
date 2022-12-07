@@ -41,9 +41,9 @@ module LotsService
     end
 
     def update_proposal_at_blockchain!
-      response = Blockchain::Proposal::Update.call(lower_sent_proposal)
-      raise BlockchainError unless response.success?
-      proposal.reload
+      # response = Blockchain::Proposal::Update.call(lower_sent_proposal)
+      # raise BlockchainError unless response.success?
+      # proposal.reload
     end
 
     def notify

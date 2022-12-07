@@ -40,8 +40,8 @@ module ProposalService
       proposal.reload
 
       bidding&.proposals&.not_failure.not_draft_or_abandoned&.each do |current|
-        response = Blockchain::Proposal::Update.call(current)
-        raise BlockchainError unless response.success?
+        # response = Blockchain::Proposal::Update.call(current)
+        # raise BlockchainError unless response.success?
       end
     end
 
