@@ -460,6 +460,7 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.2.3)
+    mysql2 (0.5.4)
     nenv (0.3.0)
     net-scp (4.0.0)
       net-ssh (>= 2.6.5, < 8.0.0)
@@ -490,8 +491,10 @@ GEM
       paper_trail-association_tracking (< 2)
       request_store (~> 1.1)
     paper_trail-association_tracking (1.1.1)
+    passenger (6.0.15)
+      rack
+      rake (>= 0.8.1)
     pdfkit (0.8.7.2)
-    pg (1.4.5)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -706,11 +709,12 @@ DEPENDENCIES
   letter_opener
   listen (>= 3.0.5, < 3.2)
   mini_magick
+  mysql2
   newrelic_rpm
   oauth2
   paper_trail (~> 9.2.0)
+  passenger
   pdfkit
-  pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
   puma (~> 3.11)

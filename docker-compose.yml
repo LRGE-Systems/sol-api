@@ -13,13 +13,14 @@ services:
         # environment: 
         #     NODE_ENV: production
     dbsol:
-        image: postgres
+        image: mariadb
         volumes:
-            - ./postgres-data:/var/lib/postgresql/data
+            - ./mariadb-data:/var/lib/mysql
         # restart: always
         ports:
             - 5432:5432
         environment:
-            POSTGRES_PASSWORD: edjfdhasm234
-            POSTGRES_USER: lrge
-            POSTGRES_DB: sdc_api_development
+            MYSQL_PASSWORD: edjfdhasm234
+            MYSQL_USER: lrge
+            MYSQL_DATABASE: sdc_api_development
+            MARIADB_ROOT_PASSWORD: sjdhsjdsjkd
