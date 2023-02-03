@@ -44,7 +44,7 @@ class Supplier < ApplicationRecord
             :phone,
             presence: true
 
-  validates :cpf, cpf: true
+  # validates :cpf, cpf: true
   validates :phone, phone: true
 
   delegate :name, to: :provider, prefix: true, allow_nil: true

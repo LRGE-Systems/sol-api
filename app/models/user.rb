@@ -44,7 +44,7 @@ class User < ApplicationRecord
             :cpf,
             presence: true
 
-  validates :cpf, cpf: true
+  # validates :cpf, cpf: true
 
   delegate :title, :id, to: :role, prefix: true, allow_nil: true
   delegate :name, to: :cooperative, prefix: true, allow_nil: true

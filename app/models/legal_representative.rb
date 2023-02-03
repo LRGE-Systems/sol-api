@@ -13,7 +13,7 @@ class LegalRepresentative < ApplicationRecord
             :cpf,
             presence: true
 
-  validates :cpf, cpf: true
+  # validates :cpf, cpf: true
 
   accepts_nested_attributes_for :address
 end

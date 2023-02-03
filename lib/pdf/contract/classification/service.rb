@@ -4,7 +4,7 @@ module Pdf::Contract::Classification
     private
 
     def template_file_name
-      'contract_service.html'
+      "contract_service.#{contract.user.organization.locale}.html"
     end
   end
 end

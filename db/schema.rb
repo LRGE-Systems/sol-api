@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_29_212322) do
+ActiveRecord::Schema.define(version: 2023_02_03_203720) do
 
   create_table "additives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "bidding_id"
@@ -418,6 +418,10 @@ ActiveRecord::Schema.define(version: 2022_11_29_212322) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "locale"
+    t.string "country"
+    t.string "projectId"
+    t.index ["projectId"], name: "index_organizations_on_projectId", unique: true
   end
 
   create_table "proposal_imports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
