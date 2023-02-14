@@ -67,7 +67,7 @@ module DoorkeeperExtensionResourceOwnerTokenResponse
   end
 
   def admin_params(base_params, resource_owner)
-    base_params.merge({ 'role' => resource_owner.role, 'rules' => rules(resource_owner) })
+    base_params.merge({ 'role' => resource_owner.role, 'rules' => rules(resource_owner), 'organization'=> {id: resource_owner.organization.id, name: resource_owner.organization.name} })
   end
 
   def rules(resource_owner)
