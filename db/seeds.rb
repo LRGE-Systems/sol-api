@@ -81,8 +81,8 @@
             name: cm[:name],
             locale: org[:locale]
         )
-        user.password = 'sol@169!m'
-        user.password_confirmation = 'sol@169!m'
+        user.password = 'sol@1234#!admin'
+        user.password_confirmation = 'sol@1234#!admin'
         user.save!
     end
 end
