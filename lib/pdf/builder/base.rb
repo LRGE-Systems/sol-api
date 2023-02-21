@@ -12,7 +12,7 @@ module Pdf::Builder
       return if html.blank?
 
       kit = PDFKit.new(html, options)
-      kit.to_file(filepath)
+      kit.to_file(filepath.to_s)
 
       filepath.open
     end
