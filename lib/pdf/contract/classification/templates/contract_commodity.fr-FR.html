@@ -1,1317 +1,307 @@
 <html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Times New Roman Bold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
-	{mso-style-name:"Footnote Text\,Footnote\,Footnote Text Char2 Char\,Footnote Text Char Char1 Char1\,Footnote Text Char1 Char Char Char1\,Footnote Text Char Char Char Char Char\,Footnote Text Char1 Char1 Char\,Footnote Text Char Char Char1 Char\,single space\,footnote text";
-	mso-style-link:"Footnote Text Char\,Footnote Char\,Footnote Text Char2 Char Char\,Footnote Text Char Char1 Char1 Char\,Footnote Text Char1 Char Char Char1 Char\,Footnote Text Char Char Char Char Char Char\,Footnote Text Char1 Char1 Char Char\,single space Char";
-	margin:0in;
-	text-align:justify;
-	font-size:10.0pt;
-	font-family:"Times New Roman",serif;}
-span.MsoFootnoteReference
-	{vertical-align:super;}
-p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
-	{mso-style-link:"Body Text Char";
-	margin:0in;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-name:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11\,Colorful List - Accent 11CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLast";
-	mso-style-link:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char\,Colorful List - Accent 11CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLast Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	text-align:justify;
-	punctuation-wrap:simple;
-	text-autospace:none;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{mso-style-name:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11\,Colorful List - Accent 11CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLastCxSpFirst";
-	mso-style-link:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char\,Colorful List - Accent 11CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLast Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	text-align:justify;
-	punctuation-wrap:simple;
-	text-autospace:none;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{mso-style-name:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11\,Colorful List - Accent 11CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLastCxSpMiddle";
-	mso-style-link:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char\,Colorful List - Accent 11CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLast Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	text-align:justify;
-	punctuation-wrap:simple;
-	text-autospace:none;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{mso-style-name:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11\,Colorful List - Accent 11CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLastCxSpLast";
-	mso-style-link:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char\,Colorful List - Accent 11CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLast Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	text-align:justify;
-	punctuation-wrap:simple;
-	text-autospace:none;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.Outline1, li.Outline1, div.Outline1
-	{mso-style-name:Outline1;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.3in;
-	text-indent:-.3in;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.Outline2, li.Outline2, div.Outline2
-	{mso-style-name:Outline2;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.6in;
-	text-indent:-.35in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.Outline3, li.Outline3, div.Outline3
-	{mso-style-name:Outline3;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.95in;
-	text-indent:-.35in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.Outline4, li.Outline4, div.Outline4
-	{mso-style-name:Outline4;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:1.3in;
-	text-indent:-.35in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.Header2-SubClauses, li.Header2-SubClauses, div.Header2-SubClauses
-	{mso-style-name:"Header 2 - SubClauses";
-	mso-style-link:"Header 2 - SubClauses Car";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:10.0pt;
-	margin-left:0in;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.Style7, li.Style7, div.Style7
-	{mso-style-name:Style7;
-	mso-style-link:"Style7 Char";
-	margin:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;
-	font-weight:bold;}
-span.Style7Char
-	{mso-style-name:"Style7 Char";
-	mso-style-link:Style7;
-	font-family:"Times New Roman",serif;
-	font-weight:bold;}
-span.ListParagraphChar
-	{mso-style-name:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char\,Colorful List - Accent 11CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLast Char\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLast Char";
-	mso-style-link:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11\,Colorful List - Accent 11CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLast\,List Paragraph \(numbered \(a\)\)CxSpLastCxSpLast";
-	font-family:"Times New Roman",serif;}
-p.Sec8Clauses, li.Sec8Clauses, div.Sec8Clauses
-	{mso-style-name:"Sec 8 Clauses";
-	margin-top:0in;
-	margin-right:5.95pt;
-	margin-bottom:10.0pt;
-	margin-left:0in;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;
-	font-weight:bold;}
-p.SectionXHeading, li.SectionXHeading, div.SectionXHeading
-	{mso-style-name:"Section X Heading";
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:12.0pt;
-	margin-left:0in;
-	text-align:center;
-	font-size:18.0pt;
-	font-family:"Times New Roman Bold",serif;
-	font-weight:bold;}
-p.COCgcc, li.COCgcc, div.COCgcc
-	{mso-style-name:"COC gcc";
-	mso-style-link:"COC gcc Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;
-	font-weight:bold;}
-span.Header2-SubClausesCar
-	{mso-style-name:"Header 2 - SubClauses Car";
-	mso-style-link:"Header 2 - SubClauses";
-	font-family:"Times New Roman",serif;}
-span.COCgccChar
-	{mso-style-name:"COC gcc Char";
-	mso-style-link:"COC gcc";
-	font-family:"Times New Roman",serif;
-	font-weight:bold;}
-span.FootnoteTextChar
-	{mso-style-name:"Footnote Text Char\,Footnote Char\,Footnote Text Char2 Char Char\,Footnote Text Char Char1 Char1 Char\,Footnote Text Char1 Char Char Char1 Char\,Footnote Text Char Char Char Char Char Char\,Footnote Text Char1 Char1 Char Char\,single space Char";
-	mso-style-link:"Footnote Text\,Footnote\,Footnote Text Char2 Char\,Footnote Text Char Char1 Char1\,Footnote Text Char1 Char Char Char1\,Footnote Text Char Char Char Char Char\,Footnote Text Char1 Char1 Char\,Footnote Text Char Char Char1 Char\,single space\,footnote text";
-	font-family:"Times New Roman",serif;}
-span.BodyTextChar
-	{mso-style-name:"Body Text Char";
-	mso-style-link:"Body Text";
-	font-family:"Times New Roman",serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
- /* Page Definitions */
- @page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
-@page WordSection2
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection2
-	{page:WordSection2;}
-@page WordSection3
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection3
-	{page:WordSection3;}
- /* List Definitions */
- ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
-
-</head>
-
-<body lang=EN-US style='word-wrap:break-word'>
-
-<div class=WordSection1>
-
-<p class=SectionXHeading><span lang=FR>Acte d’Engagement - Fournitures</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:12.0pt;
-margin-left:0in'><span lang=FR>AUX TERMES DU PRESENT MARCHE <i><span
-style=''>@@number_contract@@</span></i> conclu le <i><span
-style=''>@@date_contract@@</span></i><span
-style=''></span>.</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:12.0pt;
-margin-left:0in'><span lang=FR>ENTRE </span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:.5in;text-align:justify'><span lang=FR>(1) <i><span
-style=''>@@name_cooperative@@</span>
-de <span style=''>@@cooperative_address@@</span>
-</i>(ci-après dénommé l’«&nbsp;Acheteur&nbsp;») d’une part, et </span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:.5in;text-align:justify'><span lang=FR>(2<span style='background:
-yellow'>) <i>@@name_provider@@</i></span><i></i> de
-<i><span style=''>@@provider_address@@</span>
-</i>(ci-après dénommé le «&nbsp;Fournisseur&nbsp;»), d’autre part&nbsp;:</span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt'><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:12.0pt;
-margin-left:0in;text-align:justify'><span lang=FR>ATTENDU QUE l’Acheteur a
-lancé une demande de Cotations pour certaines Fournitures et certains Services
-connexes, à savoir <i><span style=''>@@title_bidding@@, @@lot_name@@</span> </i>tels décris
-dans l’annexe 1<i>, </i>et a accepté une Cotation du Fournisseur pour la
-livraison de ces Fournitures et la prestation de ces Services connexes., </span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:12.0pt;
-margin-left:0in;text-align:justify'><span lang=FR>Il a été arrêté et convenu ce
-qui suit&nbsp;:</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in'><span lang=FR>1.         Dans ce Marché, les mots et
-expressions auront le même sens que celui qui leur est respectivement donné
-dans les clauses du Marché auxquelles il est fait référence.</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in'><span lang=FR>2.         Les documents ci-après sont réputés
-faire partie intégrante du Marché et être lus et interprétés à ce titre. Le
-présent Acte d’Engagement prévaudra sur toute autre pièce constitutive du
-Marché.</span><span lang=FR>  </span></p>
-
-<p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:63.0pt;text-indent:-.25in'><span lang=FR>(a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=FR>La
-Cotation du Fournisseur – Annexe 1;</span></p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:63.0pt;text-indent:-.25in'><span lang=FR>(b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=FR>Les
-Conditions du Marché&nbsp;;</span></p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:63.0pt;text-indent:-.25in'><span lang=FR>(c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=FR>Les
-Spécifications et exigences de l’Acheteur (y compris le Calendrier de
-livraison)</span></p>
-
-<p class=MsoListParagraphCxSpLast style='margin-top:6.0pt;margin-right:0in;
-margin-bottom:12.0pt;margin-left:63.0pt;text-indent:-.25in'><span lang=FR>(d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=FR>Tout
-autre document listé comme faisant partie du contrat.</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:12.0pt;
-margin-left:28.35pt;text-align:justify;text-indent:-28.35pt'><span lang=FR>3.       En
-contrepartie des paiements que l’Acheteur doit effectuer au bénéfice du Fournisseur,
-comme cela est indiqué ci-après, le Fournisseur convient avec l’Acheteur par
-les présentes de livrer les Fournitures et de rendre les Services connexes, et
-de remédier aux défauts de ces Fournitures et Services connexes conformément à
-tous égards aux dispositions du Marché.</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:12.0pt;
-margin-left:28.35pt;text-align:justify;text-indent:-28.35pt'><span lang=FR>4.       L’Acheteur
-convient par les présentes de payer au Fournisseur, en contrepartie des
-Fournitures et Services connexes, et des rectifications apportées à leurs
-défauts et insuffisances, le prix du Marché, ou tout autre montant dû au titre
-du Marché, et ce, aux échéances et de la façon prescrites par le Marché.</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:12.0pt;
-margin-left:28.35pt;text-align:justify;text-indent:-28.35pt'><span lang=FR>5.     
-<span style='background:yellow'>L’offre électronique et l’acceptation par le
-biais de la Solution de soumission d’Offres  en Ligne – SOL par chaque Partie
-doivent faire exécuter cet accord par les Parties jusqu’à présent de leur
-propre volonté, sans aucune coercition ou influence indue et doivent être
-valides et juridiquement contraignants pour les deux parties à partir de la
-date ci-dessus écrite.</span></span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:12.0pt;
-margin-left:0in;text-align:justify'><span lang=FR>EN FOI DE QUOI les parties au
-présent Marché ont signé le présent document conformément aux lois de <i><span
-style='background:yellow'>[insérer le nom du pays dont la législation est
-applicable au Marché]</span></i><span style='background:yellow'>,</span> les
-jour et année mentionnés ci-dessous.</span></p>
-
-<p class=MsoNormal style='background:white'><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in'><b><span lang=FR>Pour et au nom de l’Acheteur</span></b></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in'><a name="_Hlk71041189"><span lang=FR style='font-size:10.5pt;
-font-family:"Segoe UI",sans-serif'>Accepté numériquement sur la Solution de <span
-style='background:yellow'>Soumission</span> d’Offres <span style='color:black;
-background:#D4D4D4'>en</span> Ligne – SOL par&nbsp;</span></a></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in'><span lang=FR> <i>[<span style='background:yellow'>insérer le
-nom et le titre de la personne habilitée à signer</span>]</i></span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in'><i><span lang=FR> </span></i></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in'><b><span lang=FR>Pour et au nom de du Fournisseur </span></b></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in'><span lang=FR>Accepté numériquement sur la Solution de <span
-style='background:yellow'>Soumission</span> d’Offres en Ligne – SOL par</span></p>
-
-<p class=MsoNormal><span lang=FR> <i>[<span style='background:yellow'>insérer
-el nom et le titre de la personne habilitée à signer]</span></i></span></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><i><span lang=FR>&nbsp;</span></i></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-</div>
-
-<span lang=FR style='font-size:12.0pt;font-family:"Times New Roman",serif'><br
-clear=all style='page-break-before:always'>
-</span>
-
-<div class=WordSection2>
-
-<p class=MsoNormal align=center style='margin-bottom:12.0pt;text-align:center'><b><span
-lang=FR style='font-size:18.0pt'>Conditions du Marché - Fournitures</span></b></p>
-
-<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=637
- style='border-collapse:collapse;border:none'>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-left:.75in;text-indent:-.25in'><span lang=FR
-  style='color:black;font-weight:normal'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Définitions</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Header2-SubClauses style='margin-left:26.1pt;text-indent:-26.1pt'><span
-  lang=FR>1.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Les termes et expressions ci-après auront la
-  signification qui leur est attribuée ici&nbsp;:</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(a)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR> «&nbsp;La Banque&nbsp;» signifie la Banque
-  internationale pour la Reconstruction et le Développement (BIRD), ou
-  l’Association internationale pour le Développement (AID).</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(b)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>«&nbsp;CM&nbsp;» signifie les Conditions du
-  Marché.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(c)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Le «&nbsp;Marché&nbsp;» signifie l’Acte
-  d’Engagement signé par l’Acheteur et le Fournisseur, ainsi que les documents
-  contractuels visés dans ledit Acte d’Engagement, y compris toutes les pièces
-  jointes, annexes et tous les documents qui y ont été inclus par voie de
-  référence.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(d)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Les «&nbsp;Documents contractuels&nbsp;»
-  désignent les documents visés dans l’Accord de Marché, y compris les avenants
-  éventuels auxdits documents.</span></p>
-  <p class=Outline1 style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt;page-break-after:
-  auto'><span lang=FR>(e)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR> Le «&nbsp;Prix du Marché&nbsp;» signifie le prix
-  payable au Fournisseur, comme spécifie dans l’article 6.1 des CM, sous
-  réserve de toute addition et modification ou de toute déduction audit prix,
-  qui pourra être effectuée en vertu du Marché.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(f)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>«&nbsp;Jour&nbsp;» désigne un jour calendaire.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(g)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR> «&nbsp;Achèvement&nbsp;» signifie la prestation
-  complète des Services connexes par le Fournisseur, conformément aux modalités
-  stipulées dans le Marché.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(h)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR> Le terme «&nbsp;Fournitures&nbsp;» signifie tous
-  les produits, matières premières, machines et matériels et/ou tous autres
-  matériaux que le Fournisseur est tenu de livrer à l’Acheteur en exécution du
-  Marché.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(i)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR> Le terme «&nbsp;Partie&nbsp;» signifie
-  l’Acheteur ou le Fournisseur, selon le contexte, et «&nbsp;Parties&nbsp;»
-  signifie les deux Parties.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(j)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>L’«&nbsp;Acheteur&nbsp;» signifie l’entité
-  achetant les Fournitures et les Services connexes, telle qu’elle est <b>identifiée
-  dans les CM.</b></span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(k)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Le «&nbsp;Pays de l’Acheteur&nbsp;» signifie le
-  pays identifié à l’article 2 des CM<b>.</b></span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR
-  style='letter-spacing:-.2pt'>(l)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR style='letter-spacing:-.2pt'> Le terme
-  «&nbsp;Services Connexes&nbsp;» désigne les services afférents à la
-  fourniture des biens, tels que l’assurance, l’installation, la formation et
-  la maintenance initiale, ainsi que toute obligation analogue du Fournisseur
-  dans le cadre du Marché.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(m)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-  lang=FR>Un «&nbsp;Sous-traitant&nbsp;» signifie toute personne physique,
-  privée ou entité gouvernementale ou toute combinaison de ces éléments, à qui
-  toute partie des Fournitures ou des Services connexes est sous-traitée par le
-  Fournisseur.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(n)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Le «&nbsp;Fournisseur&nbsp;» signifie toute
-  personne physique, privée ou entité gouvernementale ou toute combinaison de
-  ces éléments, dont l’offre a été acceptée par l’Acheteur et qui est désignée
-  comme tel dans l’Accord de Marché.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.25pt;text-align:justify;text-indent:-27.35pt'><span lang=FR>(o)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR> «&nbsp;Le Site&nbsp;du Projet&nbsp;» signifie le
-  lieu indiqué dans les CM.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-left:.75in;text-indent:-.25in'><span lang=FR
-  style='color:black;font-weight:normal'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Acheteur, pays de l’Acheteur, Site et Destination
-  finale</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR style='font-size:11.0pt;'>2.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>L’Acheteur est&nbsp;: <i><span style=''>@@name_cooperative@@</span></i></span></p>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR style='font-size:11.0pt'>2.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Le Pays de l’Acheteur est&nbsp;: <i><span
-  style=''>@@name_provider@@</span></i></span></p>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR style='font-size:11.0pt'>2.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Les Sites du Projet et Destination/s
-  est/sont&nbsp;: <i><span style='background:yellow'>[insérer le/s nom/s et
-  information détaillée sur le/s lieu/x du/des site/s. lorsqu’applicable.]</span></i></span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-left:.75in;text-indent:-.25in'><span lang=FR
-  style='color:black;font-weight:normal'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Notifications et adresses pour Notifications</span></p>
-  </td>
-  <td width=492 style='width:369.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Style7><span lang=FR style='font-weight:normal'>3.1 Toute
-  Notification donnée par une Partie à l’autre en vertu du Marché doit être par
-  écrit et à l’adresse ci-après en utilisant la méthode la plus rapide
-  disponible comme le courrier électronique avec preuve de réception.</span></p>
-  <p class=MsoNormal style='margin-left:35.2pt;line-height:106%'><u><span
-  lang=FR style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif'><span
-   style='text-decoration:none'>&nbsp;</span></span></u></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:35.2pt;line-height:106%'><b><u><span lang=FR style='line-height:
-  106%'>Adresse pour Notification à l’Acheteur</span></u></b><b><span lang=FR
-  style='line-height:106%'>:</span></b></p>
-  <p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
-  4.0pt;margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%'><span style=''>@@provider_legal_representative_name@@</span></span></i></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
-  margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;background:yellow'>[titre/position]</span></i></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
-  margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;background:yellow'>[département/unité de travail]</span></i></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
-  margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;'>@@provider_address@@</span></i></p>
-  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
-  4.0pt;margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;background:yellow'>[<b>Adresse électronique de courrier</b>]</span></i></p>
-  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
-  4.0pt;margin-left:35.2pt;line-height:106%'><b><u><span lang=FR
-  style='line-height:106%'>Adresse pour Notification au Fournisseur</span></u></b><b><span
-  lang=FR style='line-height:106%'>:</span></b></p>
-  <p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
-  4.0pt;margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;'>@@cooperative_legal_representative_name@@ </span></i></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
-  margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;background:yellow'>[titre/position]</span></i></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
-  margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;background:yellow'>[département/unité de travail]</span></i></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
-  margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;'>@@cooperative_address@@</span></i></p>
-  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
-  4.0pt;margin-left:35.2pt;line-height:106%'><i><span lang=FR style='line-height:
-  106%;background:yellow'>[<b>Adresse électronique de courrier</b>]</span></i></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-left:.75in;text-indent:-.25in'><span lang=FR
-  style='color:black;font-weight:normal'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR> Droit applicable</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:30.6pt;text-align:justify;text-indent:-30.6pt'><span lang=FR>4.1     Le
-  Marché est régi et interprété conformément au droit du pays de l’Acheteur<i>.</i></span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-left:.75in;text-indent:-.25in'><span lang=FR
-  style='color:black;font-weight:normal'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Règlement des litiges</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:.4in;text-align:justify;text-indent:-.4in'><span lang=FR>5.1     </span></p>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  10.0pt;margin-left:48.4pt;text-indent:-.25in'><i><span lang=FR> </span></i><span
-  lang=FR>a) Les deux parties tentent de régler à l’amiable les différends
-  découlant du présent contrat ou en rapport avec celui-là. </span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:48.4pt;text-align:justify;line-height:106%'><b><i><span lang=FR
-  style='line-height:106%'>[</span></i></b></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
-  margin-left:48.6pt;text-align:justify;line-height:106%'><span lang=FR
-  style='line-height:106%'>b) Tous les litiges non résolus découlant du présent
-  contrat ou dans le cadre de celui-là doivent être réglés conformément aux lois
-  du pays de l’acheteur.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc><span lang=FR>6. Montant du Marché</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Style7 style='margin-left:30.6pt;text-indent:-27.0pt'><span lang=FR
-  style='color:black;font-weight:normal'>1.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR style='font-weight:normal'>Le montant du Marché
-  est spécifié dans l’Annexe 1.</span></p>
-  <p class=Style7 style='margin-left:30.6pt'><span lang=FR style='font-weight:
-  normal'>&nbsp;</span></p>
-  <p class=Style7 style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-  margin-left:30.6pt;text-align:justify;text-indent:-27.0pt'><span lang=FR
-  style='color:black;font-weight:normal'>1.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR style='font-weight:normal'>Les prix unitaires
-  facturés par le Fournisseur pour les Fournitures dans le cadre du Marché ne
-  seront pas différents des prix proposés par le Fournisseur et acceptés par
-  l’Acheteur.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc><span lang=FR>7. Modalités de Règlement</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR>7.1   La méthode et conditions de paiement au Fournisseur dans le
-  cadre de ce marché seront comme ci-dessous&nbsp;:</span></p>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR>          <b>À la livraison et à l’acceptation</b> : Cent (100) pour
-  cent du prix du contrat seront payés au fournisseur dans les trente (30)
-  jours suivant la réception des marchandises et la présentation des documents
-  de facture et après la date du certificat d’acceptation de la livraison
-  délivrée par l’acheteur.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-  margin-left:57.7pt;text-align:justify;text-indent:-25.85pt'><span lang=FR> </span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>8. Impôts, Taxes et Droits</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR>8.1 Le fournisseur est entièrement responsable de toutes les taxes,
-  droits, droits de licence, etc., engagés jusqu’à la livraison des
-  marchandises contractées à l’acheteur.</span></p>
-  <p class=Style7 style='margin-left:30.6pt;text-align:justify'><span lang=FR
-  style='font-weight:normal'>&nbsp;</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>9. Sous-Traitants</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR>9.1  Le Fournisseur notifiera par écrit à l’Acheteur tous les
-  contrats de sous‑traitance attribués dans le cadre du Marché s’il ne l’a déjà
-  fait dans la Cotation. Cette notification, fournie dans la Cotation ou
-  ultérieurement, ne dégagera pas la responsabilité du Fournisseur, et ne le
-  libérera d’aucune des obligations qui lui incombent du fait du Marché.</span></p>
-  </td>
- </tr>
- <tr style='height:106.65pt'>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:106.65pt'>
-  <p class=Sec8Clauses><span lang=FR>10.  Spécifications et Normes</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:106.65pt'>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:.5in'><span lang=FR>10.1 Les Fournitures livrées au titre du
-  Marché et les Services connexes doivent satisfaire aux spécifications
-  techniques stipulées dans les Spécifications Techniques et, si aucune norme
-  n’y est indiquée, la norme sera supposée équivalente ou supérieure aux normes
-  officielles dont l’application est appropriée dans le pays d’origine des
-  Fournitures.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>11. Date de Livraison et Date d’Achèvement</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  8.0pt;margin-left:30.6pt;line-height:106%'><span lang=FR style='line-height:
-  106%'>11.1La date de livraison des Fournitures est la suivante : <i><span
-  style='background:yellow'>[Insérer la date de livraison</span>]. </i></span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>12 Garantie</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR>12.1  Le Fournisseur garantit que les Fournitures sont neuves et
-  n’ont jamais été utilisées, qu’elles sont du modèle le plus récent ou
-  courant, et qu’elles comportent toutes les dernières améliorations en matière
-  de conception et de matériaux, sauf disposition contraire du Marché. </span></p>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR>12.2   Le Fournisseur garantit en outre que les Fournitures seront
-  exemptes de tous défauts liés à une action ou à une omission du Fournisseur
-  ou liés à un défaut de conception, de matériaux et de fabrication, de nature
-  à empêcher leur utilisation normale dans les conditions particulières du pays
-  de destination finale.</span></p>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR>12.3   La garantie demeurera pour la période spécifiée dans les lois
-  du pays de l’acheteur.</span></p>
-  <p class=Header2-SubClauses style='margin-left:.4in;text-indent:-.4in'><span
-  lang=FR>          </span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>13 Droits d’Auteur</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Style7 style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
-  margin-left:25.8pt;text-align:justify;text-indent:-25.8pt'><span lang=FR
-  style='font-weight:normal'>13.1 Les droits d’auteur de tous les plans,
-  documents et autres pièces contenant des données et des renseignements
-  fournis à l’Acheteur par le Fournisseur demeureront la propriété du
-  Fournisseur ou, s’ils sont fournis directement à l’Acheteur ou par
-  l’intermédiaire du Fournisseur par une tierce partie, y compris par des
-  Fournisseurs de matériaux, les droits d’auteur desdits matériaux demeureront
-  la propriété de ladite tierce partie.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>14 Fraude et Corruption</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Header2-SubClauses style='margin-left:26.1pt;text-indent:-26.1pt'><span
-  lang=FR>14.1  La Banque exige le respect de ses Directives en matière de
-  lutte contre la Fraude et la Corruption et de ses règles et procédures de
-  sanctions applicables, établies par le Régime des Sanctions du Groupe de la
-  Banque mondiale, comme indiqué dans l’Annexe A des CM.</span></p>
-  <p class=Style7 style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
-  margin-left:25.8pt;text-align:justify;text-indent:-25.8pt'><span lang=FR
-  style='font-weight:normal'>14.2 L’Acheteur exige que le Fournisseur divulgue
-  tous avantages, honoraires ou commissions versés ou qui doivent être versés
-  en rapport avec la procédure de Demande de Cotations ou l’exécution du
-  Marché. Les renseignements divulgués doivent au minimum inclure les noms et
-  l’adresse de chaque agent ou autre partie, le montant et la monnaie ainsi que
-  le motif du versement de l’avantage, honoraires ou commission.</span></p>
-  </td>
- </tr>
- <tr style='height:232.2pt'>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:232.2pt'>
-  <p class=Sec8Clauses><span lang=FR>15 Inspection et Audit par la Banque</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;height:232.2pt'>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  10.0pt;margin-left:26.1pt'><span lang=FR>15.1 En conformité avec le
-  paragraphe 2.2 e de l’Annexe des Conditions du Marché, le Fournisseur
-  permettra et s’assurera que ses agents (qu’ils soient déclarés ou non), ses
-  sous-traitants, Prestataires et personnel, permettent à la Banque, et/ou à
-  des personnes qu’elle désignera, d’inspecter les documents et pièces
-  comptables relatifs à la procédure de passation du marché et/ou à l’exécution
-  du Marché et à les faire vérifier par des auditeurs nommés par la Banque, si
-  la Banque en fait la demande. L’attention du Fournisseur et de ses
-  sous-traitants est attirée sur la Clause 22.1 des CM (Fraude et Corruption)
-  ci-avant qui stipule, entre autres, que le fait d’entraver l’exercice par la
-  Banque de son droit d’examen et de vérification tel que prévu par la présente
-  clause constitue une pratique interdite pouvant conduire à la résiliation du
-  Marché (ainsi qu’à la l’exclusion dans le cadre du régime en vigueur
-  concernant les sanctions de la Banque). </span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>16 Résiliation</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Header2-SubClauses style='margin-left:26.1pt;text-indent:-26.1pt'><span
-  lang=FR>16.1 Résiliation pour non-exécution</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:53.1pt;text-align:justify;text-indent:-27.0pt'><span lang=FR>(a)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>L’Acheteur peut, sans préjudice des autres
-  recours qu’il détient en cas de rupture de marché, notifier par écrit au
-  Fournisseur la résiliation pour non-exécution de la totalité ou d’une partie
-  du Marché&nbsp;:</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:75.5pt;text-align:justify;text-indent:-75.5pt'><span lang=FR><span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>(i)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>si le Fournisseur manque à livrer l’une
-  quelconque ou l’ensemble des Fournitures dans les délais spécifiés dans le
-  Marché ou dans les délais prolongés par l’Acheteur;</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:75.5pt;text-align:justify;text-indent:-75.5pt'><span lang=FR><span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>(ii)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>si le Fournisseur manque à exécuter toute autre
-  obligation au titre du Marché&nbsp;; ou</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:75.5pt;text-align:justify;text-indent:-75.5pt'><span lang=FR><span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>(iii)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Si le Fournisseur, de&nbsp;l’avis de l’Acheteur,
-  s’est livré à des pratiques de fraude ou de corruption, au stade de sa
-  sélection ou lors de l’exécution du Marché. </span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:62.1pt;text-align:justify;text-indent:-27.0pt'><span lang=FR>(b)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>Au cas où l’Acheteur résilie tout ou partie du
-  Marché, l’Acheteur peut acquérir, aux conditions et de la façon qui lui
-  paraissent convenables, des Fournitures ou des Services connexes semblables à
-  ceux non reçus ou non exécutés et le Fournisseur sera responsable envers
-  l’Acheteur de tout coût supplémentaire qui en résulterait. Toutefois, le
-  Fournisseur continuera à exécuter le Marché dans la mesure où il n’est pas
-  résilié.</span></p>
-  <p class=Header2-SubClauses style='margin-left:.45in;text-indent:-.45in'><span
-  lang=FR>16.2   Résiliation pour convenance</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-  margin-left:.65in;text-align:justify;text-indent:-.25in'><span lang=FR>(a)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
-  lang=FR>L’Acheteur peut à tout moment résilier tout ou partie du Marché par
-  notification écrite adressée au Fournisseur pour motif de convenance. L’avis
-  de résiliation précisera que la résiliation intervient unilatéralement pour
-  motif de convenance, dans quelle mesure l’exécution des tâches stipulées dans
-  le Marché prend fin et la date à laquelle la résiliation prend effet.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>17.  Travail Forcé</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:-.05in;margin-bottom:
-  6.0pt;margin-left:30.4pt;text-align:justify;text-indent:-31.5pt'><span
-  lang=FR>17.1</span><span lang=FR>. Le Fournisseur, y compris ses
-  sous-traitants, ne doit pas employer ou utiliser le travail forcé, ou des
-  personnes ayant fait l’objet d’un trafic, conformément aux Clauses 27.2 et
-  27.3 dues CM.</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:-.05in;margin-bottom:
-  6.0pt;margin-left:30.4pt;text-align:justify;text-indent:-31.5pt'><span
-  lang=FR>17</span><span lang=FR>.2  Le travail forcé consiste en  tout travail
-  ou service, non effectué volontairement, qui est exigé d’une personne sous la
-  menace de la force ou de la menace, et comprend tout type de travail
-  involontaire ou obligatoire, tels que le travail asservi, le travail forcé ou
-  des arrangements similaires de contrat de travail. </span></p>
-  <p class=Style7 style='margin-left:30.6pt;text-indent:-27.0pt'><span lang=FR
-  style='font-weight:normal'>17.3  La traite des personnes est définie comme le
-  recrutement, le transport, le transfert, l’hébergement ou l’accueil de
-  personnes par le moyen de la menace ou du recours à la force ou à d’autres
-  formes de coercition, d’enlèvement, de fraude, de tromperie, d’abus de
-  pouvoir ou de position de vulnérabilité, ou de donner ou recevoir des
-  paiements ou des avantages pour obtenir le consentement d’une personne ayant
-  le contrôle sur une autre personne, aux fins de l’exploitation.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>18. Travail des Enfants</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:-.05in;margin-bottom:
-  6.0pt;margin-left:30.4pt;text-align:justify;text-indent:-30.4pt'><span
-  lang=FR>18.1  Le Fournisseur, y compris ses sous-traitants, ne doit pas
-  employer ou engager un enfant de moins de 14 ans sous réserve que la loi
-  nationale précise un âge plus élevé (l’âge minimum). </span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:-.05in;margin-bottom:
-  6.0pt;margin-left:30.4pt;text-align:justify;text-indent:-30.4pt'><span
-  lang=FR>18.2   Le Fournisseur, y compris ses sous-traitants, ne doit pas
-  employer ou engager un enfant entre l’âge minimum et l’âge de 18 ans d’une
-  manière qui est susceptible d’être dangereuse, ou d’interférer avec
-  l’éducation de l’enfant, ou d’être nocif pour la santé de l’enfant ou son
-  développement physique, mental, spirituel, moral ou social.</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:30.4pt;text-align:justify'><span lang=FR>Le travail
-  considéré comme dangereux pour les enfants est un travail qui, de par sa
-  nature ou les circonstances dans lesquelles il est effectué, est susceptible
-  de mettre en péril la santé, la sécurité ou la moralité des enfants. Ces
-  activités de travail interdites aux enfants comprennent le travail suivant:</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:43.9pt;text-align:justify;text-indent:-12.9pt'><span
-  lang=FR style='font-size:11.0pt'>a)</span><span lang=FR> l’exposition à des
-  abus physiques, psychologiques ou sexuels; </span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:43.9pt;text-align:justify;text-indent:-12.9pt'><span
-  lang=FR style='font-size:11.0pt'>b)</span><span lang=FR> le travail sous
-  terre, sous l’eau, en hauteur ou dans des espaces confinés; </span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:43.9pt;text-align:justify;text-indent:-12.9pt'><span
-  lang=FR style='font-size:11.0pt'>c)</span><span lang=FR> le travail avec des
-  machines, des matériels ou des outils dangereux, ou impliquant la
-  manipulation ou</span><span lang=FR style='font-size:11.0pt'> </span><span
-  lang=FR>le transport de charges lourdes; </span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:43.9pt;text-align:justify;text-indent:-12.9pt'><span
-  lang=FR style='font-size:11.0pt'>d)</span><span lang=FR> le travail dans des
-  environnements malsains exposant les enfants à des substances, des agents ou
-  des processus dangereux, ou à des températures, du bruit ou des vibrations
-  préjudiciables à la santé; ou</span></p>
-  <p class=Style7 style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-  margin-left:44.1pt;text-indent:-13.5pt'><span lang=FR style='font-weight:
-  normal'>e) le travail dans des conditions difficiles telles que le travail
-  pendant de longues heures, pendant la nuit ou en confinement dans les locaux
-  de l’employeur.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=145 style='width:108.9pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Sec8Clauses><span lang=FR>19. Obligations en matière d’Hygiène  et
-  de Sécurité</span></p>
-  </td>
-  <td width=492 valign=top style='width:369.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=Style7 style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-  margin-left:30.6pt;text-indent:-27.0pt'><span lang=FR style='font-weight:
-  normal'>&nbsp;</span></p>
-  <p class=Style7 style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-  margin-left:30.6pt;text-indent:-27.0pt'><span lang=FR style='font-weight:
-  normal'>19.1 Le Fournisseur satisfaire, et doit exiger de ses sous-traitants
-  le cas échéant de satisfaire toutes les règles en matière d’hygiène et de
-  sécurité, les lois, directives, et tout autre exigence contenue dans les
-  Spécifications Techniques.</span></p>
-  <p class=Style7 style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-  margin-left:30.6pt;text-indent:-27.0pt'><i><span lang=FR style='font-weight:
-  normal'>&nbsp;</span></i></p>
-  <p class=Style7 style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-  margin-left:30.6pt;text-indent:-27.0pt'><i><span lang=FR style='font-weight:
-  normal'>&nbsp;</span></i></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-</div>
-
-<b><span lang=FR style='font-size:18.0pt;font-family:"Times New Roman",serif'><br
-clear=all style='page-break-before:always'>
-</span></b>
-
-<div class=WordSection3>
-
-<p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span lang=FR
-style='font-size:20.0pt'>ANNEXE A&nbsp;: Fraude et Corruption</span></b></p>
-
-<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;text-align:center'><b><i><span lang=FR>(Ne
-pas modifier le texte de cette Annexe)</span></i></b></p>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=642
- style='border-collapse:collapse'>
- <tr>
-  <td width=642 valign=top style='width:481.5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-left:.25in;text-align:justify;text-indent:
-  -.25in;line-height:107%'><b><span lang=FR style='line-height:107%'>1.   Objet</span></b></p>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  8.0pt;margin-left:.25in;text-indent:-.25in;punctuation-wrap:hanging;
-  text-autospace:ideograph-numeric ideograph-other'><span lang=FR>1.1 Les
-  Directives de la Banque en matière de lutte contre la fraude et la corruption,
-  ainsi que la présente annexe, sont applicables à la passation des marchés
-  dans le cadre des Opérations de Financement de Projets d’Investissement par
-  la Banque.</span></p>
-  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
-  margin-left:.25in;text-align:justify;text-indent:-.25in;line-height:107%'><b><span
-  lang=FR style='line-height:107%'>2.   Exigences</span></b></p>
-  <p class=MsoListParagraphCxSpFirst style='margin-top:0in;margin-right:0in;
-  margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;punctuation-wrap:
-  hanging;text-autospace:ideograph-numeric ideograph-other'><span lang=FR>2.1 La
-  Banque exige que les Emprunteurs (y compris les bénéficiaires d’un
-  financement de la Banque), les soumissionnaires (candidats/proposants),
-  consultants, Entrepreneurs et Fournisseurs, les sous-traitants,
-  sous-consultants, Prestataires de services ou Fournisseurs, tous les agents
-  (déclarés ou non)&nbsp;; ainsi que l’ensemble de leur personnel&nbsp;; se
-  conforment aux normes les plus strictes en matière d’éthique, durant le
-  processus de passation des marchés, la sélection, et l’exécution des contrats
-  financés par la Banque, et s’abstiennent de toute fraude et corruption.</span></p>
-  <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
-  margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;punctuation-wrap:
-  hanging;text-autospace:ideograph-numeric ideograph-other'><span lang=FR>&nbsp;</span></p>
-  <p class=MsoListParagraphCxSpLast style='margin-top:0in;margin-right:0in;
-  margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;punctuation-wrap:
-  hanging;text-autospace:ideograph-numeric ideograph-other'><span lang=FR>2.2 En
-  vertu de ce principe, la Banque&nbsp;:</span></p>
-  <p class=MsoBodyText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:56.7pt;text-indent:-21.25pt'><span lang=FR>a.<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>aux fins d’application de la présente
-  disposition, définit comme suit les expressions suivantes&nbsp;:</span></p>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:92.15pt;text-indent:-92.15pt'><span lang=FR
-  style='color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR style='color:black'>est coupable de
-  «&nbsp;corruption&nbsp;» quiconque offre, donne, sollicite ou accepte,
-  directement ou indirectement, un quelconque avantage en d’influer indûment
-  sur les actions d’une autre personne ou entité&nbsp;; </span></p>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:92.15pt;text-indent:-92.15pt'><span lang=FR
-  style='color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR style='color:black'>se livre à des
-  «&nbsp;manœuvres frauduleuses&nbsp;» quiconque agit, ou s’abstient d’agir, ou
-  dénature des faits, délibérément ou par négligence grave, ou tente d’induire
-  en erreur une personne ou une entité, afin d’en retirer un avantage financier
-  ou de toute autre nature, ou se dérober à une obligation;</span></p>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:92.15pt;text-indent:-92.15pt'><span lang=FR
-  style='color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR style='color:black'>se livrent à des
-  «&nbsp;manœuvres collusives&nbsp;» les personnes ou entités qui s’entendent
-  afin d’atteindre un objectif illicite, notamment en influant indûment sur
-  l’action d’autres personnes ou entités;</span></p>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:92.15pt;text-indent:-92.15pt'><span lang=FR
-  style='color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>iv.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR style='color:black'>se livre à des
-  «&nbsp;manœuvres coercitives&nbsp;» quiconque nuit ou porte préjudice, ou
-  menace de nuire ou de porter préjudice, directement ou indirectement, à une
-  personne ou entité, ou à leurs biens, en vue d’influer indûment sur les
-  actions de cette personne ou entité ; et</span></p>
-  <p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:92.15pt;text-indent:-92.15pt'><span lang=FR
-  style='color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>v.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR style='color:black'>se livre à des
-  «&nbsp;manœuvres obstructives&nbsp;»</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:134.7pt;text-align:justify;text-indent:-21.3pt'><span
-  lang=FR style='color:black'>(a)   quiconque détruit, falsifie, altère ou
-  dissimule délibérément les preuves sur lesquelles se base une enquête de la
-  Banque en matière de corruption ou de manœuvres frauduleuses, coercitives ou
-  collusives, ou fait de fausses déclarations à ses enquêteurs destinées à
-  entraver son enquête; ou bien menace,<b> </b>harcèle ou intimide quelqu’un
-  aux fins de l’empêcher de faire part d’informations relatives à cette
-  enquête, ou bien de poursuivre l’enquête; ou </span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:134.7pt;text-align:justify;text-indent:-21.3pt'><span
-  lang=FR style='color:black'>(b)   celui qui entrave délibérément l’exercice
-  par la Banque de son droit d’examen tel que stipulé au paragraphe (e)
-  ci-dessous</span><span lang=FR>.</span></p>
-  <p class=MsoBodyText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:56.7pt;text-indent:-21.25pt'><span lang=FR>b.<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>rejettera la proposition d’attribution d’un
-  marché ou contrat si elle établit que la personne physique ou morale à
-  laquelle il est recommandé d’attribuer ledit marché ou contrat, ou l’un des
-  membres de son personnel ou de ses agents, sous-consultants, sous-traitants,
-  Prestataires de service, Fournisseurs, ou un de leurs employés, s’est livré,
-  directement ou indirectement, à un acte de corruption, une manœuvre
-  frauduleuse, collusive, coercitive ou obstructive en vue de l’obtention dudit
-  marché ou contrat; </span></p>
-  <p class=MsoBodyText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:56.7pt;text-indent:-21.25pt'><span lang=FR>c.<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>outre les recours prévus dans l’Accord de
-  Financement, pourra décider d’autres actions appropriées, y compris déclarer
-  la passation du marché non-conforme si elle détermine, à un moment
-  quelconque, que les représentants de l’Emprunteur, ou d’un bénéficiaire du
-  financement, s’est livré à la corruption ou à des manœuvres frauduleuses,
-  collusives, coercitives ou obstructives pendant la procédure de passation du
-  marché, de sélection ou d’exécution du marché, sans que l’Emprunteur ait
-  pris, en temps voulu et à la satisfaction de la Banque, les mesures
-  nécessaires pour remédier à cette situation, y compris en manquant à son
-  devoir d’informer la Banque lorsqu’il a eu connaissance desdites pratiques;</span></p>
-  <p class=MsoBodyText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:56.7pt;text-indent:-21.25pt'><span lang=FR>d.<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>sanctionnera une entreprise ou un individu, dans
-  le cadre des Directives de la Banque en matière de lutte contre la fraude et
-  la corruption, et conformément aux règles et procédures de sanctions
-  applicables de la Banque, y compris en déclarant publiquement l’exclusion de
-  l’entreprise ou de l’individu pour une période indéfinie ou déterminée (i) de
-  l’attribution d’un marché financé par la Banque ou de pouvoir en bénéficier
-  financièrement ou de toute autre manière</span><a href="#_ftn1"
-  name="_ftnref1" title=""><span lang=FR><span lang=FR style='font-size:12.0pt;
-  font-family:"Times New Roman",serif'>[1]</span></span></a><span lang=FR> (ii)
-  de la participation</span><a href="#_ftn2" name="_ftnref2" title=""><span
-  lang=FR><span lang=FR style='font-size:12.0pt;font-family:"Times New Roman",serif'>[2]</span></span></a><span
-  lang=FR> comme sous-traitant, consultant, fabricant ou fournisseur de biens
-  ou prestataire de services désigné d’une entreprise par ailleurs éligible à
-  l’attribution d’un marché financé par la Banque&nbsp;; et (iii) du bénéfice
-  du versement de fonds émanant d’un prêt de la Banque ou de participer d’une
-  autre manière à la préparation ou à la mise en œuvre d’un projet financé par
-  la Banque&nbsp;;</span></p>
-  <p class=MsoBodyText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:56.7pt;text-indent:-21.25pt'><span lang=FR>e.<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=FR>exigera que les dossiers d’appel d’offres/appel à
-  propositions, et que les contrats et marchés financés par la Banque,
-  contiennent une disposition exigeant des soumissionnaires
-  (candidats/proposants), consultants, Fournisseurs et Entrepreneurs, ainsi que
-  leurs sous-traitants, sous-consultants, Prestataires de services,
-  Fournisseurs, agents, et personnel, autorisent la Banque à inspecter<a
-  href="#_ftn3" name="_ftnref3" title=""><span class=MsoFootnoteReference><span
-  class=MsoFootnoteReference><span lang=FR style='font-size:12.0pt;font-family:
-  "Times New Roman",serif'>[3]</span></span></span></a> les pièces comptables,
-  relevés et autres documents relatifs à la passation du marché, à la sélection
-  et/ou à l’exécution du marché, et à les soumettre pour vérification à des
-  auditeurs désignés par la Banque.</span></p>
-  <p class=MsoBodyText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.45pt'><span lang=FR>&nbsp;</span></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=FR
-style='font-size:18.0pt'>&nbsp;</span></b></p>
-
-<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
-
-</div>
-
-<div><br clear=all>
-
-<hr align=left size=1 width="33%">
-
-<div id=ftn1>
-
-<p class=MsoFootnoteText><a href="#_ftnref1" name="_ftn1" title=""><span
-class=MsoFootnoteReference><span lang=FR><span class=MsoFootnoteReference><span
-lang=FR style='font-size:10.0pt;font-family:"Times New Roman",serif'>[1]</span></span></span></span></a><span
-lang=FR>              Pour écarter tout doute, les effets d’une telle sanction
-sur la partie concernée concernent, de manière non exhaustive, (i) le dépôt de
-candidature à la pré-qualification, l’expression d’intérêt pour une mission de
-consultant, et la participation à un appel d’offres directement ou comme
-sous-traitant, consultant, fabricant ou fournisseur, ou prestataire dans le cadre
-d’un tel contrat, et (ii) la conclusion d’un avenant ou un additif comportant
-une modification significative à un contrat existant.</span></p>
-
-</div>
-
-<div id=ftn2>
-
-<p class=MsoFootnoteText><a href="#_ftnref2" name="_ftn2" title=""><span
-class=MsoFootnoteReference><span lang=FR><span class=MsoFootnoteReference><span
-lang=FR style='font-size:10.0pt;font-family:"Times New Roman",serif'>[2]</span></span></span></span></a><span
-lang=FR>              Un sous-traitant, consultant, fabricant ou fournisseur de
-biens ou services (différents intitulés sont utilisés en fonction de la
-formulation du dossier d’appel d’offres) désigné est une entreprise ou un
-individu qui (i) fait partie de la demande de pré qualification ou de l’offre
-du soumissionnaire compte tenu de l’expérience spécifique et essentielle et du
-savoir-faire qu’il apporte afin de satisfaire aux conditions de qualification
-pour une offre déterminée&nbsp;; ou (ii) a été désigné par l’Emprunteur.</span></p>
-
-</div>
-
-<div id=ftn3>
-
-<p class=MsoFootnoteText style='margin-left:14.0pt;text-indent:-14.0pt'><a
-href="#_ftnref3" name="_ftn3" title=""><span class=MsoFootnoteReference><span
-lang=FR><span class=MsoFootnoteReference><span lang=FR style='font-size:10.0pt;
-font-family:"Times New Roman",serif'>[3]</span></span></span></span></a><span
-lang=FR>     Les inspections menées dans ce cadre sont des vérifications sur
-pièces du fait de leur nature. Ils comprennent des activités de recherche
-documentaire et factuelle entreprises par la Banque, ou des personnes désignées
-par elle, afin de vérifier des aspects spécifiques relevant d’une enquête ou
-d’un audit, tel que l’évaluation de la véracité d’une accusation éventuelle de
-Fraude et Corruption, par le moyen de dispositif approprié. De telles activités
-peuvent inclure, sans limitation, d’avoir accès à des documents financiers
-d’une entreprise ou d’une personne et les examiner, faire des copies de ces
-documents selon les besoins, d’avoir accès à tous autres documents, données et
-renseignements (sous forme de documents imprimés ou en format électronique)
-jugés pertinents aux fins de l’enquête ou de l’audit et les examiner, faire des
-copies de ces documents selon les besoins, avoir des entretiens avec le
-personnel et toute autre personne, mener des inspections physiques et des
-visites de site, et obtenir la vérification de renseignements par une tierce
-partie.</span></p>
-
-</div>
-
-</div>
-
-</body>
-
+   <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+      <style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c72{border-right-style:solid;padding:0pt 5pt 0pt 5pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:451.2pt;border-top-color:#000000;border-bottom-style:solid}.c14{border-right-style:solid;padding:0pt 5pt 0pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:124.8pt;border-top-color:#000000;border-bottom-style:solid}.c6{border-right-style:solid;padding:0pt 5pt 0pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:326.4pt;border-top-color:#000000;border-bottom-style:solid}.c45{margin-left:60pt;padding-top:6pt;text-indent:-30pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify;margin-right:-4pt}.c23{margin-left:61pt;padding-top:6pt;text-indent:-31pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify;margin-right:-4pt}.c76{margin-left:89pt;padding-top:0pt;text-indent:-27pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c25{margin-left:184pt;padding-top:0pt;text-indent:-92pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c47{margin-left:62pt;padding-top:0pt;text-indent:-31pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c55{margin-left:57pt;padding-top:6pt;text-indent:-13pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c30{margin-left:78pt;padding-top:6pt;text-indent:-21pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c19{margin-left:151pt;padding-top:0pt;text-indent:-75pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c7{margin-left:80pt;padding-top:0pt;text-indent:-27pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c63{margin-left:156pt;padding-top:6pt;text-indent:-21pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c73{margin-left:84pt;padding-top:0pt;text-indent:-26pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c13{margin-left:58pt;padding-top:0pt;text-indent:-27pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c35{margin-left:52pt;padding-top:0pt;text-indent:-26pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c38{margin-left:52pt;padding-top:0pt;text-indent:-26pt;padding-bottom:12pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c40{margin-left:28pt;padding-top:0pt;text-indent:-14pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c84{margin-left:35pt;padding-top:4pt;padding-bottom:4pt;line-height:1.0583333333333333;orphans:2;widows:2;text-align:left}.c56{margin-left:63pt;padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c46{margin-left:29pt;padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c91{margin-left:26pt;padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c70{margin-left:35pt;padding-top:0pt;padding-bottom:10pt;line-height:1.0583333333333333;orphans:2;widows:2;text-align:left}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left;height:11pt}.c53{margin-left:49pt;padding-top:0pt;padding-bottom:8pt;line-height:1.0583333333333333;orphans:2;widows:2;text-align:justify}.c82{margin-left:18pt;padding-top:0pt;padding-bottom:8pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c58{margin-left:30pt;padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c77{margin-left:48pt;padding-top:0pt;padding-bottom:10pt;line-height:1.0583333333333333;orphans:2;widows:2;text-align:justify}.c66{margin-left:18pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0666666666666667;orphans:2;widows:2;text-align:justify}.c60{margin-left:35pt;padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c54{margin-left:18pt;padding-top:0pt;padding-bottom:8pt;line-height:1.0666666666666667;orphans:2;widows:2;text-align:justify}.c61{margin-left:36pt;padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c10{margin-left:48pt;padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c62{margin-left:35pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0583333333333333;orphans:2;widows:2;text-align:left}.c52{margin-left:32pt;padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c33{margin-left:47pt;padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c36{margin-left:35pt;padding-top:0pt;padding-bottom:8pt;line-height:1.0583333333333333;orphans:2;widows:2;text-align:left}.c44{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify;margin-right:6pt}.c89{padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center;height:11pt}.c78{margin-left:35pt;padding-top:8pt;padding-bottom:4pt;line-height:1.0583333333333333;orphans:2;widows:2;text-align:left}.c4{padding-top:24pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c9{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c18{padding-top:6pt;padding-bottom:12pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c67{padding-top:0pt;padding-bottom:8pt;line-height:1.0583333333333333;orphans:2;widows:2;text-align:justify}.c27{padding-top:6pt;padding-bottom:12pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c22{padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c81{padding-top:12pt;padding-bottom:12pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c48{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c29{padding-top:0pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c57{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c12{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c8{color:#000000;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal}.c5{color:#000000;text-decoration:none;vertical-align:baseline;font-size:11pt;font-style:normal}.c65{color:#000000;vertical-align:baseline;font-size:11pt;font-style:normal}.c79{border-spacing:0;border-collapse:collapse;margin-right:auto}.c41{-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none}.c3{background-color:#ffffff;padding:72pt 72pt 72pt 72pt}.c26{color:#000000;text-decoration:none;vertical-align:baseline}.c1{font-weight:400;font-family:"Times New Roman"}.c20{margin-left:56pt;text-indent:-28pt}.c34{margin-left:58pt;text-indent:-27pt}.c51{vertical-align:super;font-size:17pt}.c39{font-size:18pt;font-style:normal}.c74{font-size:10pt;font-style:normal}.c11{font-size:12pt;font-style:italic}.c32{font-size:20pt;font-style:normal}.c21{font-weight:700;font-family:"Times New Roman"}.c28{font-size:10.5pt;font-style:normal}.c83{background-color:#d4d4d4;font-size:10.5pt}.c71{margin-left:57pt;text-indent:-13pt}.c64{vertical-align:super;font-size:20pt}.c94{font-size:10.5pt}.c59{height:1152pt}.c24{height:106.5pt}.c37{height:835.5pt}.c80{margin-left:36pt}.c50{height:119.2pt}.c87{height:64.5pt}.c16{height:184.5pt}.c42{margin-left:54pt}.c31{height:129.8pt}.c68{height:87.8pt}.c85{height:432.8pt}.c75{height:37.5pt}.c15{height:232.5pt}.c49{height:248.2pt}.c93{height:91.5pt}.c43{margin-left:31pt}.c95{height:120.8pt}.c69{height:218.2pt}.c86{height:135pt}.c90{height:216pt}.c2{font-size:7pt}.c17{font-size:12pt}.c92{height:513pt}.c88{background-color:#ffffff}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style>
+   </head>
+   <body class="c3 doc-content">
+      <p class="c81"><span class="c26 c32 c21">Acte d&rsquo;Engagement - Fournitures</span></p>
+      <p class="c27"><span class="c1 c17">AUX TERMES DU PRESENT MARCHE </span><span class="c1 c11">@@number_contract@@</span><span class="c1 c17">&nbsp;conclu le </span><span class="c1 c11">@@date_contract@@</span><span class="c8 c1">.</span></p>
+      <p class="c27"><span class="c8 c1">ENTRE</span></p>
+      <p class="c61"><span class="c1 c17">(1) </span><span class="c1 c11">@@name_cooperative@@ de @@cooperative_address@@ </span><span class="c8 c1">(ci-apr&egrave;s d&eacute;nomm&eacute; l&rsquo;&laquo; Acheteur &raquo;) d&rsquo;une part, et</span></p>
+      <p class="c61"><span class="c1 c17">(2) </span><span class="c1 c11">@@name_provider@@</span><span class="c1 c17">&nbsp;de </span><span class="c1 c11">@@provider_address@@ </span><span class="c8 c1">(ci-apr&egrave;s d&eacute;nomm&eacute; le &laquo; Fournisseur &raquo;), d&rsquo;autre part :</span></p>
+      <p class="c48"><span class="c8 c1">&nbsp;</span></p>
+      <p class="c18"><span class="c1 c17">ATTENDU QUE l&rsquo;Acheteur a lanc&eacute; une demande de Cotations pour certaines Fournitures et certains Services connexes, &agrave; savoir </span><span class="c1 c11">@@title_bidding@@, @@lot_name@@ </span><span class="c1 c17">tels d&eacute;cris dans l&rsquo;annexe 1</span><span class="c1 c11">, </span><span class="c8 c1">et a accept&eacute; une Cotation du Fournisseur pour la livraison de ces Fournitures et la prestation de ces Services connexes.,</span></p>
+      <p class="c18"><span class="c8 c1">Il a &eacute;t&eacute; arr&ecirc;t&eacute; et convenu ce qui suit :</span></p>
+      <p class="c22"><span class="c8 c1">1. &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dans ce March&eacute;, les mots et expressions auront le m&ecirc;me sens que celui qui leur est respectivement donn&eacute; dans les clauses du March&eacute; auxquelles il est fait r&eacute;f&eacute;rence.</span></p>
+      <p class="c22"><span class="c8 c1">2. &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les documents ci-apr&egrave;s sont r&eacute;put&eacute;s faire partie int&eacute;grante du March&eacute; et &ecirc;tre lus et interpr&eacute;t&eacute;s &agrave; ce titre. Le pr&eacute;sent Acte d&rsquo;Engagement pr&eacute;vaudra sur toute autre pi&egrave;ce constitutive du March&eacute;. </span></p>
+      <p class="c56"><span class="c1 c17">(a)</span><span class="c1 c2">&nbsp; </span><span class="c1 c17">Les Sp&eacute;cifications et exigences de l&rsquo;Acheteur et</span><span class="c1 c2">&nbsp;</span><span class="c8 c1">La Cotation du Fournisseur &ndash; Annexe 1;</span></p>
+      <p class="c56"><span class="c1 c17">(b)</span><span class="c1 c2">&nbsp; &nbsp;</span><span class="c8 c1">Les Conditions du March&eacute;.</span></p>
+      <p class="c18 c20"><span class="c8 c1">3. &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En contrepartie des paiements que l&rsquo;Acheteur doit effectuer au b&eacute;n&eacute;fice du Fournisseur, comme cela est indiqu&eacute; ci-apr&egrave;s, le Fournisseur convient avec l&rsquo;Acheteur par les pr&eacute;sentes de livrer les Fournitures et de rendre les Services connexes, et de rem&eacute;dier aux d&eacute;fauts de ces Fournitures et Services connexes conform&eacute;ment &agrave; tous &eacute;gards aux dispositions du March&eacute;.</span></p>
+      <p class="c18 c20"><span class="c8 c1">4. &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&rsquo;Acheteur convient par les pr&eacute;sentes de payer au Fournisseur, en contrepartie des Fournitures et Services connexes, et des rectifications apport&eacute;es &agrave; leurs d&eacute;fauts et insuffisances, le prix du March&eacute;, ou tout autre montant d&ucirc; au titre du March&eacute;, et ce, aux &eacute;ch&eacute;ances et de la fa&ccedil;on prescrites par le March&eacute;.</span></p>
+      <p class="c18 c20"><span class="c8 c1">5. &nbsp; &nbsp; &nbsp;L&rsquo;offre &eacute;lectronique et l&rsquo;acceptation par le biais de la Solution de soumission d&rsquo;Offres &nbsp;en Ligne &ndash; SOL par chaque Partie doivent faire ex&eacute;cuter cet accord par les Parties jusqu&rsquo;&agrave; pr&eacute;sent de leur propre volont&eacute;, sans aucune coercition ou influence indue et doivent &ecirc;tre valides et juridiquement contraignants pour les deux parties &agrave; partir de la date ci-dessus &eacute;crite.</span></p>
+      <p class="c18"><span class="c8 c1">EN FOI DE QUOI les parties au pr&eacute;sent Contrat signent le pr&eacute;sent document conform&eacute;ment aux lois du pays de l&#39;acheteur, le jour et l&#39;ann&eacute;e mentionn&eacute;s ci-dessous.</span></p>
+      <p class="c9 c88"><span class="c8 c1">&nbsp;</span></p>
+      <p class="c22"><span class="c8 c21">Pour et au nom de l&rsquo;Acheteur</span></p>
+      <p class="c22"><span class="c1 c94">Accept&eacute; num&eacute;riquement sur la Solution de Soumission d&rsquo;Offres </span><span class="c1 c83">en</span><span class="c26 c1 c28">&nbsp;Ligne &ndash; SOL par </span></p>
+      <p class="c22"><span class="c1 c17">&nbsp;</span><span class="c26 c1 c11">@@cooperative_legal_representative_name@@</span></p>
+      <p class="c22"><span class="c26 c1 c11">&nbsp;</span></p>
+      <p class="c22"><span class="c8 c21">Pour et au nom de du Fournisseur</span></p>
+      <p class="c22"><span class="c8 c1">Accept&eacute; num&eacute;riquement sur la Solution de Soumission d&rsquo;Offres en Ligne &ndash; SOL par</span></p>
+      <p class="c9"><span class="c1 c17">&nbsp;</span><span class="c26 c1 c11">@@ provider_legal_representative_name@@</span></p>
+      <p class="c0"><span class="c5 c1"></span></p>
+      <p class="c0"><span class="c5 c1"></span></p>
+      <h1 class="c4" id="h.gjdgxs"><span class="c26 c1 c32">Exigences de l&#39;acheteur et devis du fournisseur</span></h1>
+      <p class="c0"><span class="c5 c1"></span></p>
+      <p class="c9"><span class="c5 c1">@@items_lot@@</span></p>
+      <p class="c0"><span class="c5 c1"></span></p>
+      <p class="c0"><span class="c5 c1"></span></p>
+      <p class="c0"><span class="c8 c1"></span></p>
+      <h1 class="c4"><span class="c26 c1 c32">Conditions du March&eacute; - Fournitures</span></h1>
+      <a id="t.3777dadd9b5130eb32cef49432bfb8734d71f101"></a><a id="t.0"></a>
+      <table class="c79">
+         <tr class="c37">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c29 c42"><span class="c1 c17">1.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; </span><span class="c8 c21">D&eacute;finitions</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c35"><span class="c1 c17">1.1</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c8 c1">Les termes et expressions ci-apr&egrave;s auront la signification qui leur est attribu&eacute;e ici :</span></p>
+               <p class="c7"><span class="c1 c17">(a)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">&laquo; La Banque &raquo; signifie la Banque internationale pour la Reconstruction et le D&eacute;veloppement (BIRD), ou l&rsquo;Association internationale pour le D&eacute;veloppement (AID).</span></p>
+               <p class="c7"><span class="c1 c17">(b)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">&laquo; CM &raquo; signifie les Conditions du March&eacute;.</span></p>
+               <p class="c7"><span class="c1 c17">(c)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Le &laquo; March&eacute; &raquo; signifie l&rsquo;Acte d&rsquo;Engagement sign&eacute; par l&rsquo;Acheteur et le Fournisseur, ainsi que les documents contractuels vis&eacute;s dans ledit Acte d&rsquo;Engagement, y compris toutes les pi&egrave;ces jointes, annexes et tous les documents qui y ont &eacute;t&eacute; inclus par voie de r&eacute;f&eacute;rence.</span></p>
+               <p class="c7"><span class="c1 c17">(d)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Les &laquo; Documents contractuels &raquo; d&eacute;signent les documents vis&eacute;s dans l&rsquo;Accord de March&eacute;, y compris les avenants &eacute;ventuels auxdits documents.</span></p>
+               <p class="c7"><span class="c1 c17">(e)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Le &laquo; Prix du March&eacute; &raquo; signifie le prix payable au Fournisseur, comme sp&eacute;cifie dans l&rsquo;article 6.1 des CM, sous r&eacute;serve de toute addition et modification ou de toute d&eacute;duction audit prix, qui pourra &ecirc;tre effectu&eacute;e en vertu du March&eacute;.</span></p>
+               <p class="c7"><span class="c1 c17">(f)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c8 c1">&laquo; Jour &raquo; d&eacute;signe un jour calendaire.</span></p>
+               <p class="c7"><span class="c1 c17">(g)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">&laquo; Ach&egrave;vement &raquo; signifie la prestation compl&egrave;te des Services connexes par le Fournisseur, conform&eacute;ment aux modalit&eacute;s stipul&eacute;es dans le March&eacute;.</span></p>
+               <p class="c7"><span class="c1 c17">(h)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Le terme &laquo; Fournitures &raquo; signifie tous les produits, mati&egrave;res premi&egrave;res, machines et mat&eacute;riels et/ou tous autres mat&eacute;riaux que le Fournisseur est tenu de livrer &agrave; l&rsquo;Acheteur en ex&eacute;cution du March&eacute;.</span></p>
+               <p class="c7"><span class="c1 c17">(i)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Le terme &laquo; Partie &raquo; signifie l&rsquo;Acheteur ou le Fournisseur, selon le contexte, et &laquo; Parties &raquo; signifie les deux Parties.</span></p>
+               <p class="c7"><span class="c1 c17">(j)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c1 c17">L&rsquo;&laquo; Acheteur &raquo; signifie l&rsquo;entit&eacute; achetant les Fournitures et les Services connexes, telle qu&rsquo;elle est </span><span class="c8 c21">identifi&eacute;e dans les CM.</span></p>
+               <p class="c7"><span class="c1 c17">(k)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c1 c17">Le &laquo; Pays de l&rsquo;Acheteur &raquo; signifie le pays identifi&eacute; &agrave; l&rsquo;article 2 des CM</span><span class="c8 c21">.</span></p>
+               <p class="c7"><span class="c1 c17">(l)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Le terme &laquo; Services Connexes &raquo; d&eacute;signe les services aff&eacute;rents &agrave; la fourniture des biens, tels que l&rsquo;assurance, l&rsquo;installation, la formation et la maintenance initiale, ainsi que toute obligation analogue du Fournisseur dans le cadre du March&eacute;.</span></p>
+               <p class="c7"><span class="c1 c17">(m)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Un &laquo; Sous-traitant &raquo; signifie toute personne physique, priv&eacute;e ou entit&eacute; gouvernementale ou toute combinaison de ces &eacute;l&eacute;ments, &agrave; qui toute partie des Fournitures ou des Services connexes est sous-trait&eacute;e par le Fournisseur.</span></p>
+               <p class="c7"><span class="c1 c17">(n)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Le &laquo; Fournisseur &raquo; signifie toute personne physique, priv&eacute;e ou entit&eacute; gouvernementale ou toute combinaison de ces &eacute;l&eacute;ments, dont l&rsquo;offre a &eacute;t&eacute; accept&eacute;e par l&rsquo;Acheteur et qui est d&eacute;sign&eacute;e comme tel dans l&rsquo;Accord de March&eacute;.</span></p>
+               <p class="c7"><span class="c1 c17">(o)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">&nbsp;&laquo; Le Site du Projet &raquo; signifie le lieu indiqu&eacute; dans les CM.</span></p>
+            </td>
+         </tr>
+         <tr class="c68">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c29 c42"><span class="c1 c17">2.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; </span><span class="c8 c21">Acheteur, pays de l&rsquo;Acheteur, Site et Destination finale</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c46"><span class="c1">2.1</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">L&rsquo;Acheteur est : </span><span class="c26 c1 c11">@@name_cooperative@@</span></p>
+               <p class="c46"><span class="c1">2.2</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">Le Pays de l&rsquo;Acheteur est : </span><span class="c26 c1 c11">@@name_provider@@</span></p>
+               <p class="c46"><span class="c1">2.3</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">Les Sites du Projet et Destination/s est/sont : </span><span class="c26 c1 c11">@@address_delivery@@</span></p>
+            </td>
+         </tr>
+         <tr class="c69">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c29 c42"><span class="c1 c17">3.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; </span><span class="c8 c21">Notifications et adresses pour Notifications</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c9"><span class="c8 c1">3.1 Toute Notification donn&eacute;e par une Partie &agrave; l&rsquo;autre en vertu du March&eacute; doit &ecirc;tre par &eacute;crit et &agrave; l&rsquo;adresse ci-apr&egrave;s en utilisant la m&eacute;thode la plus rapide disponible comme le courrier &eacute;lectronique avec preuve de r&eacute;ception.</span></p>
+               <p class="c62"><span class="c41 c1 c65">&nbsp;</span></p>
+               <p class="c70"><span class="c41 c21 c17">Adresse pour Notification &agrave; l&rsquo;Acheteur</span><span class="c8 c21">:</span></p>
+               <p class="c84"><span class="c1 c11 c26">@@provider_legal_representative_name@@</span></p>
+               <p class="c36"><span class="c26 c1 c11">@@provider_address@@</span></p>
+               <p class="c78"><span class="c26 c1 c11">@@cooperative_legal_representative_email@@</span></p>
+               <p class="c78"><span class="c21 c17 c41">Adresse pour Notification au Fournisseur</span><span class="c8 c21">:</span></p>
+               <p class="c84"><span class="c26 c1 c11">@@cooperative_legal_representative_name@@</span></p>
+               <p class="c36"><span class="c26 c1 c11">@@cooperative_address@@</span></p>
+               <p class="c78"><span class="c26 c1 c11">@@provider_legal_representative_email@@</span></p>
+            </td>
+         </tr>
+         <tr class="c75">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c29 c42"><span class="c1 c17">4.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; </span><span class="c8 c21">&nbsp;Droit applicable</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c47"><span class="c1 c17">4.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le March&eacute; est r&eacute;gi et interpr&eacute;t&eacute; conform&eacute;ment au droit du pays de l&rsquo;Acheteur</span><span class="c26 c1 c11">.</span></p>
+            </td>
+         </tr>
+         <tr class="c31">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c29 c42"><span class="c1 c17">5.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; </span><span class="c8 c21">R&egrave;glement des litiges</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c46"><span class="c8 c1">5.1 &nbsp; &nbsp;</span></p>
+               <p class="c10"><span class="c1 c11">&nbsp;</span><span class="c8 c1">a) Les deux parties tentent de r&eacute;gler &agrave; l&rsquo;amiable les diff&eacute;rends d&eacute;coulant du pr&eacute;sent contrat ou en rapport avec celui-l&agrave;.</span></p>
+               <p class="c77"><span class="c26 c11 c21">[</span></p>
+               <p class="c53"><span class="c8 c1">b) Tous les litiges non r&eacute;solus d&eacute;coulant du pr&eacute;sent contrat ou dans le cadre de celui-l&agrave; doivent &ecirc;tre r&eacute;gl&eacute;s conform&eacute;ment aux lois du pays de l&rsquo;acheteur.</span></p>
+            </td>
+         </tr>
+         <tr class="c68">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c29"><span class="c8 c21">6. Montant du March&eacute;</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c9 c34"><span class="c1 c17">1.1.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; </span><span class="c8 c1">Le montant du March&eacute; est sp&eacute;cifi&eacute; dans l&rsquo;Annexe 1.</span></p>
+               <p class="c9 c43"><span class="c8 c1">&nbsp;</span></p>
+               <p class="c13"><span class="c1 c17">1.2.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; </span><span class="c8 c1">Les prix unitaires factur&eacute;s par le Fournisseur pour les Fournitures dans le cadre du March&eacute; ne seront pas diff&eacute;rents des prix propos&eacute;s par le Fournisseur et accept&eacute;s par l&rsquo;Acheteur.</span></p>
+            </td>
+         </tr>
+         <tr class="c86">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c29"><span class="c8 c21">7. Modalit&eacute;s de R&egrave;glement</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c46"><span class="c8 c1">7.1 &nbsp; La m&eacute;thode et conditions de paiement au Fournisseur dans le cadre de ce march&eacute; seront comme ci-dessous :</span></p>
+               <p class="c46"><span class="c1 c17">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c21 c17">&Agrave; la livraison et &agrave; l&rsquo;acceptation</span><span class="c8 c1">&nbsp;: Cent (100) pour cent du prix du contrat seront pay&eacute;s au fournisseur dans les trente (30) jours suivant la r&eacute;ception des marchandises et la pr&eacute;sentation des documents de facture et apr&egrave;s la date du certificat d&rsquo;acceptation de la livraison d&eacute;livr&eacute;e par l&rsquo;acheteur.</span></p>
+               <p class="c73"><span class="c8 c1">&nbsp;</span></p>
+            </td>
+         </tr>
+         <tr class="c87">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">8. Imp&ocirc;ts, Taxes et Droits</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c46"><span class="c8 c1">8.1 Le fournisseur est enti&egrave;rement responsable de toutes les taxes, droits, droits de licence, etc., engag&eacute;s jusqu&rsquo;&agrave; la livraison des marchandises contract&eacute;es &agrave; l&rsquo;acheteur.</span></p>
+               <p class="c57 c43"><span class="c8 c1">&nbsp;</span></p>
+            </td>
+         </tr>
+         <tr class="c93">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">9. Sous-Traitants</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c46"><span class="c8 c1">9.1 &nbsp;Le Fournisseur notifiera par &eacute;crit &agrave; l&rsquo;Acheteur tous les contrats de sous&#8209;traitance attribu&eacute;s dans le cadre du March&eacute; s&rsquo;il ne l&rsquo;a d&eacute;j&agrave; fait dans la Cotation. Cette notification, fournie dans la Cotation ou ult&eacute;rieurement, ne d&eacute;gagera pas la responsabilit&eacute; du Fournisseur, et ne le lib&eacute;rera d&rsquo;aucune des obligations qui lui incombent du fait du March&eacute;.</span></p>
+            </td>
+         </tr>
+         <tr class="c24">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">10. &nbsp;Sp&eacute;cifications et Normes</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c48 c80"><span class="c8 c1">10.1 Les Fournitures livr&eacute;es au titre du March&eacute; et les Services connexes doivent satisfaire aux sp&eacute;cifications techniques stipul&eacute;es dans les Sp&eacute;cifications Techniques et, si aucune norme n&rsquo;y est indiqu&eacute;e, la norme sera suppos&eacute;e &eacute;quivalente ou sup&eacute;rieure aux normes officielles dont l&rsquo;application est appropri&eacute;e dans le pays d&rsquo;origine des Fournitures.</span></p>
+            </td>
+         </tr>
+         <tr class="c75">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">11. Date de Livraison et Date d&rsquo;Ach&egrave;vement</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c43 c67"><span class="c1 c17">11.1La date de livraison des Fournitures est la suivante : </span><span class="c26 c1 c11">@@deadline_lot@@.</span></p>
+            </td>
+         </tr>
+         <tr class="c90">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">12 Garantie</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c46"><span class="c8 c1">12.1 &nbsp;Le Fournisseur garantit que les Fournitures sont neuves et n&rsquo;ont jamais &eacute;t&eacute; utilis&eacute;es, qu&rsquo;elles sont du mod&egrave;le le plus r&eacute;cent ou courant, et qu&rsquo;elles comportent toutes les derni&egrave;res am&eacute;liorations en mati&egrave;re de conception et de mat&eacute;riaux, sauf disposition contraire du March&eacute;.</span></p>
+               <p class="c46"><span class="c8 c1">12.2 &nbsp; Le Fournisseur garantit en outre que les Fournitures seront exemptes de tous d&eacute;fauts li&eacute;s &agrave; une action ou &agrave; une omission du Fournisseur ou li&eacute;s &agrave; un d&eacute;faut de conception, de mat&eacute;riaux et de fabrication, de nature &agrave; emp&ecirc;cher leur utilisation normale dans les conditions particuli&egrave;res du pays de destination finale.</span></p>
+               <p class="c46"><span class="c8 c1">12.3 &nbsp; La garantie demeurera pour la p&eacute;riode sp&eacute;cifi&eacute;e dans les lois du pays de l&rsquo;acheteur.</span></p>
+               <p class="c46"><span class="c8 c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            </td>
+         </tr>
+         <tr class="c95">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">13 Droits d&rsquo;Auteur</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c38"><span class="c8 c1">13.1 Les droits d&rsquo;auteur de tous les plans, documents et autres pi&egrave;ces contenant des donn&eacute;es et des renseignements fournis &agrave; l&rsquo;Acheteur par le Fournisseur demeureront la propri&eacute;t&eacute; du Fournisseur ou, s&rsquo;ils sont fournis directement &agrave; l&rsquo;Acheteur ou par l&rsquo;interm&eacute;diaire du Fournisseur par une tierce partie, y compris par des Fournisseurs de mat&eacute;riaux, les droits d&rsquo;auteur desdits mat&eacute;riaux demeureront la propri&eacute;t&eacute; de ladite tierce partie.</span></p>
+            </td>
+         </tr>
+         <tr class="c16">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">14 Fraude et Corruption</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c35"><span class="c8 c1">14.1 &nbsp;La Banque exige le respect de ses Directives en mati&egrave;re de lutte contre la Fraude et la Corruption et de ses r&egrave;gles et proc&eacute;dures de sanctions applicables, &eacute;tablies par le R&eacute;gime des Sanctions du Groupe de la Banque mondiale, comme indiqu&eacute; dans l&rsquo;Annexe A des CM.</span></p>
+               <p class="c38"><span class="c8 c1">14.2 L&rsquo;Acheteur exige que le Fournisseur divulgue tous avantages, honoraires ou commissions vers&eacute;s ou qui doivent &ecirc;tre vers&eacute;s en rapport avec la proc&eacute;dure de Demande de Cotations ou l&rsquo;ex&eacute;cution du March&eacute;. Les renseignements divulgu&eacute;s doivent au minimum inclure les noms et l&rsquo;adresse de chaque agent ou autre partie, le montant et la monnaie ainsi que le motif du versement de l&rsquo;avantage, honoraires ou commission.</span></p>
+            </td>
+         </tr>
+         <tr class="c15">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">15 Inspection et Audit par la Banque</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c91"><span class="c8 c1">15.1 En conformit&eacute; avec le paragraphe 2.2 e de l&rsquo;Annexe des Conditions du March&eacute;, le Fournisseur permettra et s&rsquo;assurera que ses agents (qu&rsquo;ils soient d&eacute;clar&eacute;s ou non), ses sous-traitants, Prestataires et personnel, permettent &agrave; la Banque, et/ou &agrave; des personnes qu&rsquo;elle d&eacute;signera, d&rsquo;inspecter les documents et pi&egrave;ces comptables relatifs &agrave; la proc&eacute;dure de passation du march&eacute; et/ou &agrave; l&rsquo;ex&eacute;cution du March&eacute; et &agrave; les faire v&eacute;rifier par des auditeurs nomm&eacute;s par la Banque, si la Banque en fait la demande. L&rsquo;attention du Fournisseur et de ses sous-traitants est attir&eacute;e sur la Clause 22.1 des CM (Fraude et Corruption) ci-avant qui stipule, entre autres, que le fait d&rsquo;entraver l&rsquo;exercice par la Banque de son droit d&rsquo;examen et de v&eacute;rification tel que pr&eacute;vu par la pr&eacute;sente clause constitue une pratique interdite pouvant conduire &agrave; la r&eacute;siliation du March&eacute; (ainsi qu&rsquo;&agrave; la l&rsquo;exclusion dans le cadre du r&eacute;gime en vigueur concernant les sanctions de la Banque).</span></p>
+            </td>
+         </tr>
+         <tr class="c92">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">16 R&eacute;siliation</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c35"><span class="c8 c1">16.1 R&eacute;siliation pour non-ex&eacute;cution</span></p>
+               <p class="c7"><span class="c1 c17">(a)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">L&rsquo;Acheteur peut, sans pr&eacute;judice des autres recours qu&rsquo;il d&eacute;tient en cas de rupture de march&eacute;, notifier par &eacute;crit au Fournisseur la r&eacute;siliation pour non-ex&eacute;cution de la totalit&eacute; ou d&rsquo;une partie du March&eacute; :</span></p>
+               <p class="c19"><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">(i)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c8 c1">si le Fournisseur manque &agrave; livrer l&rsquo;une quelconque ou l&rsquo;ensemble des Fournitures dans les d&eacute;lais sp&eacute;cifi&eacute;s dans le March&eacute; ou dans les d&eacute;lais prolong&eacute;s par l&rsquo;Acheteur;</span></p>
+               <p class="c19"><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">(ii)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp;</span><span class="c8 c1">si le Fournisseur manque &agrave; ex&eacute;cuter toute autre obligation au titre du March&eacute; ; ou</span></p>
+               <p class="c19"><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">(iii)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Si le Fournisseur, de l&rsquo;avis de l&rsquo;Acheteur, s&rsquo;est livr&eacute; &agrave; des pratiques de fraude ou de corruption, au stade de sa s&eacute;lection ou lors de l&rsquo;ex&eacute;cution du March&eacute;.</span></p>
+               <p class="c76"><span class="c1 c17">(b)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">Au cas o&ugrave; l&rsquo;Acheteur r&eacute;silie tout ou partie du March&eacute;, l&rsquo;Acheteur peut acqu&eacute;rir, aux conditions et de la fa&ccedil;on qui lui paraissent convenables, des Fournitures ou des Services connexes semblables &agrave; ceux non re&ccedil;us ou non ex&eacute;cut&eacute;s et le Fournisseur sera responsable envers l&rsquo;Acheteur de tout co&ucirc;t suppl&eacute;mentaire qui en r&eacute;sulterait. Toutefois, le Fournisseur continuera &agrave; ex&eacute;cuter le March&eacute; dans la mesure o&ugrave; il n&rsquo;est pas r&eacute;sili&eacute;.</span></p>
+               <p class="c52"><span class="c8 c1">16.2 &nbsp; R&eacute;siliation pour convenance</span></p>
+               <p class="c33"><span class="c1 c17">(a)</span><span class="c1 c2">&nbsp; &nbsp;</span><span class="c8 c1">L&rsquo;Acheteur peut &agrave; tout moment r&eacute;silier tout ou partie du March&eacute; par notification &eacute;crite adress&eacute;e au Fournisseur pour motif de convenance. L&rsquo;avis de r&eacute;siliation pr&eacute;cisera que la r&eacute;siliation intervient unilat&eacute;ralement pour motif de convenance, dans quelle mesure l&rsquo;ex&eacute;cution des t&acirc;ches stipul&eacute;es dans le March&eacute; prend fin et la date &agrave; laquelle la r&eacute;siliation prend effet.</span></p>
+            </td>
+         </tr>
+         <tr class="c49">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">17. &nbsp;Travail Forc&eacute;</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c23"><span class="c8 c1">17.1. Le Fournisseur, y compris ses sous-traitants, ne doit pas employer ou utiliser le travail forc&eacute;, ou des personnes ayant fait l&rsquo;objet d&rsquo;un trafic, conform&eacute;ment aux Clauses 27.2 et 27.3 dues CM.</span></p>
+               <p class="c23"><span class="c8 c1">17.2 &nbsp;Le travail forc&eacute; consiste en &nbsp;tout travail ou service, non effectu&eacute; volontairement, qui est exig&eacute; d&rsquo;une personne sous la menace de la force ou de la menace, et comprend tout type de travail involontaire ou obligatoire, tels que le travail asservi, le travail forc&eacute; ou des arrangements similaires de contrat de travail.</span></p>
+               <p class="c9 c34"><span class="c8 c1">17.3 &nbsp;La traite des personnes est d&eacute;finie comme le recrutement, le transport, le transfert, l&rsquo;h&eacute;bergement ou l&rsquo;accueil de personnes par le moyen de la menace ou du recours &agrave; la force ou &agrave; d&rsquo;autres formes de coercition, d&rsquo;enl&egrave;vement, de fraude, de tromperie, d&rsquo;abus de pouvoir ou de position de vuln&eacute;rabilit&eacute;, ou de donner ou recevoir des paiements ou des avantages pour obtenir le consentement d&rsquo;une personne ayant le contr&ocirc;le sur une autre personne, aux fins de l&rsquo;exploitation.</span></p>
+            </td>
+         </tr>
+         <tr class="c85">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">18. Travail des Enfants</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c45"><span class="c8 c1">18.1 &nbsp;Le Fournisseur, y compris ses sous-traitants, ne doit pas employer ou engager un enfant de moins de 14 ans sous r&eacute;serve que la loi nationale pr&eacute;cise un &acirc;ge plus &eacute;lev&eacute; (l&rsquo;&acirc;ge minimum).</span></p>
+               <p class="c45"><span class="c8 c1">18.2 &nbsp; Le Fournisseur, y compris ses sous-traitants, ne doit pas employer ou engager un enfant entre l&rsquo;&acirc;ge minimum et l&rsquo;&acirc;ge de 18 ans d&rsquo;une mani&egrave;re qui est susceptible d&rsquo;&ecirc;tre dangereuse, ou d&rsquo;interf&eacute;rer avec l&rsquo;&eacute;ducation de l&rsquo;enfant, ou d&rsquo;&ecirc;tre nocif pour la sant&eacute; de l&rsquo;enfant ou son d&eacute;veloppement physique, mental, spirituel, moral ou social.</span></p>
+               <p class="c58"><span class="c8 c1">Le travail consid&eacute;r&eacute; comme dangereux pour les enfants est un travail qui, de par sa nature ou les circonstances dans lesquelles il est effectu&eacute;, est susceptible de mettre en p&eacute;ril la sant&eacute;, la s&eacute;curit&eacute; ou la moralit&eacute; des enfants. Ces activit&eacute;s de travail interdites aux enfants comprennent le travail suivant:</span></p>
+               <p class="c55"><span class="c1">a)</span><span class="c8 c1">&nbsp;l&rsquo;exposition &agrave; des abus physiques, psychologiques ou sexuels;</span></p>
+               <p class="c55"><span class="c1">b)</span><span class="c8 c1">&nbsp;le travail sous terre, sous l&rsquo;eau, en hauteur ou dans des espaces confin&eacute;s;</span></p>
+               <p class="c55"><span class="c1">c)</span><span class="c1 c17">&nbsp;le travail avec des machines, des mat&eacute;riels ou des outils dangereux, ou impliquant la manipulation ou</span><span class="c1">&nbsp;</span><span class="c8 c1">le transport de charges lourdes;</span></p>
+               <p class="c55"><span class="c1">d)</span><span class="c8 c1">&nbsp;le travail dans des environnements malsains exposant les enfants &agrave; des substances, des agents ou des processus dangereux, ou &agrave; des temp&eacute;ratures, du bruit ou des vibrations pr&eacute;judiciables &agrave; la sant&eacute;; ou</span></p>
+               <p class="c29 c71"><span class="c8 c1">e) le travail dans des conditions difficiles telles que le travail pendant de longues heures, pendant la nuit ou en confinement dans les locaux de l&rsquo;employeur.</span></p>
+            </td>
+         </tr>
+         <tr class="c50">
+            <td class="c14" colspan="1" rowspan="1">
+               <p class="c44"><span class="c8 c21">19. Obligations en mati&egrave;re d&rsquo;Hygi&egrave;ne &nbsp;et de S&eacute;curit&eacute;</span></p>
+            </td>
+            <td class="c6" colspan="1" rowspan="1">
+               <p class="c29 c34"><span class="c8 c1">&nbsp;</span></p>
+               <p class="c29 c34"><span class="c1 c8">19.1 Le Fournisseur satisfaire, et doit exiger de ses sous-traitants le cas &eacute;ch&eacute;ant de satisfaire toutes les r&egrave;gles en mati&egrave;re d&rsquo;hygi&egrave;ne et de s&eacute;curit&eacute;, les lois, directives, et tout autre exigence contenue dans les Sp&eacute;cifications Techniques.</span></p>
+               <p class="c29 c34"><span class="c26 c1 c11">&nbsp;</span></p>
+               <p class="c29 c34"><span class="c26 c1 c11">&nbsp;</span></p>
+            </td>
+         </tr>
+      </table>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c0"><span class="c26 c39 c21"></span></p>
+      <h1 class="c4"><span class="c26 c1 c32">ANNEXE A : Fraude et Corruption</span></h1>
+      <p class="c89"><span class="c26 c11 c21"></span></p>
+      <a id="t.da26378bd15b8c0dea0d5b759d7d7022b8fc0570"></a><a id="t.1"></a>
+      <table class="c79">
+         <tr class="c59">
+            <td class="c72" colspan="1" rowspan="1">
+               <p class="c66"><span class="c8 c21">1. &nbsp; Objet</span></p>
+               <p class="c82"><span class="c8 c1">1.1 Les Directives de la Banque en mati&egrave;re de lutte contre la fraude et la corruption, ainsi que la pr&eacute;sente annexe, sont applicables &agrave; la passation des march&eacute;s dans le cadre des Op&eacute;rations de Financement de Projets d&rsquo;Investissement par la Banque.</span></p>
+               <p class="c54"><span class="c8 c21">2. &nbsp; Exigences</span></p>
+               <p class="c82"><span class="c8 c1">2.1 La Banque exige que les Emprunteurs (y compris les b&eacute;n&eacute;ficiaires d&rsquo;un financement de la Banque), les soumissionnaires (candidats/proposants), consultants, Entrepreneurs et Fournisseurs, les sous-traitants, sous-consultants, Prestataires de services ou Fournisseurs, tous les agents (d&eacute;clar&eacute;s ou non) ; ainsi que l&rsquo;ensemble de leur personnel ; se conforment aux normes les plus strictes en mati&egrave;re d&rsquo;&eacute;thique, durant le processus de passation des march&eacute;s, la s&eacute;lection, et l&rsquo;ex&eacute;cution des contrats financ&eacute;s par la Banque, et s&rsquo;abstiennent de toute fraude et corruption.</span></p>
+               <p class="c82"><span class="c8 c1">&nbsp;</span></p>
+               <p class="c82"><span class="c8 c1">2.2 En vertu de ce principe, la Banque :</span></p>
+               <p class="c30"><span class="c1 c17">a.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">aux fins d&rsquo;application de la pr&eacute;sente disposition, d&eacute;finit comme suit les expressions suivantes :</span></p>
+               <p class="c25"><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">i.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c8 c1">est coupable de &laquo; corruption &raquo; quiconque offre, donne, sollicite ou accepte, directement ou indirectement, un quelconque avantage en d&rsquo;influer ind&ucirc;ment sur les actions d&rsquo;une autre personne ou entit&eacute; ;</span></p>
+               <p class="c25"><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">ii.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c8 c1">se livre &agrave; des &laquo; man&oelig;uvres frauduleuses &raquo; quiconque agit, ou s&rsquo;abstient d&rsquo;agir, ou d&eacute;nature des faits, d&eacute;lib&eacute;r&eacute;ment ou par n&eacute;gligence grave, ou tente d&rsquo;induire en erreur une personne ou une entit&eacute;, afin d&rsquo;en retirer un avantage financier ou de toute autre nature, ou se d&eacute;rober &agrave; une obligation;</span></p>
+               <p class="c25"><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">iii.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c8 c1">se livrent &agrave; des &laquo; man&oelig;uvres collusives &raquo; les personnes ou entit&eacute;s qui s&rsquo;entendent afin d&rsquo;atteindre un objectif illicite, notamment en influant ind&ucirc;ment sur l&rsquo;action d&rsquo;autres personnes ou entit&eacute;s;</span></p>
+               <p class="c25"><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">iv.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c8 c1">se livre &agrave; des &laquo; man&oelig;uvres coercitives &raquo; quiconque nuit ou porte pr&eacute;judice, ou menace de nuire ou de porter pr&eacute;judice, directement ou indirectement, &agrave; une personne ou entit&eacute;, ou &agrave; leurs biens, en vue d&rsquo;influer ind&ucirc;ment sur les actions de cette personne ou entit&eacute; ; et</span></p>
+               <p class="c25"><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c1 c17">v.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c8 c1">se livre &agrave; des &laquo; man&oelig;uvres obstructives &raquo;</span></p>
+               <p class="c63"><span class="c1 c17">(a) &nbsp; quiconque d&eacute;truit, falsifie, alt&egrave;re ou dissimule d&eacute;lib&eacute;r&eacute;ment les preuves sur lesquelles se base une enqu&ecirc;te de la Banque en mati&egrave;re de corruption ou de man&oelig;uvres frauduleuses, coercitives ou collusives, ou fait de fausses d&eacute;clarations &agrave; ses enqu&ecirc;teurs destin&eacute;es &agrave; entraver son enqu&ecirc;te; ou bien menace,</span><span class="c21 c17">&nbsp;</span><span class="c8 c1">harc&egrave;le ou intimide quelqu&rsquo;un aux fins de l&rsquo;emp&ecirc;cher de faire part d&rsquo;informations relatives &agrave; cette enqu&ecirc;te, ou bien de poursuivre l&rsquo;enqu&ecirc;te; ou</span></p>
+               <p class="c63"><span class="c8 c1">(b) &nbsp; celui qui entrave d&eacute;lib&eacute;r&eacute;ment l&rsquo;exercice par la Banque de son droit d&rsquo;examen tel que stipul&eacute; au paragraphe (e) ci-dessous.</span></p>
+               <p class="c30"><span class="c1 c17">b.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">rejettera la proposition d&rsquo;attribution d&rsquo;un march&eacute; ou contrat si elle &eacute;tablit que la personne physique ou morale &agrave; laquelle il est recommand&eacute; d&rsquo;attribuer ledit march&eacute; ou contrat, ou l&rsquo;un des membres de son personnel ou de ses agents, sous-consultants, sous-traitants, Prestataires de service, Fournisseurs, ou un de leurs employ&eacute;s, s&rsquo;est livr&eacute;, directement ou indirectement, &agrave; un acte de corruption, une man&oelig;uvre frauduleuse, collusive, coercitive ou obstructive en vue de l&rsquo;obtention dudit march&eacute; ou contrat;</span></p>
+               <p class="c30"><span class="c1 c17">c.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">outre les recours pr&eacute;vus dans l&rsquo;Accord de Financement, pourra d&eacute;cider d&rsquo;autres actions appropri&eacute;es, y compris d&eacute;clarer la passation du march&eacute; non-conforme si elle d&eacute;termine, &agrave; un moment quelconque, que les repr&eacute;sentants de l&rsquo;Emprunteur, ou d&rsquo;un b&eacute;n&eacute;ficiaire du financement, s&rsquo;est livr&eacute; &agrave; la corruption ou &agrave; des man&oelig;uvres frauduleuses, collusives, coercitives ou obstructives pendant la proc&eacute;dure de passation du march&eacute;, de s&eacute;lection ou d&rsquo;ex&eacute;cution du march&eacute;, sans que l&rsquo;Emprunteur ait pris, en temps voulu et &agrave; la satisfaction de la Banque, les mesures n&eacute;cessaires pour rem&eacute;dier &agrave; cette situation, y compris en manquant &agrave; son devoir d&rsquo;informer la Banque lorsqu&rsquo;il a eu connaissance desdites pratiques;</span></p>
+               <p class="c30"><span class="c1 c17">d.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c8 c1">sanctionnera une entreprise ou un individu, dans le cadre des Directives de la Banque en mati&egrave;re de lutte contre la fraude et la corruption, et conform&eacute;ment aux r&egrave;gles et proc&eacute;dures de sanctions applicables de la Banque, y compris en d&eacute;clarant publiquement l&rsquo;exclusion de l&rsquo;entreprise ou de l&rsquo;individu pour une p&eacute;riode ind&eacute;finie ou d&eacute;termin&eacute;e (i) de l&rsquo;attribution d&rsquo;un march&eacute; financ&eacute; par la Banque ou de pouvoir en b&eacute;n&eacute;ficier financi&egrave;rement ou de toute autre mani&egrave;re[1] (ii) de la participation[2] comme sous-traitant, consultant, fabricant ou fournisseur de biens ou prestataire de services d&eacute;sign&eacute; d&rsquo;une entreprise par ailleurs &eacute;ligible &agrave; l&rsquo;attribution d&rsquo;un march&eacute; financ&eacute; par la Banque ; et (iii) du b&eacute;n&eacute;fice du versement de fonds &eacute;manant d&rsquo;un pr&ecirc;t de la Banque ou de participer d&rsquo;une autre mani&egrave;re &agrave; la pr&eacute;paration ou &agrave; la mise en &oelig;uvre d&rsquo;un projet financ&eacute; par la Banque ;</span></p>
+               <p class="c30"><span class="c1 c17">e.</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c1 c17">exigera que les dossiers d&rsquo;appel d&rsquo;offres/appel &agrave; propositions, et que les contrats et march&eacute;s financ&eacute;s par la Banque, contiennent une disposition exigeant des soumissionnaires (candidats/proposants), consultants, Fournisseurs et Entrepreneurs, ainsi que leurs sous-traitants, sous-consultants, Prestataires de services, Fournisseurs, agents, et personnel, autorisent la Banque &agrave; inspecter</span><span class="c1 c64">[3]</span><span class="c8 c1">&nbsp;les pi&egrave;ces comptables, relev&eacute;s et autres documents relatifs &agrave; la passation du march&eacute;, &agrave; la s&eacute;lection et/ou &agrave; l&rsquo;ex&eacute;cution du march&eacute;, et &agrave; les soumettre pour v&eacute;rification &agrave; des auditeurs d&eacute;sign&eacute;s par la Banque.</span></p>
+               <p class="c60"><span class="c8 c1">&nbsp;</span></p>
+            </td>
+         </tr>
+      </table>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c21 c39">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c12"><span class="c26 c39 c21">&nbsp;</span></p>
+      <p class="c9"><span class="c8 c1">&nbsp;</span></p>
+      <p class="c0"><span class="c1 c5"></span></p>
+      <hr>
+      <p class="c0"><span class="c5 c1"></span></p>
+      <p class="c57"><span class="c1 c51">[1]</span><span class="c26 c1 c74">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pour &eacute;carter tout doute, les effets d&rsquo;une telle sanction sur la partie concern&eacute;e concernent, de mani&egrave;re non exhaustive, (i) le d&eacute;p&ocirc;t de candidature &agrave; la pr&eacute;-qualification, l&rsquo;expression d&rsquo;int&eacute;r&ecirc;t pour une mission de consultant, et la participation &agrave; un appel d&rsquo;offres directement ou comme sous-traitant, consultant, fabricant ou fournisseur, ou prestataire dans le cadre d&rsquo;un tel contrat, et (ii) la conclusion d&rsquo;un avenant ou un additif comportant une modification significative &agrave; un contrat existant.</span></p>
+      <p class="c57"><span class="c1 c51">[2]</span><span class="c26 c1 c74">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Un sous-traitant, consultant, fabricant ou fournisseur de biens ou services (diff&eacute;rents intitul&eacute;s sont utilis&eacute;s en fonction de la formulation du dossier d&rsquo;appel d&rsquo;offres) d&eacute;sign&eacute; est une entreprise ou un individu qui (i) fait partie de la demande de pr&eacute; qualification ou de l&rsquo;offre du soumissionnaire compte tenu de l&rsquo;exp&eacute;rience sp&eacute;cifique et essentielle et du savoir-faire qu&rsquo;il apporte afin de satisfaire aux conditions de qualification pour une offre d&eacute;termin&eacute;e ; ou (ii) a &eacute;t&eacute; d&eacute;sign&eacute; par l&rsquo;Emprunteur.</span></p>
+      <p class="c40"><span class="c1 c51">[3]</span><span class="c26 c1 c74">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les inspections men&eacute;es dans ce cadre sont des v&eacute;rifications sur pi&egrave;ces du fait de leur nature. Ils comprennent des activit&eacute;s de recherche documentaire et factuelle entreprises par la Banque, ou des personnes d&eacute;sign&eacute;es par elle, afin de v&eacute;rifier des aspects sp&eacute;cifiques relevant d&rsquo;une enqu&ecirc;te ou d&rsquo;un audit, tel que l&rsquo;&eacute;valuation de la v&eacute;racit&eacute; d&rsquo;une accusation &eacute;ventuelle de Fraude et Corruption, par le moyen de dispositif appropri&eacute;. De telles activit&eacute;s peuvent inclure, sans limitation, d&rsquo;avoir acc&egrave;s &agrave; des documents financiers d&rsquo;une entreprise ou d&rsquo;une personne et les examiner, faire des copies de ces documents selon les besoins, d&rsquo;avoir acc&egrave;s &agrave; tous autres documents, donn&eacute;es et renseignements (sous forme de documents imprim&eacute;s ou en format &eacute;lectronique) jug&eacute;s pertinents aux fins de l&rsquo;enqu&ecirc;te ou de l&rsquo;audit et les examiner, faire des copies de ces documents selon les besoins, avoir des entretiens avec le personnel et toute autre personne, mener des inspections physiques et des visites de site, et obtenir la v&eacute;rification de renseignements par une tierce partie.</span></p>
+      <p class="c0"><span class="c5 c1"></span></p>
+   </body>
 </html>

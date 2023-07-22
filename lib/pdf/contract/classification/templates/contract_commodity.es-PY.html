@@ -1,1403 +1,275 @@
 <html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Courier;
-	panose-1:2 7 4 9 2 2 5 2 4 4;}
-@font-face
-	{font-family:"Tms Rmn";
-	panose-1:2 2 6 3 4 5 5 2 3 4;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Calibri Light";
-	panose-1:2 15 3 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Arial Unicode MS";
-	panose-1:2 11 6 4 2 2 2 2 2 4;}
-@font-face
-	{font-family:"Times New Roman Bold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:Times;
-	panose-1:2 2 6 3 5 4 5 2 3 4;}
-@font-face
-	{font-family:"CG Times";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Consolas;
-	panose-1:2 11 6 9 2 2 4 3 2 4;}
-@font-face
-	{font-family:"AmericanTypewriter Medium";}
-@font-face
-	{font-family:"\@Arial Unicode MS";
-	panose-1:2 11 6 4 2 2 2 2 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-h3
-	{mso-style-name:"Heading 3\,Sub-Clause Paragraph\,Section Header3";
-	mso-style-link:"Heading 3 Char\,Sub-Clause Paragraph Char\,Section Header3 Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:10.0pt;
-	margin-left:.4in;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;
-	font-weight:normal;}
-p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
-	{mso-style-name:"Footnote Text\,Footnote\,Footnote Text Char2 Char\,Footnote Text Char Char1 Char1\,Footnote Text Char1 Char Char Char1\,Footnote Text Char Char Char Char Char\,Footnote Text Char1 Char1 Char\,Footnote Text Char Char Char1 Char\,single space\,footnote text\,fn";
-	mso-style-link:"Footnote Text Char\,Footnote Char\,Footnote Text Char2 Char Char\,Footnote Text Char Char1 Char1 Char\,Footnote Text Char1 Char Char Char1 Char\,Footnote Text Char Char Char Char Char Char\,Footnote Text Char1 Char1 Char Char\,single space Char\,fn Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:.25in;
-	text-align:justify;
-	text-indent:-.25in;
-	font-size:10.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-link:"Header Char";
-	margin:0in;
-	text-align:justify;
-	border:none;
-	padding:0in;
-	font-size:10.0pt;
-	font-family:"Times New Roman",serif;}
-span.MsoFootnoteReference
-	{vertical-align:super;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-name:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11";
-	mso-style-link:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{mso-style-name:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11CxSpFirst";
-	mso-style-link:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{mso-style-name:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11CxSpMiddle";
-	mso-style-link:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{mso-style-name:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11CxSpLast";
-	mso-style-link:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-span.Heading3Char
-	{mso-style-name:"Heading 3 Char\,Sub-Clause Paragraph Char\,Section Header3 Char";
-	mso-style-link:"Heading 3\,Sub-Clause Paragraph\,Section Header3";
-	font-family:"Times New Roman",serif;}
-span.FootnoteTextChar
-	{mso-style-name:"Footnote Text Char\,Footnote Char\,Footnote Text Char2 Char Char\,Footnote Text Char Char1 Char1 Char\,Footnote Text Char1 Char Char Char1 Char\,Footnote Text Char Char Char Char Char Char\,Footnote Text Char1 Char1 Char Char\,single space Char\,fn Char";
-	mso-style-link:"Footnote Text\,Footnote\,Footnote Text Char2 Char\,Footnote Text Char Char1 Char1\,Footnote Text Char1 Char Char Char1\,Footnote Text Char Char Char Char Char\,Footnote Text Char1 Char1 Char\,Footnote Text Char Char Char1 Char\,single space\,footnote text\,fn";
-	font-family:"Times New Roman",serif;}
-span.HeaderChar
-	{mso-style-name:"Header Char";
-	mso-style-link:Header;
-	font-family:"Times New Roman",serif;}
-span.ListParagraphChar
-	{mso-style-name:"List Paragraph Char\,Citation List Char\,본문\(내용\) Char\,List Paragraph \(numbered \(a\)\) Char\,Colorful List - Accent 11 Char";
-	mso-style-link:"List Paragraph\,Citation List\,본문\(내용\)\,List Paragraph \(numbered \(a\)\)\,Colorful List - Accent 11";
-	font-family:"Times New Roman",serif;}
-p.COCgcc, li.COCgcc, div.COCgcc
-	{mso-style-name:"COC gcc";
-	mso-style-link:"COC gcc Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:16.5pt;
-	text-indent:-.25in;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;
-	font-weight:bold;}
-span.COCgccChar
-	{mso-style-name:"COC gcc Char";
-	mso-style-link:"COC gcc";
-	font-family:"Times New Roman",serif;
-	font-weight:bold;}
-p.CoCHeading1, li.CoCHeading1, div.CoCHeading1
-	{mso-style-name:"CoC Heading 1";
-	mso-style-link:"CoC Heading 1 Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:39.0pt;
-	text-align:justify;
-	text-indent:-21.0pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-span.CoCHeading1Char
-	{mso-style-name:"CoC Heading 1 Char";
-	mso-style-link:"CoC Heading 1";
-	font-family:"Times New Roman",serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
- /* Page Definitions */
- @page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
-@page WordSection2
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection2
-	{page:WordSection2;}
-@page WordSection3
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection3
-	{page:WordSection3;}
- /* List Definitions */
- ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
-
-</head>
-
-<body lang=EN-US link=blue vlink=purple style='word-wrap:break-word'>
-
-<div class=WordSection1>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=ES
-style='font-size:16.0pt;line-height:107%;font-family:"Calibri Light",sans-serif'>Convenio
-Contractual </span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=ES
-style='font-size:16.0pt;line-height:107%;font-family:"Calibri Light",sans-serif'>&nbsp;</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>ESTE
-CONVENIO DE CONTRATO @@number_contract@@ se celebra el @@date_contract@@</p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>ENTRE</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-margin-left:1.0in;text-align:justify;text-indent:-.25in;line-height:normal'><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>1)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><i><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;
-'>@@name_cooperative@@</span></i><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>,
-con&nbsp;sede principal en <i><span style=''>@@cooperative_address@@</span> </i>(en adelante, el&nbsp;“Comprador”), y </span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
-margin-left:1.0in;text-align:justify;text-indent:-.25in;line-height:normal'><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>2)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><i><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;
-'>@@name_provider@@</span></i><i><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>, </span></i><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>sociedad
-constituida al amparo de las&nbsp;leyes de <i><span style='background:lightgrey'>[indique
-el nombre del país del Proveedor]</span> </i>con sede principal en&nbsp;<i><span
-style=''>@@provider_address@@</span> </i>(en
-adelante, el “Proveedor”).</span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>POR
-CUANTO el Comprador ha invitado a cotizaciones respecto de ciertos Bienes y
-Servicios Conexos, a saber, <i><span style=''>@@title_bidding@@, @@lot_name@@</span></i>, y ha aceptado la
-cotización del Proveedor para el suministro de dichos Bienes y Servicios.</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>El
-Comprador y el Proveedor acuerdan lo siguiente: </span></p>
-
-<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-6.0pt;margin-left:.25in;text-align:justify;text-indent:-.25in'><span lang=ES
-style='font-family:"Calibri Light",sans-serif'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>En
-este Convenio las palabras y expresiones tendrán el mismo significado que se
-les asigne en los respectivos documentos del Contrato a que se refieran.</span></p>
-
-<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-6.0pt;margin-left:.25in;text-align:justify;text-indent:-.25in'><span lang=ES
-style='font-family:"Calibri Light",sans-serif'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Los
-siguientes documentos constituyen el Contrato entre el Comprador y el
-Proveedor, y serán leídos e interpretados como parte integral del Contrato.
-Este Convenio Contractual prevalecerá sobre los demás documentos del Contrato.</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:.75in;text-align:justify;text-indent:-.25in;line-height:normal'><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>(a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>la
-Cotización del Proveedor – Adjunto 1;</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:.75in;text-align:justify;text-indent:-.25in;line-height:normal'><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>(b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=ES
-style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>las Condiciones
-del Contrato;</span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:.75in;text-align:justify;text-indent:-.25in;line-height:normal'><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>(c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>los Requerimientos
-del Comprador (incluyendo los Requisitos de los Bienes y Servicios Conexos y
-las Especificaciones Técnicas); y </span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:.75in;text-align:justify;text-indent:-.25in;line-height:normal'><span
-lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>(d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=ES
-style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>cualquier otro
-documento que forme parte integrante del Contrato.</span></p>
-
-<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-6.0pt;margin-left:.25in;text-align:justify;text-indent:-.25in'><span lang=ES
-style='font-family:"Calibri Light",sans-serif'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Como
-contraprestación por los pagos que el Comprador hará al Proveedor conforme
-a&nbsp;lo&nbsp;estipulado en este Contrato, el Proveedor se compromete a
-suministrar los Bienes y&nbsp;Servicios al Comprador y a subsanar los defectos
-de estos en total consonancia con las&nbsp;disposiciones del Contrato.</span></p>
-
-<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-6.0pt;margin-left:.25in;text-align:justify;text-indent:-.25in'><span lang=ES
-style='font-family:"Calibri Light",sans-serif'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-Comprador se compromete a pagar al Proveedor, como contraprestación por el
-suministro de los Bienes y Servicios Conexos y la subsanación de sus defectos,
-el Precio del Contrato o las sumas que resulten pagaderas de conformidad con lo
-dispuesto en el Contrato en el plazo y en la forma prescriptos en este.</span></p>
-
-<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-6.0pt;margin-left:.25in;text-align:justify;text-indent:-.25in'><span lang=ES
-style='font-size:11.0pt;font-family:"Calibri Light",sans-serif'>5.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-lang=ES style='font-family:"Calibri Light",sans-serif'>La oferta y aceptación
-electrónica a través de la </span><span lang=ES style='font-size:11.0pt;
-font-family:"Calibri Light",sans-serif'>Solución Electrónica de Adquisiciones –
-SOL por cada Parte causara la ejecución de este Acuerdo por las Partes bajo su
-libre albedrio , sin ningún tipo de amenaza, o influencia indebida y será
-válido y legalmente obligatorio para ambas partes desde la fecha incluida en el
-Contrato. </span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>EN
-PRUEBA DE CONFORMIDAD, las Partes han suscripto el presente Convenio
-Contractual, de&nbsp;conformidad con el derecho vigente de <i><span
-style='background:lightgrey'>[indique el nombre de la ley del país que gobierna
-el Contrato]</span></i> en el día, mes y año antes indicados.</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
-normal'><b><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>En
-representación del Comprador</span></b></p>
-
-<p class=MsoNormal style='text-align:justify'><span lang=ES style='font-size:
-12.0pt;line-height:107%;font-family:"Calibri Light",sans-serif'>Aceptado digitalmente
-en </span><span lang=ES style='font-size:12.0pt;line-height:107%;font-family:
-"Calibri Light",sans-serif'>la Solución Electrónica de Adquisiciones – SOL por <i><span
-style=''>@@name_cooperative@@</span></i></span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>en
-calidad de <i><span style='background:lightgrey'>[indique el cargo u otra
-designación apropiada]</span></i></span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
-normal'><b><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>En
-representación del Proveedor</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>Aceptado
-digitalmente en </span><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>la
-Solución Electrónica de Adquisiciones – SOL por <i><span style=''> @@name_provider@@</span> </i></span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>en
-calidad de <i><span style='background:lightgrey'>[indique el cargo u otra
-designación apropiada]</span></i></span></p>
-
-<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
-margin-left:0in;text-align:justify;line-height:normal'><span lang=ES
-style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>&nbsp;</span></p>
-
-<p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
-normal'><span lang=ES style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'> </span></p>
-
-<b><span lang=ES style='font-size:16.0pt;line-height:107%;font-family:"Calibri Light",sans-serif'><br
-clear=all style='page-break-before:always'>
-</span></b>
-
-<p class=MsoNormal><b><span lang=ES style='font-size:16.0pt;line-height:107%;
-font-family:"Calibri Light",sans-serif'>&nbsp;</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=ES
-style='font-size:18.0pt;line-height:107%;font-family:"Calibri Light",sans-serif'>Condiciones
-de Contrato</span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-lang=ES style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=636
- style='width:476.75pt;border-collapse:collapse;border:none'>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Definiciones
-  </span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border:solid windowtext 1.0pt;border-left:
-  none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>1.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Las
-  siguientes palabras y expresiones tendrán los significados que aquí se les
-  asigna:</span></p>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  .8in;text-indent:-27.35pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(a)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “Banco” se entiende el Banco Mundial y se refiere al Banco Internacional de
-  Reconstrucción y Fomento (BIRF) o a la Asociación Internacional de Fomento
-  (IDA).</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  .8in;text-indent:-27.35pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(b)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>“CC”
-  significa Condiciones del Contrato.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  .8in;text-indent:-27.35pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(c)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “Contrato” se entiende el Convenio de Contrato celebrado entre el Comprador y
-  el Proveedor, junto con los Documentos del Contrato allí referidos,
-  incluyendo todos los anexos y apéndices, y todos los documentos incorporados
-  allí por&nbsp;referencia.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  .8in;text-indent:-27.35pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(d)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “Documentos del Contrato” se entiende los documentos enumerados en el
-  Convenio Contractual, incluyendo cualquier enmienda.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(e)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “Precio del Contrato” se entiende el precio pagadero al Proveedor según se
-  especifica en CC 6.1, sujeto a las condiciones y ajustes allí estipulados o
-  deducciones propuestas, según corresponda en virtud del&nbsp;Contrato.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(f)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “día” se entiende día calendario.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(g)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>“Finalización”
-  significa el cumplimiento de la prestación de los Servicios Conexos, si
-  corresponda, por el Proveedor de conformidad con los términos y condiciones
-  establecidos en el Contrato. </span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  .8in;text-indent:-27.35pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(h)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>“CC”
-  significa Condiciones de Contrato. </span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(i)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “Bienes” se entiende todos los productos, materia&nbsp;prima, maquinaria y
-  equipos, y otros materiales que el Proveedor deba proporcionar al Comprador
-  en&nbsp;virtud del Contrato.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(j)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>“Parte”
-  suignifica el Comprador o el Proveedor, como lo establece el contexto, y
-  “Partes” significa ambas partes.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(k)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>“Comprador”
-  significa la entidad compradora de los Bienes y Servicios Conexos si
-  corresponde, especificada en la CC 2.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(l)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>“País
-  del Comprador” es el País especificado en la CC 2.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(m)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “Servicios Conexos” se entiende los servicios incidentales relativos a la
-  provisión de los bienes, tales como seguro, instalación, capacitación y
-  mantenimiento inicial y otras obligaciones similares del Proveedor en virtud
-  del Contrato, si corresponde.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(n)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “Subcontratista” se entiende cualquier persona física, entidad privada o
-  pública, o una combinación de estas, a las cuales el Proveedor ha
-  subcontratado para que suministren parte de los Bienes o presten parte de los
-  Servicios Conexos.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(o)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “Proveedor” se entiende la persona física o entidad privada o pública, o una
-  combinación de estas, cuya oferta para ejecutar el Contrato ha sido aceptada
-  por el Comprador y es denominada como tal en el Convenio Contractual.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  57.7pt;text-indent:-27.6pt'><span lang=ES style='font-family:"Calibri Light",sans-serif;
-  letter-spacing:-.2pt'>(p)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Por
-  “emplazamiento del Proyecto” o “Lugar” o “Sitio”, donde corresponde,
-  se&nbsp;entiende el lugar citado CC 2.</span></h3>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Comprador,
-  País del Comprador, Lugar del Proyecto/Destino final</span></p>
-  </td>
-  <td width=468 valign=top style='width:351.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>2.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Comprador es: <i><span style='background:lightgrey'>[ingresar el nombre legal
-  completo del Comprador]</span></i></span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>2.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  País del Comprador es: <i><span style='background:lightgrey'>[ingresar el
-  nombre del País del Comprador]</span></i></span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>2.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Lugar del Proyecto/ Destino final es/son<i><span style='background:lightgrey'>:
-  [ingrese los nombres e información detallada de la localización de los
-  Sitios, como corresponda]</span></i></span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Notificaciones
-  y dirección para Notificaciones</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:0in;line-height:normal'><b><span lang=ES style='font-size:
-  12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>3.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Todas
-  las notificaciones entre las partes en virtud de este Contrato deberán
-  cursarse por escrito a la dirección indicada abajo utilizando el medio más
-  rápido como correo electrónico con prueba de recibo.</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><b><u><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>Dirección
-  para las notificaciones al Comprador </span></u></b></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><i><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[ingrese el nombre del oficial autorizado para recibir
-  notificaciones] </span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:115%'><i><span lang=ES style='font-size:
-  12.0pt;line-height:115%;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[Título/cargo]</span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:115%'><i><span lang=ES style='font-size:
-  12.0pt;line-height:115%;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[Unidad departamental]</span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:115%'><i><span lang=ES style='font-size:
-  12.0pt;line-height:115%;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[dirección]</span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><i><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[<b>dirección de correo electrónico</b>]</span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><b><u><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>Dirección
-  para las notificaciones al Proveedor</span></u></b><b><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif'>:</span></b></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><i><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[ingrese el nombre del oficial autorizado para recibir
-  notificaciones] </span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><i><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[Título/cargo]</span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><i><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[Unidad departamental]</span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><i><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[dirección]</span></i></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:35.2pt;line-height:normal'><i><span lang=ES
-  style='font-size:12.0pt;font-family:"Calibri Light",sans-serif;background:
-  lightgrey'>[<b>dirección de correo electrónico</b>]</span></i></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Ley
-  que rige</span></p>
-  </td>
-  <td width=468 valign=top style='width:351.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>4.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Contrato se regirá por las leyes, y se interpretará conforme a dichas leyes,
-  del País del Comprador”.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Resolución
-  de Disputas</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:0in;line-height:normal'><b><span lang=ES style='font-size:
-  12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
-  </td>
-  <td width=468 valign=top style='width:351.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>5.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Ambas
-  partes intentaran arreglar amigablemente las controversias que surjan de o en
-  relación con el presente contrato. </span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>5.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Todas
-  las disputas que surjan de o en relación con el presente contrato se
-  resolverán finalmente de conformidad con las leyes del país del comprador.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Precio
-  del Contrato</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:0in;line-height:normal'><b><span lang=ES style='font-size:
-  12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>6.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Precio del Contrato se especifica en la Cotización del Proveedor, en el
-  Adjunto 1. </span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>6.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><i><span lang=ES style='font-family:"Calibri Light",sans-serif'>L</span></i><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>os precios unitarios
-  cobrados por el Proveedor por los Bienes suministrados y los Servicios
-  Conexos prestados conforme al Contrato no variarán de los precios cotizados
-  por el Proveedor y aceptados por el Comprador. </span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Condiciones
-  de Pago</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:0in;line-height:normal'><b><span lang=ES style='font-size:
-  12.0pt;font-family:"Calibri Light",sans-serif'>&nbsp;</span></b></p>
-  </td>
-  <td width=468 valign=top style='width:351.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>7.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  método y las condiciones de pago que se realizarán al Proveedor en virtud de
-  este Contrato serán los siguientes:</span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:0in'><b><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>A la entrega y aceptación:</span></b><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'> El cien (100) por
-  ciento del Precio del Contrato será pagado dentro de los treinta (30) días
-  posteriores a la recepción de los Bienes y presentación de los documento que
-  contengan la factura respaldada por el certificado de aceptación de la
-  respectiva entrega emitido por el Comprador.</span><span lang=ES> </span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Impuestos
-  y tarifas</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>8.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Proveedor será totalmente responsable por todos los impuestos, gravámenes,
-  comisiones por licencias y otros cargos similares que se abonen hasta la
-  entrega de los Bienes contratados al Comprador.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Subcontratistas</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>9.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Proveedor informará al Comprador por escrito acerca de todos los subcontratos
-  que adjudique en virtud del Contrato, siempre que no los hubiera especificado
-  en su Cotización. Dicha notificación, en la Oferta original u Ofertas
-  posteriores, no eximirá al&nbsp;Proveedor de las obligaciones, deberes y
-  compromisos o&nbsp;responsabilidades contraídas en virtud del Contrato.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Especificaciones
-  y Normas</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>10.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Los
-  Bienes y Servicios Conexos proporcionados en el marco de este Contrato
-  deberán ajustarse a las especificaciones técnicas y a las normas estipuladas
-  las Especificaciones Técnicas, y, cuando no se haga referencia a una norma
-  aplicable, la norma será equivalente o superior a las normas oficiales cuya
-  aplicación sea apropiada en el país de origen de los Bienes.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>11.<span style='font:7.0pt "Times New Roman"'>&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Fecha
-  de Entrega y Fecha de Finalización</span></p>
-  </td>
-  <td width=468 valign=top style='width:351.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>11.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>La
-  Fecha de Entrega de los Bienes será: <i><span style='background:lightgrey'>[indique
-  la fecha de entrega]</span>.</i></span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>12.<span style='font:7.0pt "Times New Roman"'>&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Garantía</span></p>
-  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:0in;line-height:normal'><span lang=ES style='font-size:
-  12.0pt;font-family:"Calibri Light",sans-serif'>&nbsp;</span></p>
-  </td>
-  <td width=468 valign=top style='width:351.0pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>12.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Proveedor garantiza que todos los Bienes suministrados en virtud del Contrato
-  son nuevos, no tienen uso previo y&nbsp;corresponden al modelo más reciente o
-  actual, y que incorporan todas las mejoras recientes en cuanto a diseño y
-  materiales, a&nbsp;menos que el Contrato disponga otra cosa.</span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>12.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El&nbsp;Proveedor
-  además garantiza que todos los Bienes suministrados estarán libres de
-  defectos derivados de sus actos y omisiones, o&nbsp;derivados del diseño, los
-  materiales o la manufactura, durante el uso normal en las condiciones que
-  imperen en el país de destino final. </span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>12.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>La</span><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'> garantía seguirá
-  vigente durante el periodo que establezcan las leyes del País del Comprador.</span><span
-  lang=ES> </span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>13.<span style='font:7.0pt "Times New Roman"'>&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Derechos
-  de autor</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>13.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Los
-  derechos de autor sobre todos los planos, documentos y otros materiales que
-  contengan datos e información proporcionados al Comprador por el Proveedor
-  pertenecerán al Proveedor o, si se los proporciona directamente al Comprador
-  o a través de un tercero, incluidos los proveedores de materiales, los
-  derechos de autor de dichos materiales permanecerán en manos de dicho
-  tercero.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>14.<span style='font:7.0pt "Times New Roman"'>&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Fraude
-  y Corrupción</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>14.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Banco requiere el cumplimiento de sus Directrices Contra el Fraude y la
-  Corrupción y de sus políticas y&nbsp;procedimientos de sanciones vigentes
-  incluidos en el Marco de Sanciones del Grupo del Banco Mundial, conforme se
-  describe en el Apéndice A de las Condiciones del Contrato.</span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>14.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Comprador requiere que el Proveedor revele cualquier comisión o tarifa que
-  haya sido pagada o que deba pagarse a los agentes o cualquier otra parte con
-  respecto a la solicitud de cotizaciones o la ejecución del Contrato. La
-  información divulgada debe incluir al menos el nombre y la dirección del
-  agente u otra parte, el monto y la moneda, y el propósito de la comisión,
-  propina o honorario.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES>15.<span
-  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES>Inspecciones
-  y auditorías del Banco</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>15.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>De
-  conformidad con el párrafo 2.2 e. del Apéndice A de las Condiciones del Contrato,
-  el Proveedor permitirá y hará que sus agentes (sean declarados o no),
-  subcontratistas, subconsultores, proveedores de servicios, proveedores y
-  personal, permitan, al Banco y / o a las personas designadas por el Banco
-  para inspeccionar el Sitio y / o las cuentas, registros y otros documentos
-  relacionados con el proceso de solicitud de cotizaciones y / o ejecución del
-  Contrato. La atención del Proveedor y sus subcontratistas se dirige a la CC 14.1
-  (Fraude y Corrupción) que establece, entre otras cosas, que los actos
-  destinados a impedir materialmente el ejercicio de los derechos de inspección
-  y auditoría del Banco constituyen una práctica prohibida sujeta a la
-  resolución del Contrato (así como a una determinación de inelegibilidad de
-  conformidad con los procedimientos de sanciones vigentes del Banco).</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES>16.<span
-  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES>Resolución</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>16.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Resolución
-  por Incumplimiento</span></p>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  38.75pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Comprador, sin perjuicio de cualquier otro recurso por incumplimiento del
-  Contrato, mediante notificación escrita de incumplimiento enviada al
-  Proveedor, puede resolver el Contrato en su totalidad o en parte:</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  71.2pt;text-indent:-.25in'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(i)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>si el Proveedor no
-  entrega ninguno o todos los Bienes dentro del período especificado en el
-  Contrato, o dentro de cualquier extensión de los mismos otorgada por el
-  Comprador;</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  71.2pt;text-indent:-.25in'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(ii)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>si el Proveedor no
-  cumple con cualquier otra obligación bajo el Contrato; o</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  71.2pt;text-indent:-.25in'><span lang=ES style='font-family:"Calibri Light",sans-serif'>(iii)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES
-  style='font-family:"Calibri Light",sans-serif'> si el Proveedor, a juicio del
-  Comprador, ha incurrido en Fraude y Corrupción, compitiendo o ejecutando el
-  Contrato.</span></h3>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  35.2pt'><span lang=ES style='font-family:"Calibri Light",sans-serif'>En el
-  caso de que el Comprador resuelva el Contrato en su totalidad o en parte, el Comprador
-  puede adquirir, bajo los términos y de la manera que considere apropiada,
-  Bienes o Servicios Conexos, si corresponde, similares a los no entregados o
-  no realizados, y el Proveedor será responsable ante el Comprador por
-  cualquier costo adicional por dichos Bienes o Servicios Conexos similares, si
-  corresponde. Sin embargo, el Proveedor continuará la ejecución del Contrato
-  de la parte que no se resolvió</span><span lang=ES>.</span></h3>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>16.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Resolución
-  por conveniencia</span></p>
-  <h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
-  71.2pt;text-indent:-.25in'><span lang=ES>(a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Comprador, mediante notificación enviada al Proveedor, puede resolver por
-  conveniencia el Contrato, en su totalidad o en parte, en cualquier momento.
-  El aviso de resolución especificará que la resolución es por la conveniencia
-  del Comprador, el grado respecto al cual el contrato se resuelve y la fecha
-  en que dicha resolución entra en vigencia.</span></h3>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>17.<span style='font:7.0pt "Times New Roman"'>&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Trabajo
-  Forzoso</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>17.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Proveedor, incluidos sus Subcontratistas, no deberá emplear o realizar
-  trabajos forzados o personas sujetas a trata, como se describe en las
-  Subcláusulas 17.2 y 17.3.</span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>17.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  trabajo forzoso consiste en cualquier trabajo o servicio, no realizado
-  voluntariamente, que se exija de un individuo bajo amenaza de fuerza o pena,
-  e incluye cualquier tipo de trabajo involuntario u obligatorio, como trabajo
-  por contrato, trabajo en condiciones de servidumbre o acuerdos similares de
-  contratación laboral.</span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>17.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>La
-  trata de personas se define como el reclutamiento, el transporte, la
-  transferencia, la reclusión o la recepción de personas mediante la amenaza o
-  el uso de la fuerza u otras formas de coerción, secuestro, fraude, engaño,
-  abuso de poder o una posición de vulnerabilidad, o de dar o recibir pagos o
-  beneficios para lograr el consentimiento de una persona que tiene control
-  sobre otra persona, con fines de explotación, o tener control sobre otra
-  persona, con fines de explotación.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>18.<span style='font:7.0pt "Times New Roman"'>&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Trabajo
-  Infantil</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>18.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Proveedor, incluidos sus Subcontratistas, no deberá emplear o contratar a un
-  niño menor de 14 años a menos que la legislación nacional especifique una
-  edad superior (la edad mínima).</span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>18.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Proveedor, incluidos sus Subcontratistas, no deberá emplear o contratar a un
-  niño entre la edad mínima y la edad de 18 años de una manera que pueda ser
-  peligrosa o interferir con la educación del niño o ser perjudicial para la
-  salud o desarrollo físico, mental, espiritual, moral o social del niño.</span></p>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>18.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  trabajo considerado peligroso para los niños es un trabajo que, por su
-  naturaleza o las circunstancias en que se realiza, puede poner en peligro la
-  salud, la seguridad o la moral de los niños. Tales actividades laborales
-  prohibidas para niños incluyen trabajo:</span></p>
-  <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;
-  margin-bottom:6.0pt;margin-left:60.0pt;text-align:justify;text-indent:-21.3pt'><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>(a)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>con exposición a abuso
-  físico, psicológico o sexual;</span></p>
-  <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;
-  margin-bottom:6.0pt;margin-left:60.0pt;text-align:justify;text-indent:-21.3pt'><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>(b)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>bajo tierra, bajo el
-  agua, trabajando en altura o en espacios confinados;</span></p>
-  <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;
-  margin-bottom:6.0pt;margin-left:60.0pt;text-align:justify;text-indent:-21.3pt'><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>(c)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>con maquinaria, equipo
-  o herramientas peligrosas, o que impliquen manipulación o transporte de
-  cargas pesadas;</span></p>
-  <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;
-  margin-bottom:6.0pt;margin-left:60.0pt;text-align:justify;text-indent:-21.3pt'><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>(d)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>en entornos poco saludables
-  exponiendo a los niños a sustancias, agentes o procesos peligrosos,
-  temperaturas, ruido o vibraciones que dañen la salud; o</span></p>
-  <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;
-  margin-bottom:6.0pt;margin-left:60.0pt;text-align:justify;text-indent:-21.3pt'><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>(e)<span
-  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-  lang=ES style='font-family:"Calibri Light",sans-serif'>en condiciones
-  difíciles, como trabajar durante largas horas, durante la noche o en
-  confinamiento en las instalaciones del empleador.</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=COCgcc style='margin-top:6.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>19.<span style='font:7.0pt "Times New Roman"'>&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>Obligaciones
-  de Salud y Seguridad</span></p>
-  </td>
-  <td width=468 style='width:351.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=CoCHeading1 style='margin-top:6.0pt;margin-right:0in;margin-bottom:
-  6.0pt;margin-left:31.0pt;text-indent:-31.0pt'><span lang=ES style='font-family:
-  "Calibri Light",sans-serif'>19.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=ES style='font-family:"Calibri Light",sans-serif'>El
-  Proveedor deberá cumplir, y deberá exigir a sus Subcontratistas, si
-  corresponde, que cumplan con todas las reglamentaciones, leyes, pautas y
-  cualquier otro requisito establecido en las Especificaciones Técnicas.</span></p>
-  </td>
- </tr>
-</table>
-
-</div>
-
-<b><span lang=ES-CO style='font-size:16.0pt;line-height:107%;font-family:"Calibri Light",sans-serif'><br
-clear=all style='page-break-before:always'>
-</span></b>
-
-<div class=WordSection2>
-
-<p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
-margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span lang=ES
-style='font-family:"Calibri Light",sans-serif'>Anexo A de las Condiciones
-Contractuales</span></b></p>
-
-<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
-margin-bottom:6.0pt;margin-left:0in;text-align:center'><b><span lang=ES
-style='font-family:"Calibri Light",sans-serif'>Fraude y Corrupción</span></b></p>
-
-<p class=MsoNormal align=center style='text-align:center'><b><i><span lang=ES
-style='font-family:"Calibri Light",sans-serif'>(El texto de este anexo no
-deberá modificarse)</span></i></b></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.25in;text-align:justify;text-indent:-.25in'><b><span lang=ES
-style='font-family:"Calibri Light",sans-serif'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></b><b><span lang=ES style='font-family:"Calibri Light",sans-serif'>Propósito</span></b></p>
-
-<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-8.0pt;margin-left:.25in;text-align:justify;text-indent:-.25in'><span lang=ES
-style='font-size:11.0pt;font-family:"Calibri Light",sans-serif'>1.1<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=ES
-style='font-size:11.0pt;font-family:"Calibri Light",sans-serif'>Las Directrices
-Contra el Fraude y la Corrupción del Banco y este anexo se aplicarán a las
-adquisiciones en el marco de las operaciones de Financiamiento para Proyectos
-de Inversión del Banco.</span></p>
-
-<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-indent:
--.25in'><b><span lang=ES style='font-family:"Calibri Light",sans-serif'>2.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
-lang=ES style='font-family:"Calibri Light",sans-serif'>Requisitos</span></b></p>
-
-<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-6.0pt;margin-left:.25in;text-align:justify;text-indent:-.25in;text-autospace:
-none'><span lang=ES style='font-size:11.0pt;font-family:"Calibri Light",sans-serif'>2.1<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=ES
-style='font-size:11.0pt;font-family:"Calibri Light",sans-serif;color:black'>El
-Banco exige que los Prestatarios (incluidos los beneficiarios del
-financiamiento del Banco), <span style='letter-spacing:-.3pt'>licitantes
-(postulantes / proponentes), consultores, contratistas y proveedores, todo
-subcontratista,</span> subconsultor, prestadores de servicios o proveedores,
-todo agente (haya sido declarado o no), y todo miembro de su personal, observen
-las más elevadas normas éticas durante el proceso de adquisición, la selección
-y la ejecución de contratos financiados por el Banco, y se abstengan de
-prácticas fraudulentas y corruptas.</span></p>
-
-<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
-6.0pt;margin-left:.25in;text-align:justify;text-indent:-.25in;text-autospace:
-none'><span lang=ES style='font-size:11.0pt;font-family:"Calibri Light",sans-serif'>2.2<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=ES
-style='font-size:11.0pt;font-family:"Calibri Light",sans-serif'>Con ese fin, el
-Banco:</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:45.0pt;text-align:justify;text-indent:-17.85pt;line-height:normal;
-text-autospace:none'><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>Define de la siguiente manera, a los efectos de esta disposición,
-las expresiones que se indican a continuación:</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:58.5pt;text-align:justify;text-indent:-58.5pt;line-height:normal;
-text-autospace:none'><span lang=EN-AU style='font-family:"Calibri Light",sans-serif;
-color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>Por “práctica corrupta” se entiende el ofrecimiento, entrega,
-aceptación o solicitud directa o indirecta de cualquier cosa de valor con el
-fin de influir indebidamente en el accionar de otra parte.</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:58.5pt;text-align:justify;text-indent:-58.5pt;line-height:normal;
-text-autospace:none'><span lang=EN-AU style='font-family:"Calibri Light",sans-serif;
-color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>Por “práctica fraudulenta” se entiende cualquier acto u omisión,
-incluida la tergiversación de información, con el que se engañe o se intente
-engañar en forma deliberada o imprudente a una parte con el fin de obtener un
-beneficio financiero o&nbsp;de&nbsp;otra índole, o para evadir una obligación.</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:58.5pt;text-align:justify;text-indent:-58.5pt;line-height:normal;
-text-autospace:none'><span lang=EN-AU style='font-family:"Calibri Light",sans-serif;
-color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>Por “práctica colusoria” se entiende todo arreglo entre dos o más
-partes realizado con la intención de alcanzar un propósito ilícito, como el de
-influir de forma indebida en el accionar de otra parte.</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:58.5pt;text-align:justify;text-indent:-58.5pt;line-height:normal;
-text-autospace:none'><span lang=EN-AU style='font-family:"Calibri Light",sans-serif;
-color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>iv.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>Por “práctica coercitiva” se entiende el perjuicio o daño o la
-amenaza de causar perjuicio o daño directa o indirectamente a cualquiera de las
-partes o a sus bienes para influir de forma indebida en su accionar.</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:58.5pt;text-align:justify;text-indent:-58.5pt;line-height:normal;
-text-autospace:none'><span lang=EN-AU style='font-family:"Calibri Light",sans-serif;
-color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>v.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>Por “práctica de obstrucción” se entiende:</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:1.5in;text-align:justify;text-indent:-17.85pt;line-height:normal;
-text-autospace:none'><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>(a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
-lang=ES style='font-family:"Calibri Light",sans-serif;color:black'>la destrucción,
-falsificación, alteración u ocultamiento deliberado de pruebas materiales
-referidas a una investigación o el acto de dar falsos testimonios a los
-investigadores para impedir materialmente que el Banco investigue denuncias de
-prácticas corruptas, fraudulentas, coercitivas o colusorias, o la amenaza,
-persecución o&nbsp;intimidación de otra parte para evitar que revele lo que
-conoce sobre asuntos relacionados con una investigación o lleve a cabo la
-investigación, o</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:1.5in;text-align:justify;text-indent:-17.85pt;line-height:normal;
-text-autospace:none'><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>(b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
-lang=ES style='font-family:"Calibri Light",sans-serif;color:black'>los actos
-destinados a impedir materialmente que el Banco ejerza sus derechos de
-inspección y auditoría establecidos en el párrafo&nbsp;2.2&nbsp;e, que figura a
-continuación.</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:71.7pt;text-align:justify;text-indent:-17.85pt;line-height:normal;
-text-autospace:none'><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>Rechazará toda propuesta de adjudicación si determina que la
-empresa o persona recomendada para la adjudicación, los miembros de su
-personal, sus agentes, subconsultores, subcontratistas, prestadores de
-servicios, proveedores o empleados han participado, directa o indirectamente,
-en prácticas corruptas, fraudulentas, colusorias, coercitivas u obstructivas
-para competir por el contrato en cuestión.</span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:71.7pt;text-align:justify;text-indent:-17.85pt;line-height:normal;
-text-autospace:none'><span lang=ES style='font-family:"Calibri Light",sans-serif'>c.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-lang=ES style='font-family:"Calibri Light",sans-serif;color:black'>Además de
-utilizar los recursos legales establecidos en el convenio legal pertinente,
-podrá adoptar otras medidas adecuadas, entre ellas declarar que las
-adquisiciones están viciadas, si determina en cualquier momento que los
-representantes del prestatario o de un receptor de una parte de los fondos del
-préstamo participaron en prácticas corruptas, fraudulentas, colusorias,
-coercitivas u obstructivas durante el proceso de adquisición, o la selección o
-ejecución del contrato en cuestión, y que el prestatario no tomó medidas
-oportunas y adecuadas, satisfactorias para el Banco, para abordar dichas
-prácticas cuando estas ocurrieron, como informar en tiempo y&nbsp;forma a este
-último al tomar conocimiento de los hechos. </span></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
-margin-left:71.7pt;text-align:justify;text-indent:-17.85pt;line-height:normal;
-text-autospace:none'><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>d.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=ES style='font-family:"Calibri Light",sans-serif;
-color:black'>Podrá sancionar, conforme a lo establecido en sus directrices de
-lucha contra la corrupción y a sus políticas y procedimientos de sanciones
-vigentes, a cualquier empresa o persona en forma indefinida o durante un
-período determinado, lo que incluye declarar a dicha empresa o persona inelegibles
-públicamente para: (i)&nbsp;obtener la adjudicación o recibir cualquier
-beneficio, ya sea financiero o de otra índole, de un contrato financiado por el
-Banco<a href="#_ftn1" name="_ftnref1" title=""><span
-class=MsoFootnoteReference><span class=MsoFootnoteReference><span lang=ES
-style='font-size:11.0pt;line-height:107%;font-family:"Calibri Light",sans-serif;
-color:black'>[1]</span></span></span></a>; (ii) ser nominada<a href="#_ftn2"
-name="_ftnref2" title=""><span class=MsoFootnoteReference><span
-class=MsoFootnoteReference><span lang=ES style='font-size:11.0pt;line-height:
-107%;font-family:"Calibri Light",sans-serif;color:black'>[2]</span></span></span></a>como
-subcontratista, consultor, fabricante o proveedor, o prestador de servicios de
-una firma que de lo contrario sería elegible a la cual se le haya adjudicado un
-contrato financiado por el Banco, y (iii) recibir los fondos de un préstamo del
-Banco o&nbsp;participar más activamente en la preparación o la ejecución de
-cualquier proyecto financiado por el Banco.</span></p>
-
-<p class=MsoListParagraph style='margin-left:71.7pt;text-align:justify;
-text-indent:-17.85pt'><span lang=ES style='font-size:11.0pt;font-family:"Calibri Light",sans-serif'>e.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-lang=ES style='font-size:11.0pt;font-family:"Calibri Light",sans-serif;
-color:black'>Exigirá que en los documentos de solicitud de ofertas/propuestas y
-en los contratos financiados con préstamos del Banco se incluya una
-cláusula&nbsp;en la que se exija que los licitantes (postulantes /proponentes),
-consultores, contratistas y proveedores, así como sus respectivos
-subcontratistas, subconsultores, prestadores de servicios, proveedores, agentes
-y personal, permitan al Banco inspeccionar<a href="#_ftn3" name="_ftnref3"
-title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span
-lang=ES style='font-size:11.0pt;line-height:107%;font-family:"Calibri Light",sans-serif;
-color:black'>[3]</span></span></span></a>todas las cuentas, registros y otros
-documentos referidos a la presentación de ofertas y la ejecución de contratos,
-y someterlos a la auditoría de profesionales nombrados por este.</span></p>
-
-</div>
-
-<b><span lang=ES style='font-size:11.0pt;font-family:"Times New Roman",serif'><br
-clear=all style='page-break-before:auto'>
-</span></b>
-
-<div class=WordSection3>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=ES
-style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
-
-</div>
-
-<div><br clear=all>
-
-<hr align=left size=1 width="33%">
-
-<div id=ftn1>
-
-<p class=MsoFootnoteText><a href="#_ftnref1" name="_ftn1" title=""><span
-class=MsoFootnoteReference><span lang=ES style='font-family:"Calibri Light",sans-serif'><span
-class=MsoFootnoteReference><span lang=ES style='font-size:10.0pt;line-height:
-107%;font-family:"Calibri Light",sans-serif'>[1]</span></span></span></span></a><span
-lang=ES style='font-family:"Calibri Light",sans-serif'>      </span><span
-lang=ES style='font-size:9.0pt;font-family:"Calibri Light",sans-serif'>A fin de
-disipar toda duda al respecto, la inelegibilidad de una parte sancionada en
-relación con la adjudicación de un contrato implica, entre otras cosas, que la
-empresa o persona no podrá: (i) presentar una solicitud de precalificación,
-expresar interés en una consultoría, y participar en una licitación, ya sea
-directamente o en calidad de subcontratista nominado, consultor nominado,
-fabricante o proveedor nominado, o prestador de servicios nominado, con
-respecto a dicho contrato, ni (ii) firmar una enmienda mediante la cual se
-introduzca una modificación sustancial en cualquier contrato existente.</span></p>
-
-</div>
-
-<div id=ftn2>
-
-<p class=MsoFootnoteText><a href="#_ftnref2" name="_ftn2" title=""><span
-class=MsoFootnoteReference><span lang=ES style='font-family:"Calibri Light",sans-serif'><span
-class=MsoFootnoteReference><span lang=ES style='font-size:10.0pt;line-height:
-107%;font-family:"Calibri Light",sans-serif'>[2]</span></span></span></span></a><span
-lang=ES style='font-family:"Calibri Light",sans-serif'>      </span><span
-lang=ES style='font-size:9.0pt;font-family:"Calibri Light",sans-serif'>Un
-subcontratista nominado, consultor nominado, fabricante o proveedor nominado, o
-prestador de servicios nominado (se&nbsp;utilizan diferentes nombres según el
-Documento de Licitación del que se trate) es aquel que: (i) ha sido incluido
-por el licitante en su solicitud de precalificación u oferta por aportar
-experiencia y conocimientos técnicos específicos y esenciales que le permiten
-al licitante cumplir con los requisitos de calificación para la oferta particular;
-o (ii) ha sido designado por&nbsp;el&nbsp;Prestatario.</span></p>
-
-</div>
-
-<div id=ftn3>
-
-<p class=MsoFootnoteText><a href="#_ftnref3" name="_ftn3" title=""><span
-class=MsoFootnoteReference><span lang=ES style='font-family:"Calibri Light",sans-serif'><span
-class=MsoFootnoteReference><span lang=ES style='font-size:10.0pt;line-height:
-107%;font-family:"Calibri Light",sans-serif'>[3]</span></span></span></span></a><span
-lang=ES style='font-family:"Calibri Light",sans-serif'>      </span><span
-lang=ES style='font-size:9.0pt;font-family:"Calibri Light",sans-serif'>Las
-inspecciones que se llevan a cabo en este contexto suelen ser de carácter
-investigativo (es decir, forense). Consisten en actividades de constatación
-realizadas por el Banco o por personas nombradas por este para abordar asuntos
-específicos relativos a las investigaciones/auditorías, como determinar la
-veracidad de una denuncia de fraude y corrupción a través de los mecanismos
-adecuados. Dicha actividad incluye, entre otras cosas, acceder a la información
-y los registros financieros de una empresa o persona, examinarlos y hacer las
-copias que corresponda; acceder a cualquier otro tipo de documentos, datos o
-información (ya sea en formato impreso o electrónico) que se considere
-pertinente para la investigación/auditoría, examinarlos y hacer las copias que
-corresponda; entrevistar al personal y otras personas; realizar inspecciones
-físicas y visitas al emplazamiento, y someter la información a la verificación
-de terceros.</span></p>
-
-</div>
-
-</div>
-
-</body>
-
+   <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+      <style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c17{border-right-style:solid;padding:0pt 5pt 0pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:126.7pt;border-top-color:#000000;border-bottom-style:solid}.c12{border-right-style:solid;padding:0pt 5pt 0pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:324.6pt;border-top-color:#000000;border-bottom-style:solid}.c20{margin-left:86pt;padding-top:6pt;text-indent:-28pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c69{margin-left:63pt;padding-top:0pt;text-indent:-18pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c36{margin-left:117pt;padding-top:0pt;text-indent:-58pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c52{margin-left:126pt;padding-top:0pt;text-indent:-18pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c25{margin-left:81pt;padding-top:6pt;text-indent:-21pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c49{margin-left:28pt;padding-top:6pt;text-indent:-27pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c53{margin-left:90pt;padding-top:0pt;text-indent:-18pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c42{margin-left:90pt;padding-top:0pt;text-indent:-18pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c9{margin-left:62pt;padding-top:6pt;text-indent:-31pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c7{margin-left:18pt;padding-top:0pt;padding-bottom:3pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c28{margin-left:71pt;padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c43{margin-left:18pt;padding-top:0pt;padding-bottom:8pt;line-height:1.0666666666666667;orphans:2;widows:2;text-align:justify}.c60{margin-left:18pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0666666666666667;orphans:2;widows:2;text-align:justify}.c19{margin-left:18pt;padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c23{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left;height:11pt}.c41{margin-left:18pt;padding-top:0pt;padding-bottom:8pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Times New Roman";font-style:normal}.c13{margin-left:17pt;padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c44{margin-left:54pt;padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c70{padding-top:0pt;padding-bottom:0pt;line-height:1.0666666666666667;orphans:2;widows:2;text-align:left;height:11pt}.c3{margin-left:18pt;padding-top:0pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c61{padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c64{padding-top:0pt;padding-bottom:8pt;line-height:1.0666666666666667;orphans:2;widows:2;text-align:justify}.c45{padding-top:0pt;padding-bottom:12pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c10{padding-top:0pt;padding-bottom:8pt;line-height:1.0666666666666667;orphans:2;widows:2;text-align:center}.c24{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c59{padding-top:12pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c48{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c31{padding-top:6pt;padding-bottom:6pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c5{font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.c26{padding-top:6pt;padding-bottom:6pt;line-height:1.0666666666666667;orphans:2;widows:2;text-align:center}.c4{vertical-align:super;font-size:17pt;font-family:"Times New Roman";font-weight:400}.c67{border-spacing:0;border-collapse:collapse;margin-right:auto}.c51{-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none}.c58{background-color:#ffffff;padding:72pt 72pt 72pt 72pt}.c1{font-size:7pt;font-family:"Times New Roman";font-weight:400}.c18{font-size:12pt;font-family:"Times New Roman";font-weight:700}.c16{text-decoration:none;vertical-align:baseline;font-style:italic}.c6{font-size:12pt;font-family:"Times New Roman";font-weight:400}.c8{text-decoration:none;vertical-align:baseline;font-style:normal}.c71{vertical-align:baseline;font-style:normal}.c15{font-weight:400;font-family:"Times New Roman"}.c34{vertical-align:super;font-size:18pt}.c27{font-weight:700;font-family:"Times New Roman"}.c21{height:140.2pt}.c37{font-size:11pt}.c29{font-size:20pt}.c63{height:918.8pt}.c56{height:200.2pt}.c55{font-size:16pt}.c65{height:92.2pt}.c30{height:113.2pt}.c50{height:66.8pt}.c54{height:207.8pt}.c72{margin-left:31pt}.c57{height:500.2pt}.c11{height:39.8pt}.c62{height:223.5pt}.c39{height:99.8pt}.c40{font-size:9pt}.c14{height:255.8pt}.c33{height:308.2pt}.c32{margin-left:35pt}.c22{height:120.8pt}.c68{height:53.2pt}.c66{margin-left:39pt}.c47{font-size:10pt}.c38{margin-left:72pt}.c46{height:446.2pt}.c2{color:#000000}.c35{font-style:italic}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style>
+   </head>
+   <body class="c58 doc-content">
+      <p class="c10"><span class="c8 c27 c55 c2">Convenio Contractual</span></p>
+      <p class="c10"><span class="c8 c27 c2 c55">&nbsp;</span></p>
+      <p class="c24"><span class="c6 c8 c2">ESTE CONVENIO DE CONTRATO @@number_contract@@ se celebra el @@date_contract@@</span></p>
+      <p class="c24"><span class="c6 c8 c2">ENTRE</span></p>
+      <p class="c24 c38"><span class="c6">1)</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c6 c35">@@name_cooperative@@</span><span class="c6">, con sede principal en </span><span class="c6 c35">@@cooperative_address@@ </span><span class="c6 c8 c2">(en adelante, el &ldquo;Comprador&rdquo;), y</span></p>
+      <p class="c24 c38"><span class="c6">2)</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c6 c35">@@name_provider@@, </span><span class="c6">sociedad constituida al amparo de las leyes de </span><span class="c6 c35">@@provider_country@@ </span><span class="c6">con sede principal en </span><span class="c6 c35">@@provider_address@@ </span><span class="c6 c8 c2">(en adelante, el &ldquo;Proveedor&rdquo;).</span></p>
+      <p class="c24"><span class="c6">POR CUANTO el Comprador ha invitado a cotizaciones respecto de ciertos Bienes y Servicios Conexos, a saber, </span><span class="c6 c35">@@title_bidding@@, @@lot_name@@</span><span class="c6 c8 c2">, y ha aceptado la cotizaci&oacute;n del Proveedor para el suministro de dichos Bienes y Servicios.</span></p>
+      <p class="c45"><span class="c6 c2 c8">El Comprador y el Proveedor acuerdan lo siguiente:</span></p>
+      <p class="c19"><span class="c6">1.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">En este Convenio las palabras y expresiones tendr&aacute;n el mismo significado que se les asigne en los respectivos documentos del Contrato a que se refieran.</span></p>
+      <p class="c19"><span class="c6">2.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Los siguientes documentos constituyen el Contrato entre el Comprador y el Proveedor, y ser&aacute;n le&iacute;dos e interpretados como parte integral del Contrato. Este Convenio Contractual prevalecer&aacute; sobre los dem&aacute;s documentos del Contrato.</span></p>
+      <p class="c44"><span class="c6">(a)</span><span class="c1">&nbsp; &nbsp; </span><span class="c6 c8 c2">los Requerimientos del Comprador y la Cotizaci&oacute;n del Proveedor &ndash; Adjunto 1;</span></p>
+      <p class="c44"><span class="c6">(b)</span><span class="c1">&nbsp; &nbsp;</span><span class="c6 c8 c2">las Condiciones del Contrato.</span></p>
+      <p class="c19"><span class="c6">3.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Como contraprestaci&oacute;n por los pagos que el Comprador har&aacute; al Proveedor conforme a lo estipulado en este Contrato, el Proveedor se compromete a suministrar los Bienes y Servicios al Comprador y a subsanar los defectos de estos en total consonancia con las disposiciones del Contrato.</span></p>
+      <p class="c19"><span class="c6">4.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">El Comprador se compromete a pagar al Proveedor, como contraprestaci&oacute;n por el suministro de los Bienes y Servicios Conexos y la subsanaci&oacute;n de sus defectos, el Precio del Contrato o las sumas que resulten pagaderas de conformidad con lo dispuesto en el Contrato en el plazo y en la forma prescriptos en este.</span></p>
+      <p class="c19"><span class="c15">5.</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6">La oferta y aceptaci&oacute;n electr&oacute;nica a trav&eacute;s de la </span><span class="c0">Soluci&oacute;n Electr&oacute;nica de Adquisiciones &ndash; SOL por cada Parte causara la ejecuci&oacute;n de este Acuerdo por las Partes bajo su libre albedrio , sin ning&uacute;n tipo de amenaza, o influencia indebida y ser&aacute; v&aacute;lido y legalmente obligatorio para ambas partes desde la fecha incluida en el Contrato.</span></p>
+      <p class="c45"><span class="c6">EN PRUEBA DE CONFORMIDAD, las Partes han suscripto el presente Convenio Contractual, de conformidad con el derecho vigente de </span><span class="c6 c35">de conformidade com o direito vigente do pais do comprador</span><span class="c6 c8 c2">&nbsp;en el d&iacute;a, mes y a&ntilde;o antes indicados.</span></p>
+      <p class="c45"><span class="c5 c2">En representaci&oacute;n del Comprador</span></p>
+      <p class="c64"><span class="c6">Aceptado digitalmente en la Soluci&oacute;n Electr&oacute;nica de Adquisiciones &ndash; SOL por </span><span class="c16 c6 c2">@@name_cooperative@@</span></p>
+      <p class="c45"><span class="c5 c2">En representaci&oacute;n del Proveedor</span></p>
+      <p class="c45"><span class="c6">Aceptado digitalmente en la Soluci&oacute;n Electr&oacute;nica de Adquisiciones &ndash; SOL por </span><span class="c16 c6 c2">@@name_provider@@</span></p>
+      <p class="c61"><span class="c6 c8 c2">&nbsp;</span></p>
+      <p class="c23"><span class="c0"></span></p>
+      <p class="c23"><span class="c0"></span></p>
+      <p class="c59" id="h.gjdgxs"><span class="c8 c15 c29 c2">Requisitos del comprador y cotizaci&oacute;n del proveedor</span></p>
+      <p class="c23"><span class="c0"></span></p>
+      <p class="c48"><span class="c0">@@items_lot@@</span></p>
+      <p class="c23"><span class="c0"></span></p>
+      <p class="c23"><span class="c0"></span></p>
+      <p class="c59"><span class="c8 c15 c2 c29">Condiciones de Contrato</span></p>
+      <p class="c48"><span class="c5 c2">&nbsp;</span></p>
+      <a id="t.711abadf9e95daa4714d41eeca33cedc0b77007f"></a><a id="t.0"></a>
+      <table class="c67">
+         <tr class="c63">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">1.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Definiciones</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">1.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Las siguientes palabras y expresiones tendr&aacute;n los significados que aqu&iacute; se les asigna:</span></p>
+               <h3 class="c49" id="h.30j0zll"><span class="c6 c2">(a)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;Banco&rdquo; se entiende el Banco Mundial y se refiere al Banco Internacional de Reconstrucci&oacute;n y Fomento (BIRF) o a la Asociaci&oacute;n Internacional de Fomento (IDA).</span></h3>
+               <h3 class="c49" id="h.1fob9te"><span class="c6 c2">(b)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">&ldquo;CC&rdquo; significa Condiciones del Contrato.</span></h3>
+               <h3 class="c49" id="h.3znysh7"><span class="c6 c2">(c)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Por &ldquo;Contrato&rdquo; se entiende el Convenio de Contrato celebrado entre el Comprador y el Proveedor, junto con los Documentos del Contrato all&iacute; referidos, incluyendo todos los anexos y ap&eacute;ndices, y todos los documentos incorporados all&iacute; por referencia.</span></h3>
+               <h3 class="c49" id="h.2et92p0"><span class="c6 c2">(d)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;Documentos del Contrato&rdquo; se entiende los documentos enumerados en el Convenio Contractual, incluyendo cualquier enmienda.</span></h3>
+               <h3 class="c20" id="h.tyjcwt"><span class="c6 c2">(e)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;Precio del Contrato&rdquo; se entiende el precio pagadero al Proveedor seg&uacute;n se especifica en CC 6.1, sujeto a las condiciones y ajustes all&iacute; estipulados o deducciones propuestas, seg&uacute;n corresponda en virtud del Contrato.</span></h3>
+               <h3 class="c20" id="h.3dy6vkm"><span class="c6 c2">(f)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;d&iacute;a&rdquo; se entiende d&iacute;a calendario.</span></h3>
+               <h3 class="c20" id="h.1t3h5sf"><span class="c6 c2">(g)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">&ldquo;Finalizaci&oacute;n&rdquo; significa el cumplimiento de la prestaci&oacute;n de los Servicios Conexos, si corresponda, por el Proveedor de conformidad con los t&eacute;rminos y condiciones establecidos en el Contrato.</span></h3>
+               <h3 class="c49" id="h.4d34og8"><span class="c6 c2">(h)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">&ldquo;CC&rdquo; significa Condiciones de Contrato.</span></h3>
+               <h3 class="c20" id="h.2s8eyo1"><span class="c6 c2">(i)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;Bienes&rdquo; se entiende todos los productos, materia prima, maquinaria y equipos, y otros materiales que el Proveedor deba proporcionar al Comprador en virtud del Contrato.</span></h3>
+               <h3 class="c20" id="h.17dp8vu"><span class="c6 c2">(j)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">&ldquo;Parte&rdquo; suignifica el Comprador o el Proveedor, como lo establece el contexto, y &ldquo;Partes&rdquo; significa ambas partes.</span></h3>
+               <h3 class="c20" id="h.3rdcrjn"><span class="c6 c2">(k)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">&ldquo;Comprador&rdquo; significa la entidad compradora de los Bienes y Servicios Conexos si corresponde, especificada en la CC 2.</span></h3>
+               <h3 class="c20" id="h.26in1rg"><span class="c6 c2">(l)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">&ldquo;Pa&iacute;s del Comprador&rdquo; es el Pa&iacute;s especificado en la CC 2.</span></h3>
+               <h3 class="c20" id="h.lnxbz9"><span class="c6 c2">(m)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;Servicios Conexos&rdquo; se entiende los servicios incidentales relativos a la provisi&oacute;n de los bienes, tales como seguro, instalaci&oacute;n, capacitaci&oacute;n y mantenimiento inicial y otras obligaciones similares del Proveedor en virtud del Contrato, si corresponde.</span></h3>
+               <h3 class="c20" id="h.35nkun2"><span class="c6 c2">(n)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;Subcontratista&rdquo; se entiende cualquier persona f&iacute;sica, entidad privada o p&uacute;blica, o una combinaci&oacute;n de estas, a las cuales el Proveedor ha subcontratado para que suministren parte de los Bienes o presten parte de los Servicios Conexos.</span></h3>
+               <h3 class="c20" id="h.1ksv4uv"><span class="c6 c2">(o)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;Proveedor&rdquo; se entiende la persona f&iacute;sica o entidad privada o p&uacute;blica, o una combinaci&oacute;n de estas, cuya oferta para ejecutar el Contrato ha sido aceptada por el Comprador y es denominada como tal en el Convenio Contractual.</span></h3>
+               <h3 class="c20" id="h.44sinio"><span class="c6 c2">(p)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">Por &ldquo;emplazamiento del Proyecto&rdquo; o &ldquo;Lugar&rdquo; o &ldquo;Sitio&rdquo;, donde corresponde, se entiende el lugar citado CC 2.</span></h3>
+            </td>
+         </tr>
+         <tr class="c65">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">2.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Comprador, Pa&iacute;s del Comprador, Lugar del Proyecto/Destino final</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">2.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6">El Comprador es: </span><span class="c16 c6 c2">@@name_cooperative@@</span></p>
+               <p class="c9"><span class="c6">2.2</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6">El Pa&iacute;s del Comprador es: </span><span class="c16 c6 c2">@@pcooperative_country@@</span></p>
+               <p class="c9"><span class="c6">2.3</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6">El Lugar del Proyecto/ Destino final es/son</span><span class="c16 c6 c2">: @@address_delivery@@</span></p>
+            </td>
+         </tr>
+         <tr class="c62">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">3.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Notificaciones y direcci&oacute;n para Notificaciones</span></p>
+               <p class="c31"><span class="c5 c2">&nbsp;</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">3.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Todas las notificaciones entre las partes en virtud de este Contrato deber&aacute;n cursarse por escrito a la direcci&oacute;n indicada abajo utilizando el medio m&aacute;s r&aacute;pido como correo electr&oacute;nico con prueba de recibo.</span></p>
+               <p class="c31 c32"><span class="c51 c18 c2 c71">Direcci&oacute;n para las notificaciones al Comprador</span></p>
+               <p class="c31 c32"><span class="c16 c6 c2">@@cooperative_legal_representative_name@@</span></p>
+               <p class="c31 c32"><span class="c16 c6 c2">@@cooperative_address@@</span></p>
+               <p class="c31 c32"><span class="c16 c6 c2">@@cooperative_legal_representative_email@@</span></p>
+               <p class="c31 c32"><span class="c18 c51">Direcci&oacute;n para las notificaciones al Proveedor</span><span class="c2 c5">:</span></p>
+               <p class="c31 c32"><span class="c16 c6 c2">@@provider_legal_representative_name@@</span></p>
+               <p class="c31 c32"><span class="c6 c2 c16">@@provider_address@@</span></p>
+               <p class="c31 c32"><span class="c16 c6 c2">@@provider_legal_representative_email@@</span></p>
+            </td>
+         </tr>
+         <tr class="c11">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">4.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Ley que rige</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">4.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Contrato se regir&aacute; por las leyes, y se interpretar&aacute; conforme a dichas leyes, del Pa&iacute;s del Comprador&rdquo;.</span></p>
+            </td>
+         </tr>
+         <tr class="c39">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">5.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Resoluci&oacute;n de Disputas</span></p>
+               <p class="c31"><span class="c5 c2">&nbsp;</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">5.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Ambas partes intentaran arreglar amigablemente las controversias que surjan de o en relaci&oacute;n con el presente contrato.</span></p>
+               <p class="c9"><span class="c6">5.2</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Todas las disputas que surjan de o en relaci&oacute;n con el presente contrato se resolver&aacute;n finalmente de conformidad con las leyes del pa&iacute;s del comprador.</span></p>
+            </td>
+         </tr>
+         <tr class="c30">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">6.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Precio del Contrato</span></p>
+               <p class="c31"><span class="c5 c2">&nbsp;</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">6.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Precio del Contrato se especifica en la Cotizaci&oacute;n del Proveedor, en el Adjunto 1.</span></p>
+               <p class="c9"><span class="c6">6.2</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c35">L</span><span class="c6 c8 c2">os precios unitarios cobrados por el Proveedor por los Bienes suministrados y los Servicios Conexos prestados conforme al Contrato no variar&aacute;n de los precios cotizados por el Proveedor y aceptados por el Comprador.</span></p>
+            </td>
+         </tr>
+         <tr class="c21">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">7.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Condiciones de Pago</span></p>
+               <p class="c31"><span class="c5 c2">&nbsp;</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">7.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El m&eacute;todo y las condiciones de pago que se realizar&aacute;n al Proveedor en virtud de este Contrato ser&aacute;n los siguientes:</span></p>
+               <p class="c61 c72"><span class="c18">A la entrega y aceptaci&oacute;n:</span><span class="c6 c8 c2">&nbsp;El cien (100) por ciento del Precio del Contrato ser&aacute; pagado dentro de los treinta (30) d&iacute;as posteriores a la recepci&oacute;n de los Bienes y presentaci&oacute;n de los documento que contengan la factura respaldada por el certificado de aceptaci&oacute;n de la respectiva entrega emitido por el Comprador.</span></p>
+            </td>
+         </tr>
+         <tr class="c50">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">8.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Impuestos y tarifas</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">8.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Proveedor ser&aacute; totalmente responsable por todos los impuestos, grav&aacute;menes, comisiones por licencias y otros cargos similares que se abonen hasta la entrega de los Bienes contratados al Comprador.</span></p>
+            </td>
+         </tr>
+         <tr class="c22">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">9.</span><span class="c1">&nbsp; &nbsp; </span><span class="c5 c2">Subcontratistas</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">9.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Proveedor informar&aacute; al Comprador por escrito acerca de todos los subcontratos que adjudique en virtud del Contrato, siempre que no los hubiera especificado en su Cotizaci&oacute;n. Dicha notificaci&oacute;n, en la Oferta original u Ofertas posteriores, no eximir&aacute; al Proveedor de las obligaciones, deberes y compromisos o responsabilidades contra&iacute;das en virtud del Contrato.</span></p>
+            </td>
+         </tr>
+         <tr class="c22">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">10.</span><span class="c1">&nbsp; </span><span class="c5 c2">Especificaciones y Normas</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">10.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Los Bienes y Servicios Conexos proporcionados en el marco de este Contrato deber&aacute;n ajustarse a las especificaciones t&eacute;cnicas y a las normas estipuladas las Especificaciones T&eacute;cnicas, y, cuando no se haga referencia a una norma aplicable, la norma ser&aacute; equivalente o superior a las normas oficiales cuya aplicaci&oacute;n sea apropiada en el pa&iacute;s de origen de los Bienes.</span></p>
+            </td>
+         </tr>
+         <tr class="c68">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">11.</span><span class="c1">&nbsp; </span><span class="c5 c2">Fecha de Entrega y Fecha de Finalizaci&oacute;n</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">11.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6">La Fecha de Entrega de los Bienes ser&aacute;: </span><span class="c16 c6 c2">@@deadline_lot@@.</span></p>
+            </td>
+         </tr>
+         <tr class="c56">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">12.</span><span class="c1">&nbsp; </span><span class="c5 c2">Garant&iacute;a</span></p>
+               <p class="c31"><span class="c6 c8 c2">&nbsp;</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">12.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Proveedor garantiza que todos los Bienes suministrados en virtud del Contrato son nuevos, no tienen uso previo y corresponden al modelo m&aacute;s reciente o actual, y que incorporan todas las mejoras recientes en cuanto a dise&ntilde;o y materiales, a menos que el Contrato disponga otra cosa.</span></p>
+               <p class="c9"><span class="c6">12.2</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Proveedor adem&aacute;s garantiza que todos los Bienes suministrados estar&aacute;n libres de defectos derivados de sus actos y omisiones, o derivados del dise&ntilde;o, los materiales o la manufactura, durante el uso normal en las condiciones que imperen en el pa&iacute;s de destino final.</span></p>
+               <p class="c9"><span class="c6">12.3</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">La garant&iacute;a seguir&aacute; vigente durante el periodo que establezcan las leyes del Pa&iacute;s del Comprador.</span></p>
+            </td>
+         </tr>
+         <tr class="c22">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">13.</span><span class="c1">&nbsp; </span><span class="c5 c2">Derechos de autor</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">13.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Los derechos de autor sobre todos los planos, documentos y otros materiales que contengan datos e informaci&oacute;n proporcionados al Comprador por el Proveedor pertenecer&aacute;n al Proveedor o, si se los proporciona directamente al Comprador o a trav&eacute;s de un tercero, incluidos los proveedores de materiales, los derechos de autor de dichos materiales permanecer&aacute;n en manos de dicho tercero.</span></p>
+            </td>
+         </tr>
+         <tr class="c54">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">14.</span><span class="c1">&nbsp; </span><span class="c5 c2">Fraude y Corrupci&oacute;n</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">14.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Banco requiere el cumplimiento de sus Directrices Contra el Fraude y la Corrupci&oacute;n y de sus pol&iacute;ticas y procedimientos de sanciones vigentes incluidos en el Marco de Sanciones del Grupo del Banco Mundial, conforme se describe en el Ap&eacute;ndice A de las Condiciones del Contrato.</span></p>
+               <p class="c9"><span class="c6">14.2</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Comprador requiere que el Proveedor revele cualquier comisi&oacute;n o tarifa que haya sido pagada o que deba pagarse a los agentes o cualquier otra parte con respecto a la solicitud de cotizaciones o la ejecuci&oacute;n del Contrato. La informaci&oacute;n divulgada debe incluir al menos el nombre y la direcci&oacute;n del agente u otra parte, el monto y la moneda, y el prop&oacute;sito de la comisi&oacute;n, propina o honorario.</span></p>
+            </td>
+         </tr>
+         <tr class="c14">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">15.</span><span class="c1">&nbsp; </span><span class="c5 c2">Inspecciones y auditor&iacute;as del Banco</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">15.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">De conformidad con el p&aacute;rrafo 2.2 e. del Ap&eacute;ndice A de las Condiciones del Contrato, el Proveedor permitir&aacute; y har&aacute; que sus agentes (sean declarados o no), subcontratistas, subconsultores, proveedores de servicios, proveedores y personal, permitan, al Banco y / o a las personas designadas por el Banco para inspeccionar el Sitio y / o las cuentas, registros y otros documentos relacionados con el proceso de solicitud de cotizaciones y / o ejecuci&oacute;n del Contrato. La atenci&oacute;n del Proveedor y sus subcontratistas se dirige a la CC 14.1 (Fraude y Corrupci&oacute;n) que establece, entre otras cosas, que los actos destinados a impedir materialmente el ejercicio de los derechos de inspecci&oacute;n y auditor&iacute;a del Banco constituyen una pr&aacute;ctica prohibida sujeta a la resoluci&oacute;n del Contrato (as&iacute; como a una determinaci&oacute;n de inelegibilidad de conformidad con los procedimientos de sanciones vigentes del Banco).</span></p>
+            </td>
+         </tr>
+         <tr class="c57">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">16.</span><span class="c1">&nbsp; </span><span class="c5 c2">Resoluci&oacute;n</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">16.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Resoluci&oacute;n por Incumplimiento</span></p>
+               <h3 class="c61 c66" id="h.2jxsxqh"><span class="c6 c8 c2">El Comprador, sin perjuicio de cualquier otro recurso por incumplimiento del Contrato, mediante notificaci&oacute;n escrita de incumplimiento enviada al Proveedor, puede resolver el Contrato en su totalidad o en parte:</span></h3>
+               <h3 class="c28" id="h.z337ya"><span class="c6 c2">(i)</span><span class="c1 c2">&nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">si el Proveedor no entrega ninguno o todos los Bienes dentro del per&iacute;odo especificado en el Contrato, o dentro de cualquier extensi&oacute;n de los mismos otorgada por el Comprador;</span></h3>
+               <h3 class="c28" id="h.3j2qqm3"><span class="c6 c2">(ii)</span><span class="c1 c2">&nbsp; &nbsp; </span><span class="c6 c8 c2">si el Proveedor no cumple con cualquier otra obligaci&oacute;n bajo el Contrato; o</span></h3>
+               <h3 class="c28" id="h.1y810tw"><span class="c6 c2">(iii)</span><span class="c1 c2">&nbsp; </span><span class="c6 c8 c2">&nbsp;si el Proveedor, a juicio del Comprador, ha incurrido en Fraude y Corrupci&oacute;n, compitiendo o ejecutando el Contrato.</span></h3>
+               <h3 class="c61 c32" id="h.4i7ojhp"><span class="c6 c8 c2">En el caso de que el Comprador resuelva el Contrato en su totalidad o en parte, el Comprador puede adquirir, bajo los t&eacute;rminos y de la manera que considere apropiada, Bienes o Servicios Conexos, si corresponde, similares a los no entregados o no realizados, y el Proveedor ser&aacute; responsable ante el Comprador por cualquier costo adicional por dichos Bienes o Servicios Conexos similares, si corresponde. Sin embargo, el Proveedor continuar&aacute; la ejecuci&oacute;n del Contrato de la parte que no se resolvi&oacute;.</span></h3>
+               <p class="c9"><span class="c6">16.2</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">Resoluci&oacute;n por conveniencia</span></p>
+               <h3 class="c28" id="h.2xcytpi"><span class="c6 c2">(a)</span><span class="c1 c2">&nbsp; &nbsp;</span><span class="c6 c8 c2">El Comprador, mediante notificaci&oacute;n enviada al Proveedor, puede resolver por conveniencia el Contrato, en su totalidad o en parte, en cualquier momento. El aviso de resoluci&oacute;n especificar&aacute; que la resoluci&oacute;n es por la conveniencia del Comprador, el grado respecto al cual el contrato se resuelve y la fecha en que dicha resoluci&oacute;n entra en vigencia.</span></h3>
+            </td>
+         </tr>
+         <tr class="c33">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">17.</span><span class="c1">&nbsp; </span><span class="c5 c2">Trabajo Forzoso</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">17.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Proveedor, incluidos sus Subcontratistas, no deber&aacute; emplear o realizar trabajos forzados o personas sujetas a trata, como se describe en las Subcl&aacute;usulas 17.2 y 17.3.</span></p>
+               <p class="c9"><span class="c6">17.2</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El trabajo forzoso consiste en cualquier trabajo o servicio, no realizado voluntariamente, que se exija de un individuo bajo amenaza de fuerza o pena, e incluye cualquier tipo de trabajo involuntario u obligatorio, como trabajo por contrato, trabajo en condiciones de servidumbre o acuerdos similares de contrataci&oacute;n laboral.</span></p>
+               <p class="c9"><span class="c6">17.3</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">La trata de personas se define como el reclutamiento, el transporte, la transferencia, la reclusi&oacute;n o la recepci&oacute;n de personas mediante la amenaza o el uso de la fuerza u otras formas de coerci&oacute;n, secuestro, fraude, enga&ntilde;o, abuso de poder o una posici&oacute;n de vulnerabilidad, o de dar o recibir pagos o beneficios para lograr el consentimiento de una persona que tiene control sobre otra persona, con fines de explotaci&oacute;n, o tener control sobre otra persona, con fines de explotaci&oacute;n.</span></p>
+            </td>
+         </tr>
+         <tr class="c46">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">18.</span><span class="c1">&nbsp; </span><span class="c5 c2">Trabajo Infantil</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">18.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Proveedor, incluidos sus Subcontratistas, no deber&aacute; emplear o contratar a un ni&ntilde;o menor de 14 a&ntilde;os a menos que la legislaci&oacute;n nacional especifique una edad superior (la edad m&iacute;nima).</span></p>
+               <p class="c9"><span class="c6">18.2</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Proveedor, incluidos sus Subcontratistas, no deber&aacute; emplear o contratar a un ni&ntilde;o entre la edad m&iacute;nima y la edad de 18 a&ntilde;os de una manera que pueda ser peligrosa o interferir con la educaci&oacute;n del ni&ntilde;o o ser perjudicial para la salud o desarrollo f&iacute;sico, mental, espiritual, moral o social del ni&ntilde;o.</span></p>
+               <p class="c9"><span class="c6">18.3</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El trabajo considerado peligroso para los ni&ntilde;os es un trabajo que, por su naturaleza o las circunstancias en que se realiza, puede poner en peligro la salud, la seguridad o la moral de los ni&ntilde;os. Tales actividades laborales prohibidas para ni&ntilde;os incluyen trabajo:</span></p>
+               <p class="c25"><span class="c6">(a)</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">con exposici&oacute;n a abuso f&iacute;sico, psicol&oacute;gico o sexual;</span></p>
+               <p class="c25"><span class="c6">(b)</span><span class="c1">&nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">bajo tierra, bajo el agua, trabajando en altura o en espacios confinados;</span></p>
+               <p class="c25"><span class="c6">(c)</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c6 c8 c2">con maquinaria, equipo o herramientas peligrosas, o que impliquen manipulaci&oacute;n o transporte de cargas pesadas;</span></p>
+               <p class="c25"><span class="c6">(d)</span><span class="c1">&nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">en entornos poco saludables exponiendo a los ni&ntilde;os a sustancias, agentes o procesos peligrosos, temperaturas, ruido o vibraciones que da&ntilde;en la salud; o</span></p>
+               <p class="c25"><span class="c6">(e)</span><span class="c1">&nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">en condiciones dif&iacute;ciles, como trabajar durante largas horas, durante la noche o en confinamiento en las instalaciones del empleador.</span></p>
+            </td>
+         </tr>
+         <tr class="c50">
+            <td class="c17" colspan="1" rowspan="1">
+               <p class="c13"><span class="c18">19.</span><span class="c1">&nbsp; </span><span class="c5 c2">Obligaciones de Salud y Seguridad</span></p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+               <p class="c9"><span class="c6">19.1</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c6 c8 c2">El Proveedor deber&aacute; cumplir, y deber&aacute; exigir a sus Subcontratistas, si corresponde, que cumplan con todas las reglamentaciones, leyes, pautas y cualquier otro requisito establecido en las Especificaciones T&eacute;cnicas.</span></p>
+            </td>
+         </tr>
+      </table>
+      <p class="c70"><span class="c0"></span></p>
+      <p class="c26"><span class="c8 c27 c29 c2">Anexo A de las Condiciones Contractuales</span></p>
+      <p class="c26"><span class="c8 c27 c29 c2">Fraude y Corrupci&oacute;n</span></p>
+      <p class="c60"><span class="c27">1.</span><span class="c1">&nbsp; &nbsp; &nbsp;</span><span class="c8 c27 c2 c37">Prop&oacute;sito</span></p>
+      <p class="c41"><span class="c15">1.1</span><span class="c1">&nbsp; &nbsp;</span><span class="c0">Las Directrices Contra el Fraude y la Corrupci&oacute;n del Banco y este anexo se aplicar&aacute;n a las adquisiciones en el marco de las operaciones de Financiamiento para Proyectos de Inversi&oacute;n del Banco.</span></p>
+      <p class="c43"><span class="c27">2.</span><span class="c1">&nbsp; &nbsp; &nbsp;</span><span class="c8 c27 c37 c2">Requisitos</span></p>
+      <p class="c3"><span class="c15">2.1</span><span class="c1">&nbsp; &nbsp;</span><span class="c0">El Banco exige que los Prestatarios (incluidos los beneficiarios del financiamiento del Banco), licitantes (postulantes / proponentes), consultores, contratistas y proveedores, todo subcontratista, subconsultor, prestadores de servicios o proveedores, todo agente (haya sido declarado o no), y todo miembro de su personal, observen las m&aacute;s elevadas normas &eacute;ticas durante el proceso de adquisici&oacute;n, la selecci&oacute;n y la ejecuci&oacute;n de contratos financiados por el Banco, y se abstengan de pr&aacute;cticas fraudulentas y corruptas.</span></p>
+      <p class="c3"><span class="c15">2.2</span><span class="c1">&nbsp; &nbsp;</span><span class="c0">Con ese fin, el Banco:</span></p>
+      <p class="c69"><span class="c15">a.</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c0">Define de la siguiente manera, a los efectos de esta disposici&oacute;n, las expresiones que se indican a continuaci&oacute;n:</span></p>
+      <p class="c36"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c15">i.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c0">Por &ldquo;pr&aacute;ctica corrupta&rdquo; se entiende el ofrecimiento, entrega, aceptaci&oacute;n o solicitud directa o indirecta de cualquier cosa de valor con el fin de influir indebidamente en el accionar de otra parte.</span></p>
+      <p class="c36"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c15">ii.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c0">Por &ldquo;pr&aacute;ctica fraudulenta&rdquo; se entiende cualquier acto u omisi&oacute;n, incluida la tergiversaci&oacute;n de informaci&oacute;n, con el que se enga&ntilde;e o se intente enga&ntilde;ar en forma deliberada o imprudente a una parte con el fin de obtener un beneficio financiero o de otra &iacute;ndole, o para evadir una obligaci&oacute;n.</span></p>
+      <p class="c36"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c15">iii.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c0">Por &ldquo;pr&aacute;ctica colusoria&rdquo; se entiende todo arreglo entre dos o m&aacute;s partes realizado con la intenci&oacute;n de alcanzar un prop&oacute;sito il&iacute;cito, como el de influir de forma indebida en el accionar de otra parte.</span></p>
+      <p class="c36"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c15">iv.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c0">Por &ldquo;pr&aacute;ctica coercitiva&rdquo; se entiende el perjuicio o da&ntilde;o o la amenaza de causar perjuicio o da&ntilde;o directa o indirectamente a cualquiera de las partes o a sus bienes para influir de forma indebida en su accionar.</span></p>
+      <p class="c36"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c15">v.</span><span class="c1">&nbsp; &nbsp; &nbsp; </span><span class="c0">Por &ldquo;pr&aacute;ctica de obstrucci&oacute;n&rdquo; se entiende:</span></p>
+      <p class="c52"><span class="c15">(a)</span><span class="c1">&nbsp; &nbsp; </span><span class="c0">la destrucci&oacute;n, falsificaci&oacute;n, alteraci&oacute;n u ocultamiento deliberado de pruebas materiales referidas a una investigaci&oacute;n o el acto de dar falsos testimonios a los investigadores para impedir materialmente que el Banco investigue denuncias de pr&aacute;cticas corruptas, fraudulentas, coercitivas o colusorias, o la amenaza, persecuci&oacute;n o intimidaci&oacute;n de otra parte para evitar que revele lo que conoce sobre asuntos relacionados con una investigaci&oacute;n o lleve a cabo la investigaci&oacute;n, o</span></p>
+      <p class="c52"><span class="c15">(b)</span><span class="c1">&nbsp; &nbsp; </span><span class="c0">los actos destinados a impedir materialmente que el Banco ejerza sus derechos de inspecci&oacute;n y auditor&iacute;a establecidos en el p&aacute;rrafo 2.2 e, que figura a continuaci&oacute;n.</span></p>
+      <p class="c53"><span class="c15">b.</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c0">Rechazar&aacute; toda propuesta de adjudicaci&oacute;n si determina que la empresa o persona recomendada para la adjudicaci&oacute;n, los miembros de su personal, sus agentes, subconsultores, subcontratistas, prestadores de servicios, proveedores o empleados han participado, directa o indirectamente, en pr&aacute;cticas corruptas, fraudulentas, colusorias, coercitivas u obstructivas para competir por el contrato en cuesti&oacute;n.</span></p>
+      <p class="c53"><span class="c15">c.</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c0">Adem&aacute;s de utilizar los recursos legales establecidos en el convenio legal pertinente, podr&aacute; adoptar otras medidas adecuadas, entre ellas declarar que las adquisiciones est&aacute;n viciadas, si determina en cualquier momento que los representantes del prestatario o de un receptor de una parte de los fondos del pr&eacute;stamo participaron en pr&aacute;cticas corruptas, fraudulentas, colusorias, coercitivas u obstructivas durante el proceso de adquisici&oacute;n, o la selecci&oacute;n o ejecuci&oacute;n del contrato en cuesti&oacute;n, y que el prestatario no tom&oacute; medidas oportunas y adecuadas, satisfactorias para el Banco, para abordar dichas pr&aacute;cticas cuando estas ocurrieron, como informar en tiempo y forma a este &uacute;ltimo al tomar conocimiento de los hechos.</span></p>
+      <p class="c53"><span class="c15">d.</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c15">Podr&aacute; sancionar, conforme a lo establecido en sus directrices de lucha contra la corrupci&oacute;n y a sus pol&iacute;ticas y procedimientos de sanciones vigentes, a cualquier empresa o persona en forma indefinida o durante un per&iacute;odo determinado, lo que incluye declarar a dicha empresa o persona inelegibles p&uacute;blicamente para: (i) obtener la adjudicaci&oacute;n o recibir cualquier beneficio, ya sea financiero o de otra &iacute;ndole, de un contrato financiado por el Banco</span><span class="c15 c34">[1]</span><span class="c15">; (ii) ser nominada</span><span class="c15 c34">[2]</span><span class="c0">como subcontratista, consultor, fabricante o proveedor, o prestador de servicios de una firma que de lo contrario ser&iacute;a elegible a la cual se le haya adjudicado un contrato financiado por el Banco, y (iii) recibir los fondos de un pr&eacute;stamo del Banco o participar m&aacute;s activamente en la preparaci&oacute;n o la ejecuci&oacute;n de cualquier proyecto financiado por el Banco.</span></p>
+      <p class="c42"><span class="c15">e.</span><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c15">Exigir&aacute; que en los documentos de solicitud de ofertas/propuestas y en los contratos financiados con pr&eacute;stamos del Banco se incluya una cl&aacute;usula en la que se exija que los licitantes (postulantes /proponentes), consultores, contratistas y proveedores, as&iacute; como sus respectivos subcontratistas, subconsultores, prestadores de servicios, proveedores, agentes y personal, permitan al Banco inspeccionar</span><span class="c15 c34">[3]</span><span class="c0">todas las cuentas, registros y otros documentos referidos a la presentaci&oacute;n de ofertas y la ejecuci&oacute;n de contratos, y someterlos a la auditor&iacute;a de profesionales nombrados por este.</span></p>
+      <p class="c23"><span class="c8 c27 c37 c2"></span></p>
+      <p class="c48"><span class="c0">&nbsp;</span></p>
+      <p class="c23"><span class="c0"></span></p>
+      <hr>
+      <p class="c23"><span class="c0"></span></p>
+      <p class="c7"><span class="c4">[1]</span><span class="c15 c47">&nbsp; &nbsp; &nbsp; </span><span class="c8 c15 c40 c2">A fin de disipar toda duda al respecto, la inelegibilidad de una parte sancionada en relaci&oacute;n con la adjudicaci&oacute;n de un contrato implica, entre otras cosas, que la empresa o persona no podr&aacute;: (i) presentar una solicitud de precalificaci&oacute;n, expresar inter&eacute;s en una consultor&iacute;a, y participar en una licitaci&oacute;n, ya sea directamente o en calidad de subcontratista nominado, consultor nominado, fabricante o proveedor nominado, o prestador de servicios nominado, con respecto a dicho contrato, ni (ii) firmar una enmienda mediante la cual se introduzca una modificaci&oacute;n sustancial en cualquier contrato existente.</span></p>
+      <p class="c7"><span class="c4">[2]</span><span class="c15 c47">&nbsp; &nbsp; &nbsp; </span><span class="c8 c15 c2 c40">Un subcontratista nominado, consultor nominado, fabricante o proveedor nominado, o prestador de servicios nominado (se utilizan diferentes nombres seg&uacute;n el Documento de Licitaci&oacute;n del que se trate) es aquel que: (i) ha sido incluido por el licitante en su solicitud de precalificaci&oacute;n u oferta por aportar experiencia y conocimientos t&eacute;cnicos espec&iacute;ficos y esenciales que le permiten al licitante cumplir con los requisitos de calificaci&oacute;n para la oferta particular; o (ii) ha sido designado por el Prestatario.</span></p>
+      <p class="c7"><span class="c4">[3]</span><span class="c15 c47">&nbsp; &nbsp; &nbsp; </span><span class="c8 c15 c40 c2">Las inspecciones que se llevan a cabo en este contexto suelen ser de car&aacute;cter investigativo (es decir, forense). Consisten en actividades de constataci&oacute;n realizadas por el Banco o por personas nombradas por este para abordar asuntos espec&iacute;ficos relativos a las investigaciones/auditor&iacute;as, como determinar la veracidad de una denuncia de fraude y corrupci&oacute;n a trav&eacute;s de los mecanismos adecuados. Dicha actividad incluye, entre otras cosas, acceder a la informaci&oacute;n y los registros financieros de una empresa o persona, examinarlos y hacer las copias que corresponda; acceder a cualquier otro tipo de documentos, datos o informaci&oacute;n (ya sea en formato impreso o electr&oacute;nico) que se considere pertinente para la investigaci&oacute;n/auditor&iacute;a, examinarlos y hacer las copias que corresponda; entrevistar al personal y otras personas; realizar inspecciones f&iacute;sicas y visitas al emplazamiento, y someter la informaci&oacute;n a la verificaci&oacute;n de terceros.</span></p>
+      <p class="c23"><span class="c0"></span></p>
+   </body>
 </html>

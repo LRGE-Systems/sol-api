@@ -26,7 +26,11 @@ module Pdf::Builder
     end
 
     def base_options
-      options = { encoding:'UTF-8', page_size: 'A4', print_media_type: true }
+      options = { 
+        encoding:'UTF-8', 
+        page_size: 'A4', 
+        print_media_type: true ,
+      }
       options = options.merge(header_options)
       options = options.merge(footer_options)
       options

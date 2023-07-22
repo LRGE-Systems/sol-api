@@ -50,7 +50,7 @@ module BiddingsService
               when 'obras'
                 Pdf::Bidding::Edict::TemplateObraHtml
               end      
-      klass.call(bidding: bidding)
+      c = klass.call(bidding: bidding)
     end
   end
 end

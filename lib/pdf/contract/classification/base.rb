@@ -20,10 +20,12 @@ module Pdf::Contract::Classification
     private
 
     def parse_html
-      return unless contract.all_signed?
+      return unless (( !contract.blank? && contract.all_signed?) || (!bidding.blank?))
 
       dictionary.each do |key, value|
-        html.gsub!(key, value.to_s)
+        nval = value
+        nval = key if value == "NODEF"
+        html.gsub!(key, nval.to_s)
       end
 
       html
@@ -31,13 +33,21 @@ module Pdf::Contract::Classification
 
     def dictionary
       {
+        "@@cooperative_country@@" => cooperative.address.country,
+        "@@provider_country@@" => (contract.blank? ? "NODEF" : provider.address.country),
+        "@@bidding_link@@" => bidding.link ,
+        "@@bidding_start_date@@" => bidding.start_date ,
+        '@@project_name@@' => bidding.organization.name,
+        '@@bidding_country@@' => bidding.organization.country,
         '@@name_cooperative@@' => cooperative.name,
         '@@cooperative_address@@' => cooperative_address,
         '@@cooperative_legal_representative_name@@' => cooperative_legal_representative_name,
-        '@@name_provider@@' => provider.name,
-        '@@document_provider@@' => provider.document,
-        '@@provider_address@@' => provider_address,
-        '@@provider_legal_representative_name@@' => provider_legal_representative_name,
+        '@@cooperative_legal_representative_email@@' => cooperative_legal_representative_email,
+        '@@name_provider@@' => (contract.blank? ? "NODEF" : provider.name),
+        '@@document_provider@@' => (contract.blank? ? "NODEF" : provider.document),
+        '@@provider_address@@' => (contract.blank? ? "NODEF" : provider_address),
+        '@@provider_legal_representative_email@@' => (contract.blank? ? "NODEF" : provider_legal_representative_email),
+        '@@provider_legal_representative_name@@' => (contract.blank? ? "NODEF" : provider_legal_representative_name),
         '@@lot_name@@' => lot_name,
         '@@title_bidding@@' => bidding.title,
         '@@total_value@@' => formatted_total_value,
@@ -45,20 +55,20 @@ module Pdf::Contract::Classification
         '@@number_covenant@@' => bidding.covenant.number,
         '@@env_name_state@@' => pdf_contract_env('NAME_STATE'),
         '@@address_delivery@@' => address_bidding_or_lot,
-        '@@deadline_contract@@' => contract.deadline - 60,
+        '@@deadline_contract@@' => (contract.blank? ? "NODEF" : contract.deadline - 60),
         '@@deadline_lot@@' => deadline(lot),
         '@@city_cooperative@@' => cooperative.address.city.name,
-        '@@date_today@@' => I18n.l(contract.supplier_signed_at.to_date),
-        '@@user_signed_at_contract@@' => I18n.l(contract.user_signed_at, format: :shorter),
-        '@@name_supplier@@' => contract.supplier.name,
-        '@@supplier_signed_at_contract@@' => I18n.l(contract.supplier_signed_at, format: :shorter),
+        '@@date_today@@' => (contract.blank? ? "NODEF" : I18n.l(contract.supplier_signed_at.to_date)),
+        '@@user_signed_at_contract@@' => (contract.blank? ? "NODEF" : I18n.l(contract.user_signed_at, format: :shorter)),
+        '@@name_supplier@@' => (contract.blank? ? "NODEF" : contract.supplier.name),
+        '@@supplier_signed_at_contract@@' => (contract.blank? ? "NODEF" : I18n.l(contract.supplier_signed_at, format: :shorter)),
         '@@items_lot@@' => fill_table,
         '@@env_contract_join@@' => pdf_contract_env('CONTRACT_JOIN'),
         '@@env_covenant_resource@@' => pdf_contract_env('COVENANT_RESOURCE'),
         '@@env_loan@@' => pdf_contract_env('LOAN'),
         '@@cooperative_state@@' => cooperative_state,
         '@@cooperative_legal_representative_cpf@@' => cooperative_legal_representative_cpf,
-        '@@provider_legal_representative_cpf@@' => provider_legal_representative_cpf,
+        '@@provider_legal_representative_cpf@@' => (contract.blank? ? "NODEF" : provider_legal_representative_cpf),
         '@@env_department_development@@' => pdf_contract_env('DEPARTMENT_DEVELOPMENT'),
         '@@env_foro@@' => pdf_contract_env('FORO'),
         '@@env_productive_program@@' => pdf_contract_env('PRODUCTIVE_PROGRAM'),
@@ -66,8 +76,8 @@ module Pdf::Contract::Classification
         '@@env_development_action_company@@' => pdf_contract_env('DEVELOPMENT_ACTION_COMPANY'),
         '@@delivery_price@@' => delivery_price,
         '@@lot_address@@' => address_bidding_or_lot,
-        '@@contract_value@@' => contract_value,
-        '@@number_contract@@' => contract.title,
+        '@@contract_value@@' => (contract.blank? ? "NODEF" : contract_value),
+        '@@number_contract@@' => (contract.blank? ? "NODEF" : contract.title),
         '@@date_contract@@' => date_full,
         '@@items_name@@' => items_name,
         '@@cnpj_cooperative@@' => cooperative.cnpj
@@ -75,25 +85,30 @@ module Pdf::Contract::Classification
     end
 
     def date_full
+      return "NODEF" if contract.blank?
       @date_full ||= I18n.l(contract.created_at, format: :date_contract)
     end
 
     def items_name
+      return "NODEF" if contract.blank?
       contract.lot_group_item_lot_proposals.map do |lot_group_item_lot_proposal|
         lot_group_item_lot_proposal.item.description
       end.uniq.to_sentence
     end
 
     def deadline(lot)
+      return "NODEF" if contract.blank?
       lot.deadline.nil? ? lot.bidding.deadline : lot.deadline
     end
 
     def contract_value
+      return "NODEF" if contract.blank?
       value = contract.proposal.price_total
       formatted_currency(value)
     end
 
     def delivery_price
+      return "NODEF" if contract.blank?
       formatted_currency(lot_proposal.delivery_price)
     end
 
@@ -112,6 +127,7 @@ module Pdf::Contract::Classification
     end
 
     def fill_table
+      return "NODEF" if contract.blank?
       rows_table.each_with_index.map do |rows, index|
         table_items = "#{annexs_html[index]}<table class='table' align='center'>#{table}"
         rows(rows, index, table_items)
@@ -128,12 +144,14 @@ module Pdf::Contract::Classification
     end
 
     def rows_table
+      return "NODEF" if contract.blank?
       contract.proposal.lot_group_item_lot_proposals.map do |lot_group_item_lot_proposal|
         fill_table_row(lot_group_item_lot_proposal)
       end
     end
 
     def annexs_html
+      return "NODEF" if contract.blank?
       @annexs_html ||= lots_list.map{|x| "<p class='center'>#{x}</p><br/>"}.uniq
     end
 
@@ -150,6 +168,7 @@ module Pdf::Contract::Classification
     end
 
     def fill_table_row(lot_group_item_lot_proposal)
+      return "NODEF" if contract.blank?
       "<tr>"\
         "<td>#{lot_group_item_lot_proposal.item.title}</td>"\
         "<td>#{lot_group_item_lot_proposal.item.description}</td>"\
@@ -175,6 +194,7 @@ module Pdf::Contract::Classification
 
     # TODO: move these methods to a contract decorator
     def address_bidding_or_lot
+      return "NODEF" if contract.blank? 
       return bidding.address unless bidding.address.empty?
       return lots.map(&:address).to_sentence if global?
 
@@ -190,15 +210,23 @@ module Pdf::Contract::Classification
     end
 
     def provider_address
-      full_address(provider.address)
+      (contract.blank? ? "NODEF" : full_address(provider.address))
     end
 
     def cooperative_legal_representative_name
       legal_representative(cooperative).name
     end
 
+    def cooperative_legal_representative_email
+      legal_representative(cooperative).email
+    end
+
     def provider_legal_representative_name
-      legal_representative(provider).name
+      (contract.blank? ? "NODEF" : legal_representative(provider).name)
+    end
+
+    def provider_legal_representative_email
+      (contract.blank? ? "NODEF" : legal_representative(provider).email)
     end
 
     def cooperative_legal_representative_cpf
@@ -206,49 +234,57 @@ module Pdf::Contract::Classification
     end
 
     def provider_legal_representative_cpf
-      legal_representative(provider).cpf
+      (contract.blank? ? "NODEF" : legal_representative(provider).cpf)
     end
 
     def lot_name
+      return "NODEF" if contract.blank?
+
       return lots.map(&:name).to_sentence if global?
 
       lot.name
     end
 
     def formatted_total_value
-      formatted_currency(total_value)
+      (contract.blank? ? "NODEF" : formatted_currency(total_value) )
     end
 
     def price_total_lot(lot_group_item_lot_proposal)
+      if contract.blank?
+        return "NODEF"
+      end
       quantity = lot_group_item_lot_proposal.lot_group_item.quantity
       price = lot_group_item_lot_proposal.price
       formatted_currency(quantity * price)
     end
 
     def total_full_value
+      if contract.blank? 
+        return "NODEF"
+      end
       value = prepare_currency(formatted_total_value)
       valid_value_for_full_text?(value) ? Extenso.moeda(value) : nil
     end
 
     def total_value
-      @total_value ||= contract.proposal.price_total
+      @total_value ||= (contract.blank? ? "NODEF" : contract.proposal.price_total)
     end
 
     def lot
-      @lot ||= lot_proposal.lot
+      @lot ||= (contract.blank? ? "NODEF" : lot_proposal.lot)
     end
 
     def lot_proposal
-      @lot_proposal ||= contract.proposal.lot_proposals.first
+      @lot_proposal ||= (contract.blank? ? "NODEF" : contract.proposal.lot_proposals.first)
     end
 
     def lots
-      @lots ||= contract.proposal.lots
+      @lots ||= (contract.blank? ? "NODEF" : contract.proposal.lots)
     end
 
     def full_address(address)
       "#{address.address}, #{address_complement_number(address)}, " \
-      "#{address.cep}, #{address.city.name}, #{address.state.name}"
+      "#{address.cep}, #{address.city.name}, #{address.state.name}, #{address.country}"
     end
 
     def address_complement_number(address)
@@ -258,15 +294,15 @@ module Pdf::Contract::Classification
     end
 
     def cooperative
-      @cooperative ||= contract.user.cooperative
+      @cooperative ||= (contract.blank? ? bidding.cooperative : (contract.user.cooperative) )
     end
 
     def provider
-      @provider ||= contract.supplier.provider
+      @provider ||= (contract.blank? ? "NODEF" : (contract.supplier.provider))
     end
 
     def bidding
-      @bidding ||= contract.bidding
+      @bidding ||= contract.blank? ? biddingTop : contract.bidding
     end
 
     def global?
@@ -286,6 +322,10 @@ module Pdf::Contract::Classification
 
     def pdf_contract_env(key)
       ENV["PDF_CONTRACT_#{key}"]
+    end
+
+    def localeBase
+      return (contract.blank? ? bidding : contract.user).organization.locale
     end
 
     def template_file_name; end

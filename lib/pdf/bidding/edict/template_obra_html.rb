@@ -29,21 +29,41 @@ module Pdf::Bidding
 
     def dictionary
       {
+        '@@cooperative_legal_representative_name@@' => cooperative_legal_representative_name,
+        '@@number_covenant@@' => bidding.covenant.number,
+        '@@name_cooperative@@' => cooperative.name,
+        '@@title_bidding@@' => bidding.title,
+        "@@bidding_description@@" => bidding.description ,
+        "@@bidding_link@@" => bidding.link ,
+        "@@bidding_start_date@@" => bidding.start_date ,
+        '@@project_name@@' => bidding.organization.name,
+        '@@bidding_country@@' => bidding.organization.country,
         '@@cooperative.name@@' => cooperative.name,
         '@@cooperative.address.address@@' => cooperative.address.address,
         '@@cooperative.address.city.name@@' => cooperative.address.city.name,
         '@@cooperative.address.city.state.name@@' =>
           cooperative.address.city.state.name,
         '@@cooperative.cnpj@@' => cooperative.cnpj,
+        '@@cooperative_legal_representative_email@@' => cooperative.legal_representative.email,
         '@@cooperative.legal_representative.name@@' =>
           cooperative.legal_representative.name,
         '@@bidding.title@@' => bidding.title,
         '@@bidding.items@@' => bidding_items,
         '@@bidding.proposals@@' => fill_tables,
-        '@@bidding.closing_date@@' => format_date(bidding.closing_date),
         '@@current_date@@' => format_date(Date.current),
-        '@@technical_team@@' => fill_table_technical_team
+        '@@technical_team@@' => fill_table_technical_team,
+        "@@contract_annex@@" => pre_contract_render,
+        '@@bidding.closing_date@@' => format_date(bidding.closing_date),
+        '@@deadline_lot@@' => format_date(bidding.closing_date),
       }
+    end
+
+    def cooperative_legal_representative_name
+      legal_representative(cooperative).name
+    end
+
+    def legal_representative(klass)
+      klass.legal_representative
     end
 
     def bidding_items
@@ -151,10 +171,16 @@ module Pdf::Bidding
     end
 
     def template_data
+      append = bidding.organization.locale == "pt-BR" ? "_obra" : ""
       @template_data ||=
         File.read(
-          Rails.root.join('lib', 'pdf', 'bidding', 'edict', 'templates', 'edict_obra.html')
+          Rails.root.join('lib', 'pdf', 'bidding', 'edict', 'templates', "edict#{append}.#{bidding.organization.locale}.html")
         )
+    end
+
+    def pre_contract_render
+      c = Pdf::Contract::TemplateStrategy.decideByClassificationName(className: bidding.classification_name, contract: nil, bidding: bidding)
+      c.call
     end
   end
 end
