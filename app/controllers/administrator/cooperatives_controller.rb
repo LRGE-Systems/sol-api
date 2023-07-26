@@ -9,15 +9,15 @@ module Administrator
 
       address_attributes: [
         :id, :address, :number, :neighborhood, :city_id, :cep, :complement,
-        :reference_point, :latitude, :longitude, :phone, :email
+        :reference_point, :latitude, :longitude, :phone, :email,:country_id
       ],
 
       legal_representative_attributes: [
-        :id, :name, :nationality, :civil_state, :rg, :cpf, :valid_until,
+        :id, :name, :nationality, :civil_state, :rg, :cpf, :valid_until,:email,
 
         address_attributes: [
           :id, :address, :number, :neighborhood, :city_id, :cep, :complement,
-          :reference_point, :latitude, :longitude, :phone, :email
+          :reference_point, :latitude, :longitude, :phone, :email, :country_id,
         ]
 
       ]

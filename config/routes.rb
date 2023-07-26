@@ -209,6 +209,7 @@ Rails.application.routes.draw do
   namespace :search do
     resources :admins, only: :index
     resources :cities, only: :index
+    resources :country, only: :index
     resources :organizations, only: :index
     resources :cooperatives, only: :index
     resources :classifications, only: :index

@@ -5,7 +5,13 @@ module Search
     private
 
     def base_resources
-      City.includes(:state)
+      if params[:country].blank? || params[:country] == "null"
+        City.includes(:state)
+      else 
+        City.includes(:state).where(states: {
+          country_id: params[:'country']
+        })
+      end
     end
   end
 end

@@ -1,6 +1,6 @@
 class LegalRepresentativeSerializer < ActiveModel::Serializer
 
-  attributes :id, :name, :nationality, :civil_state, :rg, :cpf, :valid_until
+  attributes :id, :name, :nationality, :civil_state, :rg, :cpf, :valid_until,:email
 
   has_one :address
 

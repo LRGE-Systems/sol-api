@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_16_142519) do
+ActiveRecord::Schema.define(version: 2023_07_26_225522) do
 
   create_table "additives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "bidding_id"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2023_07_16_142519) do
     t.datetime "updated_at", null: false
     t.string "phone", default: "-", null: false
     t.string "email", default: "-"
-    t.string "country"
     t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
     t.index ["city_id"], name: "index_addresses_on_city_id"
   end
@@ -163,6 +162,14 @@ ActiveRecord::Schema.define(version: 2023_07_16_142519) do
     t.datetime "updated_at", null: false
     t.bigint "organization_id"
     t.index ["organization_id"], name: "index_cooperatives_on_organization_id"
+  end
+
+  create_table "countries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.string "sigla"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "covenants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -506,6 +513,8 @@ ActiveRecord::Schema.define(version: 2023_07_16_142519) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "code"
+    t.bigint "country_id"
+    t.index ["country_id"], name: "index_states_on_country_id"
   end
 
   create_table "suppliers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|

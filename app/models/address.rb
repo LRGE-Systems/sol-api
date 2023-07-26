@@ -6,8 +6,10 @@ class Address < ApplicationRecord
 
   belongs_to :addressable, polymorphic: true
   belongs_to :city, optional: :city_optional?
+  belongs_to :country, optional: :city_optional?
 
   has_one :state, through: :city
+
 
   validates :address,
             :number,
@@ -33,6 +35,10 @@ class Address < ApplicationRecord
 
   def skip_integration_validations!
     @skip_integration_validations = true
+  end
+
+  def country_name 
+    self.state.country_name
   end
 
   private
