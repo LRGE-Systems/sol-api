@@ -18,7 +18,7 @@ module Pdf::Bidding
     private
 
     def parse_html
-      return if !bidding_not_able_to_generate?
+      return if bidding_not_able_to_generate?
 
       dictionary.each do |key, value|
         html.gsub!(key, value.to_s)
