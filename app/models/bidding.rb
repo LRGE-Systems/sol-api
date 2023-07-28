@@ -19,9 +19,11 @@ class Bidding < ApplicationRecord
   # attribute :value, :money
 
   enum kind: { unitary: 1, lot: 2, global: 3 }
+  
   enum status: { draft: 0, waiting: 1, approved: 2, ongoing: 3, draw: 4,
                  under_review: 5, finnished: 6, canceled: 7, suspended: 8,
                  failure: 9, reopened: 10, desert: 11 }
+
   enum modality: { unrestricted: 0, open_invite: 1, closed_invite: 2 }
 
   belongs_to :covenant

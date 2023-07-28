@@ -18,7 +18,7 @@ module Pdf::Bidding
     private
 
     def parse_html
-      return if bidding_not_able_to_generate?
+      return if !bidding_not_able_to_generate?
 
       dictionary.each do |key, value|
         html.gsub!(key, value.to_s)
@@ -145,9 +145,13 @@ module Pdf::Bidding
     end
 
     def template_data
+      append = ""
+      if bidding.organization.locale == "fr-FR"
+        append = ".#{bidding.classification_name.downcase}"
+      end
       @template_data ||=
         File.read(
-          Rails.root.join('lib', 'pdf', 'bidding', 'edict', 'templates', "edict#{bidding.organization.locale}.html")
+          Rails.root.join('lib', 'pdf', 'bidding', 'edict', 'templates', "edict#{append}.#{bidding.organization.locale}.html")
         )
     end
     def pre_contract_render

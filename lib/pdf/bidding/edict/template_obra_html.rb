@@ -171,7 +171,12 @@ module Pdf::Bidding
     end
 
     def template_data
-      append = bidding.organization.locale == "pt-BR" ? "_obra" : ""
+      append = ""
+      if bidding.organization.locale == "pt-BR"
+        append = "_obra"
+      elsif bidding.organization.locale == "fr-FR"
+        append = ".#{bidding.classification_name.downcase}"
+      end
       @template_data ||=
         File.read(
           Rails.root.join('lib', 'pdf', 'bidding', 'edict', 'templates', "edict#{append}.#{bidding.organization.locale}.html")
