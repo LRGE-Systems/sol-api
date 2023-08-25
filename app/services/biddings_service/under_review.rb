@@ -34,5 +34,7 @@ module BiddingsService
     def review
       BiddingsService::Review.call(bidding: bidding)
     end
+
+    
   end
 end

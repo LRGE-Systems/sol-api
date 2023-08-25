@@ -39,3 +39,30 @@ pt-BR:
           contract_total_inexecution: "O contrato %s com o fornecedor %s / CPF/CNPJ %s foi atualizado para a situação de inexecução total pela associação %s."
           no_proposals: Nenhuma empresa vencedora.
 
+          table:
+            header:
+              item_number: Item N°
+              item_description: Descrição
+              item_quantity: Quantidade
+              item_unit: Unidade
+              item_destiny: Destino
+              item_destiny_deadline: Prazo
+              prop_item_lot: Item
+              prop_rank: Rank
+              prop_bidder_name: Fornecedor
+              prop_bidder_id: Fornecedor ID
+              prop_price: Preço
+              prop_date: Enviado em
+              prop_accepted_yn: Aceito (S/N)
+              prop_reject_reason: Motivo da rejeição
+              prop_yes: Sim
+              prop_no: Não
+              prop_triage: Triagem
+              prop_contract_number: N° Contrato
+              prop_awarded_on: Data do prêmio 
+              prop_awarded_amount: Prêmio
+              prop_signed_on: Assinado em
+              prop_rejected_on: Rejeitado em
+              prop_completed_on: Concluído em
+              
+

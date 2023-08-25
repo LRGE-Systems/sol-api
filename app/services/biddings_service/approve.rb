@@ -21,10 +21,17 @@ module BiddingsService
     def approve
       @approve ||= begin
         execute_or_rollback do
+          nm = true 
+          if bidding.approved?
+            nm = false
+          end
           bidding.approved!
           bidding.reload
           create_bidding_at_blockchain!
           notify
+          if nm 
+            generate_minute
+          end
         end
       end
     end
@@ -56,6 +63,10 @@ module BiddingsService
 
     def generate_edict
       Bidding::EdictPdfGenerateWorker.perform_async(bidding.id)
+    end
+
+    def generate_minute
+      Bidding::Minute::PdfGenerateWorker.perform_async(bidding.id)
     end
   end
 end

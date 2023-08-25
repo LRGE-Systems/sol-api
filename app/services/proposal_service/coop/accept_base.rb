@@ -17,6 +17,7 @@ module ProposalService::Coop
         proposal.reload
         update_proposal_at_blockchain!
         notify
+        generate_minute
       end
     end
 
@@ -27,5 +28,9 @@ module ProposalService::Coop
 
     # override
     def notify; end
+
+    def generate_minute
+      Bidding::Minute::PdfGenerateWorker.perform_async(proposal.bidding.id)
+    end
   end
 end

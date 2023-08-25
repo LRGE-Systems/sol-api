@@ -4,11 +4,20 @@ module Pdf::Bidding
     include ActionView::Helpers::NumberHelper
     include Pdf::HelperMethods
 
-    attr_accessor :html
+    attr_accessor :html, :tables_content, 
+    :tables_prop_content, :tables_prop_coop_content, 
+    :tables_prop_admin_content, :tables_prop_contract_content,
+    :tables_prop_contract_terminated_content, :table
 
     def initialize(*args)
       super
       @html = template_data
+      @tables_content = []
+      @tables_prop_content = []
+      @tables_prop_coop_content = []
+      @tables_prop_admin_content = []
+      @tables_prop_contract_content = []
+      @tables_prop_contract_terminated_content = []
     end
 
     def main_method
@@ -23,12 +32,27 @@ module Pdf::Bidding
       dictionary.each do |key, value|
         html.gsub!(key, value.to_s)
       end
-
+      
+      puts "HTML MADE"
+      
       html
     end
 
     def dictionary
       {
+        "@@bidding_description@@" => bidding.description ,
+        '@@title_bidding@@' => bidding.title,
+        "@@bidding_start_date@@" => bidding.start_date ,
+        '@@bidding_country@@' => bidding.organization.country,
+        '@@project_name@@' => bidding.organization.name,
+        '@@name_cooperative@@' => cooperative.name,
+        '@@number_covenant@@' => bidding.covenant.number,
+        '@@items_lot@@' => fill_tables,
+        '@@proposals_items@@'=> fill_proposals_tables,
+        '@@items_proposals_coop@@' => fill_proposals_coop_tables,
+        '@@items_proposals_admin@@' => fill_proposals_admin_tables,
+        '@@contract_all_signed@@' => fill_contract_signed_tables,
+        '@@contract_all_terminated@@' => fill_contract_terminated_tables,
         '@@cooperative.name@@' => cooperative.name,
         '@@cooperative.address.address@@' => cooperative.address.address,
         '@@cooperative.address.city.name@@' => cooperative.address.city.name,
@@ -230,5 +254,378 @@ module Pdf::Bidding
 
     # override
     def template_file_name; end
+
+    def to_text(array)
+      array.join("")
+    end
+
+    def fill_tables
+
+      bidding.lots.each do |lot|
+        tables_content.push(fill_title(lot))
+        tables_content.push(fill_table(lot))
+      end
+
+      to_text(tables_content)
+    end
+    
+    def fill_title(lot)
+      "<p class=\"tab50\"><b>#{I18n.t("document.pdf.bidding.edict.lot")}: #{lot.name}</b></p>"
+    end
+
+    def fill_table(lot)
+      @table = []
+
+      fill_table_top_row(lot)
+
+      lot.lot_group_items.each do |lot_group_item|
+        fill_table_row(lot_group_item)
+      end
+
+      surrond_with_table_tag
+      to_text(table)
+    end
+
+    def fill_table_top_row(lot)
+      table.push(
+        "<tr>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.item_number")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.item_description")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.item_quantity")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.item_unit")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.item_destiny")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.item_destiny_deadline")}</th>"\
+        "</tr>"
+      )
+    end
+
+    def fill_table_row(lot_group_item)
+      table.push(
+        "<tr>"\
+          "<td>#{lot_group_item.item.title}</td>"\
+          "<td>#{lot_group_item.item.description}</td>"\
+          "<td>#{formatted_number(lot_group_item.quantity)}</td>"\
+          "<td>#{lot_group_item.item.unit_name}</td>"\
+          "<td>#{lot_group_item.lot.address}</td>"\
+          "<td>#{lot_group_item.lot.deadline}</td>"\
+        "</tr>"
+      )
+    end
+
+    def surrond_with_table_tag
+      table.unshift("<table>")
+      table.push("</table><br/>")
+    end
+
+    def formatted_number(value)
+      number_with_delimiter(value)
+    end
+
+    ######
+
+    def fill_proposals_tables
+
+      bidding.lot_proposals.each_with_index do |lot, ind|
+        tables_prop_content.push(fill_proposals_title(lot))
+        tables_prop_content.push(fill_proposals_table(lot, ind))
+      end
+
+      to_text(tables_prop_content)
+    end
+    
+    def fill_proposals_title(lot)
+      ""
+      # "<p class=\"tab50\"><b>#{I18n.t("document.pdf.bidding.edict.lot")}: #{lot.name}</b></p>"
+    end
+
+    def fill_table_proposals_top_row(lot)
+      table.push(
+        "<tr>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_item_lot")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_rank")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_name")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_id")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_price")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_date")}</th>"\
+        "</tr>"
+      )
+    end
+
+    def fill_proposals_table_row(lot, lot_group_item, ind)
+      table.push(
+        "<tr>"\
+          "<td>#{lot_group_item.item.title}</td>"\
+          "<td>#{ind+1}</td>"\
+          "<td>#{lot.proposal.provider.name}</td>"\
+          "<td>#{lot.proposal.provider.id}</td>"\
+          "<td>#{lot.price_total}</td>"\
+          "<td>#{I18n.l(lot_group_item.created_at, format: :shorter)}</td>"\
+        "</tr>"
+      )
+    end
+
+    def fill_proposals_table(lot, ind)
+      @table = []
+
+      fill_table_proposals_top_row(lot)
+
+      lot.lot_group_items.each do |lot_group_item|
+        fill_proposals_table_row(lot, lot_group_item, ind)
+      end
+
+      surrond_with_table_tag
+      to_text(table)
+    end
+
+
+    ####
+
+    def fill_proposals_coop_tables
+
+      bidding.lot_proposals.each_with_index do |lot, ind|
+        tables_prop_coop_content.push(fill_proposals_coop_title(lot))
+        tables_prop_coop_content.push(fill_proposals_coop_table(lot, ind))
+      end
+
+      to_text(tables_prop_coop_content)
+    end
+    
+    def fill_proposals_coop_title(lot)
+      ""
+      # "<p class=\"tab50\"><b>#{I18n.t("document.pdf.bidding.edict.lot")}: #{lot.name}</b></p>"
+    end
+
+    def fill_table_proposals_coop_top_row(lot)
+      table.push(
+        "<tr>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_item_lot")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_rank")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_name")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_id")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_accepted_yn")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_reject_reason")}</th>"\
+        "</tr>"
+      )
+    end
+
+    def fill_proposals_coop_table_row(lot, lot_group_item, ind)
+      if lot.blank? || lot.proposal.blank?
+        "NODEF"
+      else 
+        comment = lot.proposal.event_proposal_status_changes.filter{|e| e.to == 'coop_refused'}.last.comment
+        table.push(
+          "<tr>"\
+            "<td>#{lot_group_item.item.title}</td>"\
+            "<td>#{ind}</td>"\
+            "<td>#{lot.proposal.provider.name}</td>"\
+            "<td>#{lot.proposal.provider.id}</td>"\
+            "<td>#{I18n.t("document.pdf.bidding.minute.table.header.#{lot.proposal.coop_accepted? ? 'prop_yes' : lot.proposal.coop_refused? ? 'prop_no' : 'prop_triage'}")}</td>"\
+            "<td>#{comment}</td>"\
+          "</tr>"
+        )
+      end
+    end
+
+    def fill_proposals_coop_table(lot, ind)
+      @table = []
+
+      fill_table_proposals_coop_top_row(lot)
+
+      lot.lot_group_items.each do |lot_group_item|
+        fill_proposals_coop_table_row(lot, lot_group_item, ind)
+      end
+
+      surrond_with_table_tag
+      to_text(table)
+    end
+
+    ###
+
+    def fill_proposals_admin_tables
+
+      bidding.lot_proposals.each_with_index do |lot, ind|
+        tables_prop_admin_content.push(fill_proposals_admin_title(lot))
+        tables_prop_admin_content.push(fill_proposals_admin_table(lot, ind))
+      end
+
+      to_text(tables_prop_admin_content)
+    end
+    
+    def fill_proposals_admin_title(lot)
+      ""
+      # "<p class=\"tab50\"><b>#{I18n.t("document.pdf.bidding.edict.lot")}: #{lot.name}</b></p>"
+    end
+
+    def fill_table_proposals_admin_top_row(lot)
+      table.push(
+        "<tr>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_item_lot")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_contract_number")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_name")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_id")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_awarded_on")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_awarded_amount")}</th>"\
+        "</tr>"
+      )
+    end
+
+    def fill_proposals_admin_table_row(lot, lot_group_item, ind)
+      if lot.blank? || lot.proposal.blank? || lot.proposal.contract.blank?
+        "NODEF"
+      else 
+        table.push(
+          "<tr>"\
+            "<td>#{lot_group_item.item.title}</td>"\
+            "<td>#{lot.proposal.contract.title}</td>"\
+            "<td>#{lot.proposal.provider.name}</td>"\
+            "<td>#{lot.proposal.provider.id}</td>"\
+            "<td>#{I18n.l(lot.proposal.contract.created_at, format: :shorter)}</td>"\
+            "<td>#{lot.proposal.price_total}</td>"\
+          "</tr>"
+        )
+      end
+    end
+
+    def fill_proposals_admin_table(lot, ind)
+      @table = []
+
+      fill_table_proposals_admin_top_row(lot)
+
+      lot.lot_group_items.each do |lot_group_item|
+        fill_proposals_admin_table_row(lot, lot_group_item, ind)
+      end
+
+      surrond_with_table_tag
+      to_text(table)
+    end
+
+
+    ###
+
+    def fill_contract_signed_tables
+
+      bidding.contracts.each_with_index do |contract, ind|
+        contract.proposal.lot_proposals.each_with_index do |lot, ind|
+          tables_prop_contract_content.push(fill_contract_signed_title(lot))
+          tables_prop_contract_content.push(fill_contract_signed_table(lot, ind))
+        end
+      end
+
+      to_text(tables_prop_contract_content)
+    end
+    
+    def fill_contract_signed_title(lot)
+      ""
+      # "<p class=\"tab50\"><b>#{I18n.t("document.pdf.bidding.edict.lot")}: #{lot.name}</b></p>"
+    end
+
+    def fill_table_contract_signed_top_row(lot)
+      table.push(
+        "<tr>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_item_lot")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_contract_number")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_name")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_id")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_signed_on")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_rejected_on")}</th>"\
+        "</tr>"
+      )
+    end
+
+    def fill_contract_signed_table_row(lot, lot_group_item, ind)
+      if  lot.blank? || lot.proposal.blank? || lot.proposal.contract.blank?
+        "NODEF"
+      else 
+        allsigned = lot.proposal.contract.all_signed? ? I18n.l(lot.proposal.contract.updated_at, format: :shorter) : ''
+        rejected = lot.proposal.contract.refused? ? I18n.l(lot.proposal.contract.updated_at, format: :shorter) : ''
+        table.push(
+          "<tr>"\
+            "<td>#{lot_group_item.item.title}</td>"\
+            "<td>#{lot.proposal.contract.title}</td>"\
+            "<td>#{lot.proposal.provider.name}</td>"\
+            "<td>#{lot.proposal.provider.id}</td>"\
+            "<td>#{allsigned}</td>"\
+            "<td>#{rejected}</td>"\
+          "</tr>"
+        )
+      end
+    end
+
+    def fill_contract_signed_table(lot, ind)
+      @table = []
+
+      fill_table_contract_signed_top_row(lot)
+
+      lot.lot_group_items.each do |lot_group_item|
+        fill_contract_signed_table_row(lot, lot_group_item, ind)
+      end
+
+      surrond_with_table_tag
+      to_text(table)
+    end
+
+
+    ###
+
+    def fill_contract_terminated_tables
+
+      bidding.contracts.each_with_index do |contract, ind|
+        contract.proposal.lot_proposals.each_with_index do |lot, ind|
+          tables_prop_contract_terminated_content.push(fill_contract_terminated_title(lot))
+          tables_prop_contract_terminated_content.push(fill_contract_terminated_table(lot, ind))
+        end
+      end
+
+      to_text(tables_prop_contract_terminated_content)
+    end
+    
+    def fill_contract_terminated_title(lot)
+      ""
+      # "<p class=\"tab50\"><b>#{I18n.t("document.pdf.bidding.edict.lot")}: #{lot.name}</b></p>"
+    end
+
+    def fill_table_contract_terminated_top_row(lot)
+      table.push(
+        "<tr>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_item_lot")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_contract_number")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_name")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_id")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_completed_on")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_awarded_amount")}</th>"\
+        "</tr>"
+      )
+    end
+
+    def fill_contract_terminated_table_row(lot, lot_group_item, ind)
+      if  lot.blank? || lot.proposal.blank? || lot.proposal.contract.blank?
+        "NODEF"
+      else 
+        table.push(
+          "<tr>"\
+            "<td>#{lot_group_item.item.title}</td>"\
+            "<td>#{lot.proposal.contract.title}</td>"\
+            "<td>#{lot.proposal.provider.name}</td>"\
+            "<td>#{lot.proposal.provider.id}</td>"\
+            "<td>#{I18n.l(lot.proposal.contract.updated_at, format: :shorter)}</td>"\
+            "<td>#{lot.proposal.price_total}</td>"\
+          "</tr>"
+        )
+      end
+    end
+
+    def fill_contract_terminated_table(lot, ind)
+      @table = []
+
+      fill_table_contract_terminated_top_row(lot)
+
+      lot.lot_group_items.each do |lot_group_item|
+        fill_contract_terminated_table_row(lot, lot_group_item, ind)
+      end
+
+      surrond_with_table_tag
+      to_text(table)
+    end
+
   end
 end

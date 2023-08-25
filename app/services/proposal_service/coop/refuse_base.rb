@@ -22,6 +22,7 @@ module ProposalService::Coop
         next_proposal_to_triage! if next_proposal
         proposal.reload
         notify
+        generate_minute
       end
     end
 
@@ -58,5 +59,9 @@ module ProposalService::Coop
 
     # override
     def notify; end
+
+    def generate_minute
+      Bidding::Minute::PdfGenerateWorker.perform_async(proposal.bidding.id)
+    end
   end
 end

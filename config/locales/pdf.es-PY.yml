@@ -38,4 +38,29 @@
           contract_refused: "El contrato %s ha sido rechazado por el proveedor %s por el/los motivo/s %s"
           contract_total_inexecution: "El contrato %s con el proveedor %s / CNPJ %s ha sido actualizado para la situación de falta de ejecución total por la asociación %s."
           no_proposals: Ninguna empresa ganadora.
+          table:
+            header:
+              item_number: Número de artículo
+              item_description: Descripción
+              item_quantity: Cantidad
+              item_unit: Unidad
+              item_destiny: Destino
+              item_destiny_deadline: Término
+              prop_item_lot: Artículo
+              prop_rank: Rango
+              prop_bidder_name: Proveedor
+              prop_bidder_id: Identificación del proveedor
+              prop_price: Precio
+              prop_date: Enviado
+              prop_accepted_yn: Aceptado (sí/no)
+              prop_reject_reason: Justificación del rechazo
+              prop_yes: Sí
+              prop_no: No
+              prop_triage: Poner en pantalla
+              prop_contract_number: Contrato no.
+              prop_awarded_on: Fecha de premiación
+              prop_awarded_amount: Otorgar
+              prop_signed_on: Firmado
+              prop_rejected_on: No refrendada
+              prop_completed_on: Completado en
 

@@ -37,6 +37,8 @@ module ContractsService
     def sign!
       contract.signed!
       contract.reload
+      sleep 2
+      generate_minute
     end
 
     def update_contract_blockchain!
@@ -49,6 +51,9 @@ module ContractsService
 
     def generate_pdf
       Contract::PdfGenerateWorker.perform_async(contract.id) if contract.all_signed?
+    end
+    def generate_minute
+      Bidding::Minute::PdfGenerateWorker.perform_async(contract.bidding.id)
     end
   end
 end

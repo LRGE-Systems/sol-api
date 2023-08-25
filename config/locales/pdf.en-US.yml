@@ -38,4 +38,28 @@
           contract_refused: "Contract %s was rejected by vendor %s due to %s"
           contract_total_inexecution: "Contract %s with vendor %s / CNPJ %s was updated to “complete nonperformance” status by the cooperative %s."
           no_proposals: No winning company.
-
+          table:
+            header:
+              item_number: Line Item N°
+              item_description: Description of Item
+              item_quantity: Quantity required
+              item_unit: Physical unit
+              item_destiny: Final Destination
+              item_destiny_deadline: Delivery Period or Completion Schedule from Date of Contract signing
+              prop_item_lot: Lot/Item
+              prop_rank: Rank
+              prop_bidder_name: Bidder’s name
+              prop_bidder_id: Bidder’s Tax/Id number
+              prop_price: Bid Price
+              prop_date: Submitted on
+              prop_accepted_yn: Accepted (Y/N)
+              prop_reject_reason: Justification for rejection
+              prop_yes: Yes
+              prop_no: No
+              prop_triage: Triage
+              prop_contract_number: Contract number
+              prop_awarded_on: Awarded on
+              prop_awarded_amount: Award amount
+              prop_signed_on: Signed on
+              prop_rejected_on: No refrendada
+              prop_completed_on: Completed on
