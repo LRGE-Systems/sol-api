@@ -63,3 +63,7 @@
               prop_signed_on: Signed on
               prop_rejected_on: No refrendada
               prop_completed_on: Completed on
+              prop_terminated_on: Terminated on
+              prop_justification: Justification
+              prop_total: Total
+              prop_partial: Partial

@@ -10,11 +10,14 @@ module Pdf::Bidding
                 Pdf::Bidding::Minute::ApprovedHtml 
               when 'finnished'
                 Pdf::Bidding::Minute::FinnishedHtml
+              when 'reopened'
+                Pdf::Bidding::Minute::ReopenedHtml
               when 'failure'
                 Pdf::Bidding::Minute::FailureHtml
               when 'desert'
                 Pdf::Bidding::Minute::DesertHtml
               end
+      puts klass
       klass.new(bidding: bidding)
     end
   end

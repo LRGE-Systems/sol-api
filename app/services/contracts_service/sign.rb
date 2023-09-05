@@ -35,9 +35,12 @@ module ContractsService
     end
 
     def sign!
+      puts "!CONTRACT SIGNING!"
       contract.signed!
       contract.reload
+      contract.bidding.reload
       sleep 2
+      puts "!GENERATING MINUTE!"
       generate_minute
     end
 
@@ -53,7 +56,7 @@ module ContractsService
       Contract::PdfGenerateWorker.perform_async(contract.id) if contract.all_signed?
     end
     def generate_minute
-      Bidding::Minute::PdfGenerateWorker.perform_async(contract.bidding.id)
+      Bidding::Minute::PdfGenerateWorker.perform_async(contract.bidding.id) if contract.all_signed?
     end
   end
 end

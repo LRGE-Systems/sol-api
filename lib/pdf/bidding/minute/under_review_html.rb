@@ -7,11 +7,18 @@ module Pdf::Bidding
     end
 
     def template_file_name
-      if bidding.proposals.all?{ |x| x.triage? }
-        'steps/step_2.html'
-      elsif !bidding.proposals.all?{ |x| x.accepted? || x.refused? } 
-        'steps/step_3.html' 
+      lastProposal = bidding.proposals.order(:updated_at => :desc).first.reload
+
+      puts "LAST PROPOSAL"
+      puts lastProposal.attributes
+      
+      if lastProposal.triage? || lastProposal.sent?
+        return 'steps/step_2.html'
+      elsif !(lastProposal.accepted? || lastProposal.refused? )
+        @lot_proposals_override = lastProposal.lot_proposals.order(updated_at: :desc).first
+        return 'steps/step_3.html' 
       end
+
     end
   end
 end

@@ -12,6 +12,7 @@ module ContractsService
 
     def change_contract_status!
       contract.total_inexecution!
+      Bidding::Minute::PdfGenerateWorker.perform_async(contract.bidding.id, contract.attributes) if contract.total_inexecution?
     end
 
     def notify

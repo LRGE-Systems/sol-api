@@ -15,6 +15,7 @@ module ProposalService::Admin
         proposal.reload
         update_proposal_at_blockchain!
         notify
+        # generate_minute
       end
     end
 
@@ -28,5 +29,9 @@ module ProposalService::Admin
 
     # override
     def notify; end
+
+    def generate_minute
+      Bidding::Minute::PdfGenerateWorker.perform_async(proposal.bidding.id)
+    end
   end
 end

@@ -18,6 +18,9 @@ module ContractsService
         recalculate_available_quantity!
         update_contract_blockchain!
         notify
+        contract.reload
+        contract.bidding.reload
+        generate_minute
       end
     end
 
@@ -35,6 +38,10 @@ module ContractsService
 
     def notify
       Notifications::Contracts::PartialExecution.call(contract: contract)
+    end
+
+    def generate_minute
+      Bidding::Minute::PdfGenerateWorker.perform_async(contract.bidding.id, contract.attributes)
     end
   end
 end

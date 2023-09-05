@@ -25,11 +25,11 @@ module BiddingsService
 
           recalculate_quantity!
           bidding.finnished!
-          bidding.reload
           update_bidding_blockchain!
           notify
           create_contract!
           generate_spreadsheet_report
+          generate_minute
         end
       end
     end
@@ -60,11 +60,15 @@ module BiddingsService
     end
 
     def generate_addendum_accepted_pdf
-      Bidding::Minute::AddendumAcceptedPdfGenerateWorker.perform_async(bidding.id)
+      # Bidding::Minute::AddendumAcceptedPdfGenerateWorker.perform_async(bidding.id)
     end
 
     def generate_spreadsheet_report
       Bidding::SpreadsheetReportGenerateWorker.perform_async(bidding.id)
+    end
+
+    def generate_minute
+      Bidding::Minute::PdfGenerateWorker.perform_async(bidding.id , bidding.contracts.last.attributes)
     end
   end
 end

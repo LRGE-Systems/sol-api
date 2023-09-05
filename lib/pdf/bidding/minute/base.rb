@@ -7,7 +7,10 @@ module Pdf::Bidding
     attr_accessor :html, :tables_content, 
     :tables_prop_content, :tables_prop_coop_content, 
     :tables_prop_admin_content, :tables_prop_contract_content,
-    :tables_prop_contract_terminated_content, :table
+    :tables_prop_contract_terminated_content, :table,
+    :tables_prop_contract_termination_content, 
+    :contract_override,
+    :lot_proposals_override
 
     def initialize(*args)
       super
@@ -18,6 +21,7 @@ module Pdf::Bidding
       @tables_prop_admin_content = []
       @tables_prop_contract_content = []
       @tables_prop_contract_terminated_content = []
+      @tables_prop_contract_termination_content = []
     end
 
     def main_method
@@ -29,11 +33,13 @@ module Pdf::Bidding
     def parse_html
       return if bidding_not_able_to_generate?
 
+      puts "STARTING HTML BUILDING"
+
       dictionary.each do |key, value|
         html.gsub!(key, value.to_s)
       end
       
-      puts "HTML MADE"
+      puts "!!!HTML MADE!!!"
       
       html
     end
@@ -53,6 +59,7 @@ module Pdf::Bidding
         '@@items_proposals_admin@@' => fill_proposals_admin_tables,
         '@@contract_all_signed@@' => fill_contract_signed_tables,
         '@@contract_all_terminated@@' => fill_contract_terminated_tables,
+        "@@contract_termination_table@@" => fill_contract_termination_tables,
         '@@cooperative.name@@' => cooperative.name,
         '@@cooperative.address.address@@' => cooperative.address.address,
         '@@cooperative.address.city.name@@' => cooperative.address.city.name,
@@ -325,9 +332,14 @@ module Pdf::Bidding
 
     def fill_proposals_tables
 
-      bidding.lot_proposals.each_with_index do |lot, ind|
-        tables_prop_content.push(fill_proposals_title(lot))
-        tables_prop_content.push(fill_proposals_table(lot, ind))
+      if lot_proposals_override.blank?
+        bidding.lot_proposals.each_with_index do |lot, ind|
+          tables_prop_content.push(fill_proposals_title(lot))
+          tables_prop_content.push(fill_proposals_table(lot, ind))
+        end
+      else 
+        tables_prop_content.push(fill_proposals_title(lot_proposals_override))
+        tables_prop_content.push(fill_proposals_table(lot_proposals_override, 0))
       end
 
       to_text(tables_prop_content)
@@ -381,11 +393,17 @@ module Pdf::Bidding
     ####
 
     def fill_proposals_coop_tables
-
-      bidding.lot_proposals.each_with_index do |lot, ind|
-        tables_prop_coop_content.push(fill_proposals_coop_title(lot))
-        tables_prop_coop_content.push(fill_proposals_coop_table(lot, ind))
+      
+      if lot_proposals_override.blank?
+        bidding.lot_proposals.each_with_index do |lot, ind|
+          tables_prop_coop_content.push(fill_proposals_coop_title(lot))
+          tables_prop_coop_content.push(fill_proposals_coop_table(lot, ind))
+        end
+      else 
+        tables_prop_coop_content.push(fill_proposals_coop_title(lot_proposals_override))
+        tables_prop_coop_content.push(fill_proposals_coop_table(lot_proposals_override, 0))
       end
+
 
       to_text(tables_prop_coop_content)
     end
@@ -412,7 +430,7 @@ module Pdf::Bidding
       if lot.blank? || lot.proposal.blank?
         "NODEF"
       else 
-        comment = lot.proposal.event_proposal_status_changes.filter{|e| e.to == 'coop_refused'}.last.comment
+        comment = lot.proposal.event_proposal_status_changes.filter{|e| e.to == 'coop_refused'}&.last&.comment || ''
         table.push(
           "<tr>"\
             "<td>#{lot_group_item.item.title}</td>"\
@@ -443,10 +461,16 @@ module Pdf::Bidding
 
     def fill_proposals_admin_tables
 
-      bidding.lot_proposals.each_with_index do |lot, ind|
-        tables_prop_admin_content.push(fill_proposals_admin_title(lot))
-        tables_prop_admin_content.push(fill_proposals_admin_table(lot, ind))
+      if lot_proposals_override.blank?
+        bidding.lot_proposals.each_with_index do |lot, ind|
+          tables_prop_admin_content.push(fill_proposals_admin_title(lot))
+          tables_prop_admin_content.push(fill_proposals_admin_table(lot, ind))
+        end
+      else 
+        tables_prop_admin_content.push(fill_proposals_admin_title(lot_proposals_override))
+        tables_prop_admin_content.push(fill_proposals_admin_table(lot_proposals_override, 0))
       end
+
 
       to_text(tables_prop_admin_content)
     end
@@ -504,8 +528,15 @@ module Pdf::Bidding
 
     def fill_contract_signed_tables
 
-      bidding.contracts.each_with_index do |contract, ind|
-        contract.proposal.lot_proposals.each_with_index do |lot, ind|
+      if contract_override.blank?
+        bidding.contracts.each_with_index do |contract, ind|
+          contract.proposal.lot_proposals.each_with_index do |lot, ind|
+            tables_prop_contract_content.push(fill_contract_signed_title(lot))
+            tables_prop_contract_content.push(fill_contract_signed_table(lot, ind))
+          end
+        end
+      else 
+        contract_override.proposal.lot_proposals.each_with_index do |lot, ind|
           tables_prop_contract_content.push(fill_contract_signed_title(lot))
           tables_prop_contract_content.push(fill_contract_signed_table(lot, ind))
         end
@@ -569,12 +600,20 @@ module Pdf::Bidding
 
     def fill_contract_terminated_tables
 
-      bidding.contracts.each_with_index do |contract, ind|
-        contract.proposal.lot_proposals.each_with_index do |lot, ind|
+      if contract_override.blank?
+        bidding.contracts.each_with_index do |contract, ind|
+          contract.proposal.lot_proposals.each_with_index do |lot, ind|
+            tables_prop_contract_terminated_content.push(fill_contract_terminated_title(lot))
+            tables_prop_contract_terminated_content.push(fill_contract_terminated_table(lot, ind))
+          end
+        end
+      else 
+        contract_override.proposal.lot_proposals.each_with_index do |lot, ind|
           tables_prop_contract_terminated_content.push(fill_contract_terminated_title(lot))
           tables_prop_contract_terminated_content.push(fill_contract_terminated_table(lot, ind))
         end
       end
+
 
       to_text(tables_prop_contract_terminated_content)
     end
@@ -627,5 +666,76 @@ module Pdf::Bidding
       to_text(table)
     end
 
+    ###
+
+    def fill_contract_termination_tables
+
+      if contract_override.blank?
+        bidding.contracts.each_with_index do |contract, ind|
+          contract.proposal.lot_proposals.each_with_index do |lot, ind|
+            tables_prop_contract_termination_content.push(fill_contract_termination_title(lot))
+            tables_prop_contract_termination_content.push(fill_contract_termination_table(lot, ind))
+          end
+        end
+      else 
+        contract_override.proposal.lot_proposals.each_with_index do |lot, ind|
+          tables_prop_contract_termination_content.push(fill_contract_termination_title(lot))
+          tables_prop_contract_termination_content.push(fill_contract_termination_table(lot, ind))
+        end
+      end
+
+
+      tables_prop_contract_termination_content.push("* #{I18n.t("document.pdf.bidding.minute.table.header.prop_justification")}: 1 – #{I18n.t("document.pdf.bidding.minute.table.header.prop_total")} ; 2 – #{I18n.t("document.pdf.bidding.minute.table.header.prop_partial")}.")
+
+      to_text(tables_prop_contract_termination_content)
+    end
+    
+    def fill_contract_termination_title(lot)
+      ""
+      # "<p class=\"tab50\"><b>#{I18n.t("document.pdf.bidding.edict.lot")}: #{lot.name}</b></p>"
+    end
+
+    def fill_table_contract_termination_top_row(lot)
+      table.push(
+        "<tr>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_item_lot")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_contract_number")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_name")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_id")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_terminated_on")}</th>"\
+          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_justification")}</th>"\
+        "</tr>"
+      )
+    end
+
+    def fill_contract_termination_table_row(lot, lot_group_item, ind)
+      if  lot.blank? || lot.proposal.blank? || lot.proposal.contract.blank?
+        "NODEF"
+      else 
+        table.push(
+          "<tr>"\
+            "<td>#{lot_group_item.item.title}</td>"\
+            "<td>#{lot.proposal.contract.title}</td>"\
+            "<td>#{lot.proposal.provider.name}</td>"\
+            "<td>#{lot.proposal.provider.id}</td>"\
+            "<td>#{I18n.l(lot.proposal.contract.updated_at, format: :shorter)}</td>"\
+            "<td>#{lot.proposal.contract.total_inexecution? ? "1" : "2"}</td>"\
+          "</tr>"
+        )
+      end
+    end
+
+    def fill_contract_termination_table(lot, ind)
+      @table = []
+
+      fill_table_contract_termination_top_row(lot)
+
+      lot.lot_group_items.each do |lot_group_item|
+        fill_contract_termination_table_row(lot, lot_group_item, ind)
+      end
+
+      surrond_with_table_tag
+      to_text(table)
+    end
   end
 end

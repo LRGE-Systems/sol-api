@@ -48,7 +48,7 @@ module ContractsService
     end
 
     def generate_minute_addendum
-      Bidding::Minute::AddendumPdfGenerateWorker.perform_async(contract.id)
+      # Bidding::Minute::AddendumPdfGenerateWorker.perform_async(contract.id)
     end
 
     def update_contract_blockchain!

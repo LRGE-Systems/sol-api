@@ -3,6 +3,7 @@ module BiddingsService::Minute
     private
 
     def minute_html_template
+      puts "!! STARTING BIDDING PDF GENERATE SERVICE"
       template_service.call
     end
 

@@ -64,5 +64,9 @@ pt-BR:
               prop_signed_on: Assinado em
               prop_rejected_on: Rejeitado em
               prop_completed_on: Concluído em
+              prop_terminated_on: Rompido em
+              prop_justification: Justificação
+              prop_total: Total
+              prop_partial: Parcial
               
 

@@ -53,7 +53,7 @@ module BiddingsService
       bidding.reload
       blockchain_bidding_update!
       BiddingsService::Clone.call!(bidding: bidding)
-      # generate_minute
+      generate_minute
     end
 
     def under_review_and_notify!

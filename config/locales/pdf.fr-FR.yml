@@ -61,4 +61,8 @@
               prop_signed_on: Signé sur
               prop_rejected_on: Non contresigné
               prop_completed_on: Terminé le
+              prop_terminated_on: Terminé le
+              prop_justification: Justification
+              prop_total: Totale
+              prop_partial: Parcial
 
