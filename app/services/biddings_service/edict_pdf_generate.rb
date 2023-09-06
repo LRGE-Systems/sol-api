@@ -37,7 +37,7 @@ module BiddingsService
 
     def edict_pdf
       @edict_pdf ||= Pdf::Builder::Bidding.call(
-        header_resource: bidding, html: edict_html_template, file_type: 'edict'
+        header_resource: bidding, html: edict_html_template, file_type: 'edict', biddingTg: bidding
       )
     end
 

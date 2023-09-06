@@ -68,11 +68,30 @@ module Pdf::Builder
     # PDFkit will only accept a file or URL, it will not accept raw text the way you expect.
     # ie; passing the erb compiled output directly back to pdfkit results in non-dynamic content being displayed.
     def render_header_footer(type)
-      compiled = ERB.new(File.read("#{Rails.root}/app/views/reports/#{type}.html.erb")).result(binding)
+      compiled = ERB.new(parse_html(type)).result(binding)
       file = Tempfile.new(["#{type}",".html"])
       file.write(compiled)
       file.rewind
       file.path
+    end
+
+    def parse_html(type)
+      html = File.read("#{Rails.root}/app/views/reports/#{type}.html.erb")
+
+      dictionary.each do |key, value|
+        html.gsub!(key, value.to_s)
+      end
+      
+      html
+    end
+
+    def dictionary
+      I18n.locale = biddingTg.organization.locale
+      {
+        "@@full_name@@" => I18n.t("document.pdf.base.full_name"),
+        "@@disclaimer_start@@" => I18n.t("document.pdf.base.disclaimer_start"),
+        "@@auth_confirm@@" => I18n.t("document.pdf.base.auth_confirm")
+      }
     end
 
     def filepath

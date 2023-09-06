@@ -45,7 +45,26 @@ module Pdf::Bidding
     end
 
     def dictionary
+      I18n.locale = bidding.organization.locale
       {
+        "@@procurement_of@@" =>  I18n.t('document.pdf.base.procurement_of'),
+        "@@ref_n@@" =>  I18n.t('document.pdf.base.ref_n'),
+        "@@bid_opening@@" =>  I18n.t('document.pdf.base.bid_opening'),
+        "@@issued_on@@" =>  I18n.t('document.pdf.base.issued_on'),
+        "@@country@@" =>  I18n.t('document.pdf.base.country'),
+        "@@project@@" => I18n.t('document.pdf.base.project'),
+        "@@purchaser_employer@@"=>I18n.t('document.pdf.base.purchaser_employer'),
+        "@@financing_agreement@@"=>I18n.t('document.pdf.base.financing_agreement'),
+        "@@process_details@@"=>I18n.t('document.pdf.base.process_details'),
+        "@@bid_prices@@"=>I18n.t('document.pdf.base.bid_prices'),
+        "@@evaluation_of_bids@@"=>I18n.t('document.pdf.base.evaluation_of_bids'),
+        "@@awarded_contracts@@"=>I18n.t('document.pdf.base.awarded_contracts'),
+        "@@countersignature@@"=>I18n.t('document.pdf.base.countersignature'),
+        "@@contract_completion@@"=>I18n.t('document.pdf.base.contract_completion'),
+        "@@amendments_minutes_intro@@"=>I18n.t('document.pdf.base.amendments_minutes_intro'),
+        "@@amendment_a@@"=>I18n.t('document.pdf.base.amendment_a'),
+        "@@amendment_b@@"=>I18n.t('document.pdf.base.amendment_b'),
+        
         "@@bidding_description@@" => bidding.description ,
         '@@title_bidding@@' => bidding.title,
         "@@bidding_start_date@@" => bidding.start_date ,

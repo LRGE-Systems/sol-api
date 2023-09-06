@@ -1,6 +1,31 @@
 ﻿es-PY:
   document:
     pdf:
+      base: 
+        full_name: "SOL - SOLUCIÓN DE OFERTA EN LÍNEA"
+        disclaimer_start: Este documento fue generado por
+        auth_confirm: Su autenticidad está verificada.
+        procurement_of: La obtención de
+        ref_n: Número de referencia
+        bid_opening: Apertura de ofertas
+        issued_on: Emitido el
+        country: País
+        project: Proyecto
+        purchaser_employer: Compradora / Empleadora
+        financing_agreement: Acuerdo de Financiamiento
+        process_details: Detalles del proceso
+        bid_prices: Precios de oferta
+        evaluation_of_bids: Evaluación de ofertas
+        awarded_contracts: Contratos adjudicados
+        countersignature: Contrafirma
+        contract_completion: Finalización del contrato
+        amendments_minutes_intro: Modificaciones a esta Acta
+        amendment_a: Enmienda A – Terminación del Contrato
+        amendment_b: Enmienda B – Laudo tras la Terminación
+
+
+
+        
       contract:
         table:
           header:

@@ -1,6 +1,29 @@
 pt-BR:
   document:
     pdf:
+      base: 
+        full_name: "SOL - SOLUÇÃO ONLINE DE LICITAÇÃO"
+        disclaimer_start: Este documento foi gerado pelo
+        auth_confirm: Sua autenticidade é verificada.
+        procurement_of: Aquisição de
+        ref_n: Ref. No
+        bid_opening: Abertura de propostas
+        issued_on: Emitida em
+        country: País
+        project: Projeto
+        purchaser_employer: Comprador/empregador
+        financing_agreement: Acordo de Financiamento
+        process_details: Detalhes do processo
+
+        bid_prices: Preços de oferta
+        evaluation_of_bids: Avaliação de Propostas
+        awarded_contracts: Contratos adjudicados
+        countersignature: Referendação
+        contract_completion: Conclusão do Contrato
+        amendments_minutes_intro: Alterações a esta ata
+        amendment_a: Alteração A – Rescisão do Contrato
+        amendment_b: Alteração B – Prêmio após Rescisão
+
       contract:
         table:
           header:

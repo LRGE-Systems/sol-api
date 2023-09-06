@@ -46,7 +46,7 @@ module BiddingsService::Minute
     end
 
     def minute_pdf
-      @minute_pdf ||= Pdf::Builder::Bidding.call(html: minute_html_template, file_type: file_type)
+      @minute_pdf ||= Pdf::Builder::Bidding.call(html: minute_html_template, file_type: file_type, biddingTg: bidding)
     end
 
     def merged_minute_pdf

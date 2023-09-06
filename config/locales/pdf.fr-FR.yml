@@ -1,6 +1,30 @@
 ﻿fr-FR:
   document:
     pdf:
+      base: 
+        full_name: "SOL - SOLUTION D'ENCHÈRES EN LIGNE"
+        disclaimer_start: Ce document a été généré par
+        auth_confirm: Son authenticité est vérifiée.
+        procurement_of: Achat de
+        ref_n: Numéro de réference
+        bid_opening: Ouverture des offres
+        issued_on: Publié le
+        country: Pays
+        project: Projet
+        purchaser_employer: Acheteur/Employeur
+        financing_agreement: Accord de financement
+        process_details: Détails du processus
+        bid_prices: Prix offerts
+        evaluation_of_bids: Évaluation des offres
+        awarded_contracts: Contrats attribués
+        countersignature: Contreseing
+        contract_completion: Achèvement du contrat
+        amendments_minutes_intro: Modifications à ce procès-verbal
+        amendment_a: Amendement A – Résiliation du contrat
+        amendment_b: Amendement B – Attribution suite à la résiliation
+
+
+
       contract:
         table:
           header:
