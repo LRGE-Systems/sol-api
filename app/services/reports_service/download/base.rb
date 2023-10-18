@@ -67,7 +67,7 @@ module ReportsService::Download
     end
 
     def name_file
-      @name_file ||= "storage/#{name_key}#{DateTime.current.strftime('%d%m%Y%H%M')}.#{@book.file_extension}"
+      @name_file ||= "/home/gal/SOL/sol-api/public/storage/#{name_key}#{DateTime.current.strftime('%d%m%Y%H%M')}.#{@book.file_extension}"
     end
 
     def name_key; end

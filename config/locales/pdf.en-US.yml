@@ -63,6 +63,9 @@
           contract_total_inexecution: "Contract %s with vendor %s / CNPJ %s was updated to “complete nonperformance” status by the cooperative %s."
           no_proposals: No winning company.
           table:
+            ranks:
+              i0: Top Rated
+              others: "%s"
             header:
               item_number: Line Item N°
               item_description: Description of Item

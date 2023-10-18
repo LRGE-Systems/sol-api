@@ -61,6 +61,9 @@
           contract_total_inexecution: "Le contrat %s avec le fournisseur %s / CPF/CNPJ %s a été actualisé à la situation de non réalisation totale par l'association %s."
           no_proposals: Aucune entreprise n'a été gagnante.
           table:
+            ranks:
+              i0: Los más valorados
+              others: "%s"
             header:
               item_number: Numéro de l'article
               item_description: Description

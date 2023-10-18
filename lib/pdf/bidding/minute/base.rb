@@ -383,10 +383,13 @@ module Pdf::Bidding
     end
 
     def fill_proposals_table_row(lot, lot_group_item, ind)
+      rankTrans = [
+        I18n.t("document.pdf.bidding.minute.table.ranks.others") % [ (ind+1).to_s ]
+      ]
       table.push(
         "<tr>"\
           "<td>#{lot_group_item.item.title}</td>"\
-          "<td>#{ind+1}</td>"\
+          "<td>#{rankTrans[0]}</td>"\
           "<td>#{lot.proposal.provider.name}</td>"\
           "<td>#{lot.proposal.provider.id}</td>"\
           "<td>#{lot.price_total}</td>"\
@@ -450,10 +453,13 @@ module Pdf::Bidding
         "NODEF"
       else 
         comment = lot.proposal.event_proposal_status_changes.filter{|e| e.to == 'coop_refused'}&.last&.comment || ''
+        rankTrans = [
+          I18n.t("document.pdf.bidding.minute.table.ranks.others") % [ (ind+1).to_s ]
+        ]
         table.push(
           "<tr>"\
             "<td>#{lot_group_item.item.title}</td>"\
-            "<td>#{ind}</td>"\
+            "<td>#{rankTrans[0]}</td>"\
             "<td>#{lot.proposal.provider.name}</td>"\
             "<td>#{lot.proposal.provider.id}</td>"\
             "<td>#{I18n.t("document.pdf.bidding.minute.table.header.#{lot.proposal.coop_accepted? ? 'prop_yes' : lot.proposal.coop_refused? ? 'prop_no' : 'prop_triage'}")}</td>"\
@@ -570,6 +576,8 @@ module Pdf::Bidding
     end
 
     def fill_table_contract_signed_top_row(lot)
+      allsigned = lot.proposal.contract.all_signed? ? I18n.l(lot.proposal.contract.updated_at, format: :shorter) : ''
+
       table.push(
         "<tr>"\
           "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_item_lot")}</th>"\
@@ -577,7 +585,7 @@ module Pdf::Bidding
           "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_name")}</th>"\
           "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_bidder_id")}</th>"\
           "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_signed_on")}</th>"\
-          "<th>#{I18n.t("document.pdf.bidding.minute.table.header.prop_rejected_on")}</th>"\
+          "<th>#{allsigned.blank? ? I18n.t("document.pdf.bidding.minute.table.header.prop_rejected_on") : I18n.t("document.pdf.bidding.minute.table.header.prop_awarded_amount") }</th>"\
         "</tr>"
       )
     end
@@ -588,6 +596,7 @@ module Pdf::Bidding
       else 
         allsigned = lot.proposal.contract.all_signed? ? I18n.l(lot.proposal.contract.updated_at, format: :shorter) : ''
         rejected = lot.proposal.contract.refused? ? I18n.l(lot.proposal.contract.updated_at, format: :shorter) : ''
+        
         table.push(
           "<tr>"\
             "<td>#{lot_group_item.item.title}</td>"\
@@ -595,7 +604,7 @@ module Pdf::Bidding
             "<td>#{lot.proposal.provider.name}</td>"\
             "<td>#{lot.proposal.provider.id}</td>"\
             "<td>#{allsigned}</td>"\
-            "<td>#{rejected}</td>"\
+            "<td>#{allsigned.blank? ? rejected : lot.proposal.price_total}</td>"\
           "</tr>"
         )
       end

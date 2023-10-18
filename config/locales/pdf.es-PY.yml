@@ -64,6 +64,9 @@
           contract_total_inexecution: "El contrato %s con el proveedor %s / CNPJ %s ha sido actualizado para la situación de falta de ejecución total por la asociación %s."
           no_proposals: Ninguna empresa ganadora.
           table:
+            ranks:
+              i0: Los más valorados
+              others: "%s"
             header:
               item_number: Número de artículo
               item_description: Descripción

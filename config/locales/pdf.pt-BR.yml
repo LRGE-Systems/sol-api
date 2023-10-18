@@ -24,6 +24,8 @@ pt-BR:
         amendment_a: Alteração A – Rescisão do Contrato
         amendment_b: Alteração B – Prêmio após Rescisão
 
+
+
       contract:
         table:
           header:
@@ -63,6 +65,9 @@ pt-BR:
           no_proposals: Nenhuma empresa vencedora.
 
           table:
+            ranks:
+              i0: Melhor avaliado
+              others: "%s"
             header:
               item_number: Item N°
               item_description: Descrição
