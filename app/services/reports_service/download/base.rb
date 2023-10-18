@@ -28,22 +28,22 @@ module ReportsService::Download
 
     def download
       load_resources
-      puts "CARALHO7"
+      print "CARALHO7"
 
       generate_base_spreadsheet
-      puts "CARALHO6"
+      print "CARALHO6"
 
       load_rows
-      puts "CARALHO5"
+      print "CARALHO5"
 
       detailings
-      puts "CARALHO3"
+      print "CARALHO3"
 
       load_row_detailings
-      puts "CARALHO1"
+      print "CARALHO1"
       respWriet = @book.write "/home/gal/SOL/sol-api/public/#{name_file}"
-      puts "CARALHO2"
-      puts respWriet
+      print "CARALHO2"
+      print respWriet
     end
 
     def generate_base_spreadsheet
