@@ -1,7 +1,9 @@
 module ReportsService
   class BaseContract
 
-    def initialize; end
+    def initialize(user) 
+      @user = user[:user]
+    end
 
     def self.call
       new.call
@@ -30,7 +32,7 @@ module ReportsService
     end
 
     def by_classification(classification_id)
-      ::Contract.by_classification(classification_id)
+      ::Contract.joins(:bidding).where(biddings: {organization: @user.organization}).by_classification(classification_id)
     end
   end
 end

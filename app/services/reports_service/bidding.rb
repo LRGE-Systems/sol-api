@@ -3,7 +3,9 @@ module ReportsService
 
     STATUSES = ::Bidding.statuses.keys.except("draft").freeze
 
-    def initialize; end
+    def initialize(user)
+      @user = user[:user]
+    end
 
     def self.call
       new.call
@@ -16,8 +18,10 @@ module ReportsService
     private
 
     def report
+      puts @user
+      puts "CARALHO"
       STATUSES.inject([]) do |array, key|
-        array << { label: key.to_sym, data: count_price(::Bidding.send("#{key}")) }
+        array << { label: key.to_sym, data: count_price(::Bidding.where(organization: @user.organization).send("#{key}")) }
         array
       end
     end

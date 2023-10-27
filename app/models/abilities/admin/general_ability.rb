@@ -14,7 +14,7 @@ module Abilities::Admin
     def initialize(user)
       if exist_integration?
         can :read, INTEGRATION_MODELS
-        can :manage, NOT_INTEGRATION_MODELS
+        can :manage, NOT_INTEGRATION_MODELS + INTEGRATION_MODELS
       else
         can :manage, INTEGRATION_MODELS + NOT_INTEGRATION_MODELS
       end
