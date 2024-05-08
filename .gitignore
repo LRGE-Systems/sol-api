@@ -98,3 +98,4 @@ yarn-error.log*
 /spec/fixtures/myfiles/contract_*.html
 /spec/fixtures/myfiles/minute_*.html
 /spec/fixtures/myfiles/edict_*.html
+secrets.yml
