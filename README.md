@@ -10,6 +10,15 @@ This repository contains all the API necessary for other applications:
 - sol-cooperative-frontend;
 - sol-supplier-frontend.
 
+
+
+# Fast Setup with Docker
+
+## use the docker compose inside de folder dockerfastdeploy
+
+
+
+
 ## Initial setting
 
 The `setup` executable should do all the necessary work, so just run:
@@ -28,7 +37,7 @@ Authorization of access to the API by the front-end application and the user is 
 doorkeeper. Then just run:
 
 ```bash
-  rake oauth:applications:load
+  bundle exec rake oauth:applications:load
 ```
 
 To check the credentials it is necessary to enter the application console, then run the command:
@@ -66,3 +75,6 @@ Need database to be prepopulated with the follwed data:
 
 - City and states (automatic, rails task)
 - Roles
+
+
+

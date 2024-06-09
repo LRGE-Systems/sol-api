@@ -3,7 +3,7 @@ namespace :setup do
   task load: :environment do |task|
 
     tasks = [
-      'setup:admin:load',
+      'sol_sample_users:setup',
       'setup:cities:load',
       'setup:classifications:load',
       'setup:integrations:load',

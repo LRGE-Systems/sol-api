@@ -8,19 +8,3 @@ services:
             - .:/app
         ports:
             - 3000:3000
-        depends_on: 
-            - dbsol
-        # environment: 
-        #     NODE_ENV: production
-    dbsol:
-        image: mariadb
-        volumes:
-            - ./mariadb-data:/var/lib/mysql
-        # restart: always
-        ports:
-            - 5432:5432
-        environment:
-            MYSQL_PASSWORD: edjfdhasm234
-            MYSQL_USER: lrge
-            MYSQL_DATABASE: sdc_api_development
-            MARIADB_ROOT_PASSWORD: sjdhsjdsjkd

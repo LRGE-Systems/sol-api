@@ -1,0 +1,27 @@
+version: "2"
+services:
+    api:
+        image: thhegal/sol-cloud-api:latest
+        ports:
+            - 3000:3000
+
+    admin:
+        image: thhegal/sol-cloud-admin:latest
+        volumes: 
+            - ./secrets_admin.yml:/app/src/config/secrets.yml
+        ports:
+            - 8080:8080
+
+    coop:
+        image: thhegal/sol-cloud-cooperative:latest
+        volumes: 
+            - ./secrets_coop.yml:/app/src/config/secrets.yml
+        ports:
+            - 8081:8080
+
+    supplier:
+        image: thhegal/sol-cloud-supplier:latest
+        volumes: 
+            - ./secrets_supp.yml:/app/src/config/secrets.yml
+        ports:
+            - 8082:8080

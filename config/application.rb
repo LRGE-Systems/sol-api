@@ -15,6 +15,8 @@ require "action_cable/engine"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+ActiveSupport::Deprecation.behavior = :silence
+
 Bundler.require(*Rails.groups)
 
 module SdcApi

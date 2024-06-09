@@ -9,6 +9,11 @@ RUN curl -fsSL https://packages.redis.io/gpg | gpg --dearmor -o /usr/share/keyri
 RUN echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb bullseye main" | tee /etc/apt/sources.list.d/redis.list
 RUN apt-get update -y
 RUN apt-get install redis -y
+RUN bundle install --verbose
+
+RUN apt-get install mariadb-server -y
+RUN service mariadb start
+
 ENTRYPOINT '/app/entrypoint.sh'
 # RUN bin/setup
 # COPY Gemfile.lock /app/Gemfile.lock
